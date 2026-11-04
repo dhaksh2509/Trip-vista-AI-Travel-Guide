@@ -1645,7 +1645,7 @@ export function findDestination(query: string): DestinationMeta {
     state: state,
     coordinates: { lat, lng },
     bannerUrl: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
-    description: `A captivating destination in ${state}, featuring historic landmarks, panoramic vantage points, serene natural walking trails, and rich regional traditions.`,
+    description: `A captivating destination in ${state} (${categoryTag}), featuring historic landmarks, panoramic vantage points, serene natural walking trails, and rich regional traditions.`,
     bestMonths: 'October to April',
     idealDays: 3,
     popularInterests: ['Nature', 'History', 'Food', 'Photography'],

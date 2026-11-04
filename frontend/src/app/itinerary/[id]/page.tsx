@@ -1,28 +1,26 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { useParams, useRouter } from 'next/navigation';
+import { useParams } from 'next/navigation';
 import Link from 'next/link';
-import { 
-  TripPlan, 
-  ActivityItem 
+import {
+  TripPlan,
+  ActivityItem
 } from '@/types';
-import { 
-  Clock, 
-  IndianRupee, 
-  Navigation, 
-  Download, 
-  Check, 
-  Trash2, 
-  RefreshCw, 
+import {
+  Clock,
+  IndianRupee,
+  Navigation,
+  Download,
+  Check,
+  Trash2,
+  RefreshCw,
   MapPin,
   Utensils,
   MessageSquare,
-  Sparkles,
   Layers,
   Map as MapIcon,
   List,
-  Info,
   X,
   Compass,
   Calendar,
@@ -36,7 +34,6 @@ import { findDestination } from '@/lib/data/destinations';
 
 export default function ItineraryPage() {
   const params = useParams();
-  const router = useRouter();
   const tripId = params.id as string;
 
   const [trip, setTrip] = useState<TripPlan | null>(null);
@@ -153,7 +150,7 @@ export default function ItineraryPage() {
     if (!trip) return;
     const copy: TripPlan = JSON.parse(JSON.stringify(trip));
     const destMeta = findDestination(copy.destinationName);
-    
+
     // Pick an alternative attraction that is not already selected
     const currentName = copy.days[dayIndex][slot]?.name;
     const alternative = destMeta.attractions.find(a => a.name !== currentName) || destMeta.attractions[0];
@@ -261,11 +258,10 @@ export default function ItineraryPage() {
             <button
               onClick={handleDownloadOffline}
               disabled={isDownloaded}
-              className={`flex items-center gap-1.5 px-4 py-2.5 rounded-xl font-bold text-xs transition shadow-sm ${
-                isDownloaded
-                  ? 'bg-zinc-900 text-yellow-400 border border-yellow-400/30 cursor-default'
-                  : 'bg-yellow-400 hover:bg-yellow-300 text-black active:translate-y-0.5'
-              }`}
+              className={`flex items-center gap-1.5 px-4 py-2.5 rounded-xl font-bold text-xs transition shadow-sm ${isDownloaded
+                ? 'bg-zinc-900 text-yellow-400 border border-yellow-400/30 cursor-default'
+                : 'bg-yellow-400 hover:bg-yellow-300 text-black active:translate-y-0.5'
+                }`}
             >
               {isDownloaded ? (
                 <>
@@ -360,11 +356,10 @@ export default function ItineraryPage() {
         <div className="flex items-center gap-1.5 overflow-x-auto pb-0.5">
           <button
             onClick={() => setActiveDayNumber(null)}
-            className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition shrink-0 ${
-              activeDayNumber === null
-                ? 'bg-yellow-400 text-black shadow-md'
-                : 'bg-[#09090b] text-zinc-400 hover:text-white hover:bg-zinc-800 border border-zinc-800'
-            }`}
+            className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition shrink-0 ${activeDayNumber === null
+              ? 'bg-yellow-400 text-black shadow-md'
+              : 'bg-[#09090b] text-zinc-400 hover:text-white hover:bg-zinc-800 border border-zinc-800'
+              }`}
           >
             All Days ({trip.days.length})
           </button>
@@ -372,11 +367,10 @@ export default function ItineraryPage() {
             <button
               key={d.dayNumber}
               onClick={() => setActiveDayNumber(d.dayNumber)}
-              className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition shrink-0 ${
-                activeDayNumber === d.dayNumber
-                  ? 'bg-yellow-400 text-black shadow-md'
-                  : 'bg-[#09090b] text-zinc-400 hover:text-white hover:bg-zinc-800 border border-zinc-800'
-              }`}
+              className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition shrink-0 ${activeDayNumber === d.dayNumber
+                ? 'bg-yellow-400 text-black shadow-md'
+                : 'bg-[#09090b] text-zinc-400 hover:text-white hover:bg-zinc-800 border border-zinc-800'
+                }`}
             >
               Day {d.dayNumber}
             </button>
@@ -387,9 +381,8 @@ export default function ItineraryPage() {
         <div className="flex items-center bg-[#09090b] p-1 rounded-xl border border-zinc-800 gap-1">
           <button
             onClick={() => setActiveView('split')}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition ${
-              activeView === 'split' ? 'bg-yellow-400 text-black' : 'text-zinc-400 hover:text-white'
-            }`}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition ${activeView === 'split' ? 'bg-yellow-400 text-black' : 'text-zinc-400 hover:text-white'
+              }`}
             title="Split Itinerary & Map View"
           >
             <Layers className="w-3.5 h-3.5" />
@@ -397,9 +390,8 @@ export default function ItineraryPage() {
           </button>
           <button
             onClick={() => setActiveView('timeline')}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition ${
-              activeView === 'timeline' ? 'bg-yellow-400 text-black' : 'text-zinc-400 hover:text-white'
-            }`}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition ${activeView === 'timeline' ? 'bg-yellow-400 text-black' : 'text-zinc-400 hover:text-white'
+              }`}
             title="Timeline Only View"
           >
             <List className="w-3.5 h-3.5" />
@@ -407,9 +399,8 @@ export default function ItineraryPage() {
           </button>
           <button
             onClick={() => setActiveView('map')}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition ${
-              activeView === 'map' ? 'bg-yellow-400 text-black' : 'text-zinc-400 hover:text-white'
-            }`}
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition ${activeView === 'map' ? 'bg-yellow-400 text-black' : 'text-zinc-400 hover:text-white'
+              }`}
             title="Full Map View"
           >
             <MapIcon className="w-3.5 h-3.5" />
@@ -493,19 +484,18 @@ export default function ItineraryPage() {
                       const slotBadgeColor = slot === 'morning'
                         ? 'bg-yellow-400/20 text-yellow-300 border-yellow-400/40'
                         : slot === 'afternoon'
-                        ? 'bg-amber-400/20 text-amber-300 border-amber-400/40'
-                        : 'bg-zinc-800 text-zinc-200 border-zinc-700';
+                          ? 'bg-amber-400/20 text-amber-300 border-amber-400/40'
+                          : 'bg-zinc-800 text-zinc-200 border-zinc-700';
 
                       return (
-                        <div 
+                        <div
                           key={slot}
                           id={`card-${act.id}`}
                           onClick={() => handleSelectActivity(act)}
-                          className={`bg-[#121214] rounded-2xl border overflow-hidden cursor-pointer transition-all duration-200 group ${
-                            isHighlighted
-                              ? 'border-yellow-400 ring-2 ring-yellow-400/40 bg-[#18181b] shadow-xl'
-                              : 'border-zinc-800 hover:border-zinc-700 hover:bg-[#18181b]'
-                          }`}
+                          className={`bg-[#121214] rounded-2xl border overflow-hidden cursor-pointer transition-all duration-200 group ${isHighlighted
+                            ? 'border-yellow-400 ring-2 ring-yellow-400/40 bg-[#18181b] shadow-xl'
+                            : 'border-zinc-800 hover:border-zinc-700 hover:bg-[#18181b]'
+                            }`}
                         >
                           {/* Place Image Banner with graceful fallback */}
                           <div className="relative h-40 w-full overflow-hidden bg-black">

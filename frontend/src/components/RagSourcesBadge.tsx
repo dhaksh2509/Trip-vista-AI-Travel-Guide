@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { RAGSource } from '@/types';
-import { Database, ChevronDown, ChevronUp, ExternalLink, ShieldCheck } from 'lucide-react';
+import { Database, ChevronDown, ChevronUp, ShieldCheck } from 'lucide-react';
 
 interface RagSourcesBadgeProps {
   sources: RAGSource[];
@@ -34,7 +34,7 @@ export default function RagSourcesBadge({ sources, destinationName }: RagSources
               </span>
             </div>
             <p className="text-[11px] text-zinc-400 mt-0.5">
-              Recommendations grounded in regional travel documentation and verified point coordinates
+              Recommendations grounded in regional travel documentation {destinationName ? `for ${destinationName}` : ''} and verified point coordinates
             </p>
           </div>
         </div>

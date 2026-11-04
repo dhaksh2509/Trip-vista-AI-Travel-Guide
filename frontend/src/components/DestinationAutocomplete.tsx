@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef, useId } from 'react';
-import { MapPin, Search, X, Loader2, ChevronDown } from 'lucide-react';
+import { MapPin, X, Loader2, ChevronDown } from 'lucide-react';
 import { 
   searchAllIndiaDestinations, 
   findAllIndiaDestination,

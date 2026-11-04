@@ -88,7 +88,7 @@ export class ItineraryAgent {
 
       // Rotate meals: assign a different meal per day so each day shows distinct restaurant suggestions
       // We assign 1 meal per day (cycling through the meals list), or up to 2 if list is long enough
-      const dayMeals: MealRecommendation[] = this.selectMealsForDay(allMeals, dayNum, numDays);
+      const dayMeals: MealRecommendation[] = this.selectMealsForDay(allMeals, dayNum);
 
       days.push({
         dayNumber: dayNum,
@@ -113,7 +113,7 @@ export class ItineraryAgent {
    * If there are 3+ meals, each day gets a rotating primary + a rotating secondary meal.
    * This ensures different restaurants appear on different days.
    */
-  private selectMealsForDay(allMeals: MealRecommendation[], dayNum: number, totalDays: number): MealRecommendation[] {
+  private selectMealsForDay(allMeals: MealRecommendation[], dayNum: number): MealRecommendation[] {
     if (!allMeals || allMeals.length === 0) return [];
 
     const count = allMeals.length;

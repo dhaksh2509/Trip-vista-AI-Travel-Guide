@@ -2,25 +2,22 @@
 
 import React, { useState, useEffect, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import { 
-  Compass, 
-  Calendar, 
-  Users, 
-  IndianRupee, 
-  MapPin, 
-  Car, 
+import {
+  Calendar,
+  Users,
+  MapPin,
+  Car,
   AlertCircle,
   Check,
   Sparkles,
-  ArrowRight,
-  Gauge
+  ArrowRight
 } from 'lucide-react';
-import { 
-  TravelPreferences, 
-  TravelType, 
-  TravelPace, 
-  TransportPreference, 
-  AgentStep 
+import {
+  TravelPreferences,
+  TravelType,
+  TravelPace,
+  TransportPreference,
+  AgentStep
 } from '@/types';
 import AgentProgressModal from '@/components/AgentProgressModal';
 import { aiOrchestrator } from '@/lib/ai/orchestrator';
@@ -167,7 +164,13 @@ function PlannerForm() {
       return;
     }
 
-    // Resolve starting location record if not set
+    // Resolve destination & starting location records if not set
+    const resolvedDestRecord = destinationRecord || (
+      destination.trim()
+        ? findAllIndiaDestination(destination.trim()) || (findDestination(destination.trim()) as DestinationCatalogueItem)
+        : undefined
+    );
+
     const resolvedStartRecord = startingLocationRecord || (
       startingLocation.trim()
         ? findAllIndiaDestination(startingLocation.trim()) || (findDestination(startingLocation.trim()) as DestinationCatalogueItem)
@@ -176,6 +179,7 @@ function PlannerForm() {
 
     const preferences: TravelPreferences = {
       destination: destination.trim(),
+      destinationRecord: resolvedDestRecord,
       durationDays: daysNum,
       travelersCount,
       budgetInr: budgetNum,
@@ -197,8 +201,10 @@ function PlannerForm() {
           if (index >= 0) {
             const copy = [...prev];
             copy[index] = updatedStep;
+            setCurrentStepIndex(index);
             return copy;
           }
+          setCurrentStepIndex(prev.length);
           return [...prev, updatedStep];
         });
       });
@@ -250,7 +256,7 @@ function PlannerForm() {
 
       {/* Main Planner Form */}
       <form onSubmit={handleGenerate} noValidate className="space-y-5">
-        
+
         {/* Card 1: Destination & Origin Selection */}
         <div className="bg-[#121214] p-5 sm:p-6 rounded-2xl border border-zinc-800 space-y-4 shadow-card">
           <div className="border-b border-zinc-800 pb-3">
@@ -287,11 +293,10 @@ function PlannerForm() {
                     type="button"
                     key={cat.category}
                     onClick={() => setSelectedCategoryTab(cat.category)}
-                    className={`px-2.5 py-1 rounded-md text-xs font-medium transition-colors ${
-                      selectedCategoryTab === cat.category
+                    className={`px-2.5 py-1 rounded-md text-xs font-medium transition-colors ${selectedCategoryTab === cat.category
                         ? 'bg-yellow-400 text-black border border-yellow-400 font-bold'
                         : 'text-zinc-400 hover:text-white'
-                    }`}
+                      }`}
                   >
                     {cat.category}
                   </button>
@@ -308,11 +313,10 @@ function PlannerForm() {
                       const m = findAllIndiaDestination(d) || (findDestination(d) as DestinationCatalogueItem);
                       if (m) setDestinationRecord(m);
                     }}
-                    className={`px-2.5 py-1 rounded-md text-xs font-medium border transition-colors ${
-                      destination.toLowerCase() === d.toLowerCase()
+                    className={`px-2.5 py-1 rounded-md text-xs font-medium border transition-colors ${destination.toLowerCase() === d.toLowerCase()
                         ? 'bg-yellow-400 text-black border-yellow-400 font-bold'
                         : 'bg-[#09090b] text-zinc-300 border-zinc-800 hover:bg-zinc-800'
-                    }`}
+                      }`}
                   >
                     {d}
                   </button>
@@ -505,11 +509,10 @@ function PlannerForm() {
                       type="button"
                       key={item}
                       onClick={() => toggleInterest(item)}
-                      className={`px-3 py-1.5 rounded-lg text-xs font-medium border flex items-center space-x-1.5 transition-colors ${
-                        isSelected
+                      className={`px-3 py-1.5 rounded-lg text-xs font-medium border flex items-center space-x-1.5 transition-colors ${isSelected
                           ? 'bg-yellow-400 text-black border-yellow-400 font-bold'
                           : 'bg-[#09090b] text-zinc-300 border-zinc-800 hover:border-zinc-700 hover:text-white'
-                      }`}
+                        }`}
                     >
                       {isSelected && <Check className="w-3.5 h-3.5 text-black" />}
                       <span>{item}</span>

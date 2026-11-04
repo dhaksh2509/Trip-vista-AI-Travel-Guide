@@ -5,11 +5,9 @@ import {
   Cpu, 
   Database, 
   WifiOff, 
-  CheckCircle2, 
   Map, 
   ShieldCheck, 
   Layers, 
-  Sparkles,
   ArrowRight
 } from 'lucide-react';
 import Logo from '@/components/Logo';

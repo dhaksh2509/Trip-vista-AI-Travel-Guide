@@ -1,4 +1,4 @@
-import { OfflineTripRecord, getOfflineDb } from './db';
+import { OfflineTripRecord } from './db';
 
 export interface OfflineAssistantResponse {
   answer: string;

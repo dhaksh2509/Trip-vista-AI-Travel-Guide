@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import { ItineraryDay } from '@/types';
-import { Clock, IndianRupee, MapPin } from 'lucide-react';
+import { Clock, IndianRupee } from 'lucide-react';
 import { MapMarkerItem } from './LeafletMapInner';
 
 const LeafletMapInner = dynamic(() => import('./LeafletMapInner'), {

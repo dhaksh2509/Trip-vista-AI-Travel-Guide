@@ -12,12 +12,10 @@ import {
   Send, 
   ArrowRight,
   Database,
-  Calendar,
   Compass,
   Bot,
   User,
   ShieldCheck,
-  MapPin,
   ExternalLink
 } from 'lucide-react';
 import Link from 'next/link';

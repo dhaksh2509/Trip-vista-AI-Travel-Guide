@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(req: NextRequest) {
   try {
-    const { title, destination, content, category } = await req.json();
+    const { title, destination, content } = await req.json();
 
     if (!title || !destination || !content) {
       return NextResponse.json({ error: 'title, destination, and content are required' }, { status: 400 });

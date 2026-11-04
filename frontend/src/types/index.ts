@@ -6,6 +6,7 @@ export type TransportPreference = 'Personal Car / Rental' | 'Train' | 'Flight' |
 
 export interface TravelPreferences {
   destination: string;
+  destinationRecord?: any;
   durationDays: number;
   travelersCount: number;
   budgetInr: number;

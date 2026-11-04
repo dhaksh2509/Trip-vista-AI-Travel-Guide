@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Shield, Cpu, Database, WifiOff, Heart } from 'lucide-react';
+import { Shield, Cpu, Database, WifiOff } from 'lucide-react';
 import Logo from '@/components/Logo';
 
 export default function Footer() {

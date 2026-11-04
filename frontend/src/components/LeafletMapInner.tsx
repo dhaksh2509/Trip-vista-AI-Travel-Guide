@@ -172,7 +172,9 @@ export default function LeafletMapInner({
     });
 
     // Draw route polyline connecting points in order
-    const routePoints: [number, number][] = filteredMarkers.map(m => [m.lat, m.lng]);
+    const routePoints: [number, number][] = (routeCoordinates && routeCoordinates.length >= 2)
+      ? routeCoordinates.map(c => [c.lat, c.lng] as [number, number])
+      : filteredMarkers.map(m => [m.lat, m.lng] as [number, number]);
     if (routePoints.length >= 2) {
       polylineRef.current = L.polyline(routePoints, {
         color: '#facc15',

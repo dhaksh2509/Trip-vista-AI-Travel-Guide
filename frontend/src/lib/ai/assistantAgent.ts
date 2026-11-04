@@ -1,6 +1,6 @@
-import { TripPlan, ChatMessage, ActivityItem } from '@/types';
+import { TripPlan, ActivityItem } from '@/types';
 import { vectorStore } from '@/lib/rag/vectorStore';
-import { DESTINATIONS_DATA, findDestination } from '@/lib/data/destinations';
+import { findDestination } from '@/lib/data/destinations';
 
 export interface AssistantResponse {
   message: string;
@@ -75,25 +75,24 @@ export class AssistantAgent {
     if (query.includes('reduce') && query.includes('budget') && currentTrip) {
       const updated = JSON.parse(JSON.stringify(currentTrip)) as TripPlan;
       const originalTotal = updated.budget.totalEstimatedInr;
-      const reductionFactor = 0.82; // 18% reduction
-      
+
       updated.budget.accommodationInr = Math.round(updated.budget.accommodationInr * 0.80);
       updated.budget.foodInr = Math.round(updated.budget.foodInr * 0.85);
       updated.budget.transportationInr = Math.round(updated.budget.transportationInr * 0.80);
       updated.budget.shoppingInr = Math.round(updated.budget.shoppingInr * 0.70);
       updated.budget.otherInr = Math.round(updated.budget.otherInr * 0.75);
-      
+
       const newTotal = updated.budget.accommodationInr +
         updated.budget.foodInr +
         updated.budget.transportationInr +
         updated.budget.activitiesInr +
         updated.budget.shoppingInr +
         updated.budget.otherInr;
-      
+
       updated.budget.totalEstimatedInr = newTotal;
       updated.budget.remainingBudgetInr = Math.max(0, updated.budget.totalBudgetInr - newTotal);
       updated.budget.dailyAveragePerPersonInr = Math.round(newTotal / (updated.preferences.durationDays * updated.preferences.travelersCount));
-      
+
       updated.budget.savingsTips.unshift('Optimized: Switched to verified budget homestays and shared hill jeeps.');
 
       return {
@@ -113,7 +112,7 @@ export class AssistantAgent {
       let newActivity: ActivityItem | null = null;
 
       const destMeta = findDestination(currentTrip.destinationName);
-      const replacementCandidate = destMeta.attractions.find(a => 
+      const replacementCandidate = destMeta.attractions.find(a =>
         !a.name.toLowerCase().includes('waterfall') &&
         !a.name.toLowerCase().includes('cascades') &&
         a.id !== 'araku-borra-caves'

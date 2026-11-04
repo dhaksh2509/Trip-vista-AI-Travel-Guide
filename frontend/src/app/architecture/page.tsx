@@ -2,21 +2,11 @@
 
 import React from 'react';
 import { 
-  Bot, 
-  Database, 
-  Layers, 
   Cpu, 
-  Wifi, 
   WifiOff, 
   ShieldCheck, 
-  Compass, 
-  Sparkles,
-  ArrowDown,
-  ArrowRight,
-  Server,
-  Cloud
+  ArrowDown
 } from 'lucide-react';
-import Link from 'next/link';
 
 export default function ArchitecturePage() {
   return (

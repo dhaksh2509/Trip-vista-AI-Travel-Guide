@@ -5,16 +5,12 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { 
   Compass, 
-  MapPin, 
   Calendar, 
   Users, 
   IndianRupee, 
   WifiOff, 
   Database, 
-  Shield, 
   ArrowRight, 
-  Sparkles, 
-  Layers, 
   Check, 
   ChevronRight,
   Map as MapIcon

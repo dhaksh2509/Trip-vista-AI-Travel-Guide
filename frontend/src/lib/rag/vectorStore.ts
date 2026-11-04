@@ -1,4 +1,4 @@
-import { KNOWLEDGE_BASE_DOCUMENTS, RawDocument } from './documents/knowledgeBase';
+import { KNOWLEDGE_BASE_DOCUMENTS } from './documents/knowledgeBase';
 import { RAGSource } from '@/types';
 
 export interface VectorChunk {

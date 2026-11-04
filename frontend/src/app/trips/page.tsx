@@ -9,13 +9,11 @@ import {
   Check, 
   Plus, 
   DownloadCloud,
-  MapPin,
   Calendar,
   Users,
   Compass,
   Search,
-  Map as MapIcon,
-  Sparkles
+  Map as MapIcon
 } from 'lucide-react';
 import { OfflineSyncManager } from '@/lib/offline/syncManager';
 import { findDestination } from '@/lib/data/destinations';

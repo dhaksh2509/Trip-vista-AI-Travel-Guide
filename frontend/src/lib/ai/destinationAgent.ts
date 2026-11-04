@@ -93,7 +93,7 @@ export class DestinationAgent {
 
     // Slice to exactly totalSlotsNeeded and verify no duplicate IDs remain
     const finalSelected = selected.slice(0, totalSlotsNeeded);
-    this.deduplicateByCoordinates(finalSelected, destMeta);
+    this.deduplicateByCoordinates(finalSelected);
 
     const categorized: Record<string, ActivityItem[]> = {};
     let totalMinutes = 0;
@@ -115,12 +115,12 @@ export class DestinationAgent {
 
   /**
    * Ensure no two generated activities have identical coordinates by adding small jitter.
-   * Real attractions from destMeta have genuinely different coordinates, so we only need
+   * Real attractions genuinely have different coordinates, so we only need
    * to handle the generated generic ones.
    */
-  private deduplicateByCoordinates(attractions: ActivityItem[], destMeta: DestinationMeta): void {
+  private deduplicateByCoordinates(attractions: ActivityItem[]): void {
     const seen = new Set<string>();
-    attractions.forEach((attr, i) => {
+    attractions.forEach((attr) => {
       const key = `${attr.coordinates.lat.toFixed(4)},${attr.coordinates.lng.toFixed(4)}`;
       if (seen.has(key)) {
         // Tiny jitter to differentiate the pin on the map

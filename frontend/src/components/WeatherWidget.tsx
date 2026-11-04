@@ -5,9 +5,6 @@ import { WeatherInfo } from '@/types';
 import {
   CloudRain,
   Sun,
-  Wind,
-  Droplets,
-  AlertTriangle,
   WifiOff,
   Sparkles,
   Thermometer

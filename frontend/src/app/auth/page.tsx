@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { User, Lock, Mail, ShieldCheck, ArrowRight, Sparkles } from 'lucide-react';
+import { User, Lock, Mail, ArrowRight } from 'lucide-react';
 import Logo from '@/components/Logo';
 
 export default function AuthPage() {

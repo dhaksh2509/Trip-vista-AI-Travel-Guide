@@ -6,13 +6,7 @@ import {
   User, 
   Bot,
   WifiOff,
-  Sparkles,
-  MapPin,
-  Compass,
-  ArrowRight,
-  ShieldCheck,
-  CheckCircle2,
-  RefreshCw
+  MapPin
 } from 'lucide-react';
 import { ChatMessage, TripPlan } from '@/types';
 import { assistantAgent } from '@/lib/ai/assistantAgent';

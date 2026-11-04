@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { User, Settings, Database, Trash2, ShieldCheck, Check, Sparkles, Wifi } from 'lucide-react';
+import { Settings, Database, Trash2, Check } from 'lucide-react';
 import { OfflineSyncManager } from '@/lib/offline/syncManager';
 import { getOfflineDb } from '@/lib/offline/db';
 

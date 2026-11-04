@@ -25,7 +25,7 @@ const STEP_DISPLAY_NAMES: Record<string, string> = {
 export default function AgentProgressModal({
   isOpen,
   steps,
-  currentStepIndex
+  currentStepIndex: _currentStepIndex
 }: AgentProgressModalProps) {
   if (!isOpen) return null;
 

@@ -2,17 +2,7 @@
 
 import React from 'react';
 import { BudgetBreakdown } from '@/types';
-import { 
-  Building, 
-  Utensils, 
-  Car, 
-  Ticket, 
-  ShoppingBag, 
-  ShieldAlert, 
-  CheckCircle, 
-  Lightbulb, 
-  TrendingUp 
-} from 'lucide-react';
+import { Lightbulb } from 'lucide-react';
 
 interface BudgetChartProps {
   budget: BudgetBreakdown;
