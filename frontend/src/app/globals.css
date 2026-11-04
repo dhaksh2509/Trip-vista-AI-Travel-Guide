@@ -1,0 +1,200 @@
+@import "leaflet/dist/leaflet.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #000000;
+    --foreground: #f4f4f5;
+    --card: #121214;
+    --card-foreground: #f4f4f5;
+    --border: #27272a;
+    --navy-canvas: #000000;
+    --navy-surface: #121214;
+    --navy-surface-hover: #18181b;
+    --navy-border: #27272a;
+    --navy-border-hover: #3f3f46;
+    --turquoise: #facc15;
+    --turquoise-subtle: rgba(250, 204, 21, 0.15);
+    --sunshine: #facc15;
+    --sunshine-subtle: rgba(250, 204, 21, 0.2);
+  }
+}
+
+body {
+  color: var(--foreground);
+  background-color: var(--background);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Professional TripVista Component Utilities ────────────────── */
+@layer components {
+  /* Panels & Cards */
+  .tv-panel {
+    background-color: #121214;
+    border: 1px solid #27272a;
+    border-radius: 0.75rem;
+  }
+
+  .tv-card {
+    background-color: #121214;
+    border: 1px solid #27272a;
+    border-radius: 0.75rem;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  }
+
+  .tv-card:hover {
+    border-color: #3f3f46;
+    background-color: #18181b;
+    box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.7);
+  }
+
+  .tv-card-interactive {
+    background-color: #121214;
+    border: 1px solid #27272a;
+    border-radius: 0.75rem;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .tv-card-interactive:hover {
+    border-color: rgba(250, 204, 21, 0.4);
+    box-shadow: 0 10px 28px -4px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(250, 204, 21, 0.2);
+    transform: translateY(-2px);
+  }
+
+  /* Form Inputs */
+  .tv-input {
+    background-color: #09090b;
+    border: 1px solid #27272a;
+    border-radius: 0.5rem;
+    color: #ffffff;
+    font-size: 0.8125rem;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .tv-input:focus {
+    border-color: #facc15;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(250, 204, 21, 0.2);
+  }
+
+  .tv-input::placeholder {
+    color: #71717a;
+  }
+
+  /* Buttons */
+  .tv-btn-primary {
+    background-color: #facc15;
+    color: #000000;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    transition: background-color 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+  }
+
+  .tv-btn-primary:hover {
+    background-color: #fde047;
+    box-shadow: 0 4px 14px 0 rgba(250, 204, 21, 0.3);
+  }
+
+  .tv-btn-primary:active {
+    background-color: #eab308;
+    transform: scale(0.98);
+  }
+
+  .tv-btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+
+  .tv-btn-secondary {
+    background-color: #18181b;
+    color: #e4e4e7;
+    border: 1px solid #27272a;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  }
+
+  .tv-btn-secondary:hover {
+    background-color: #27272a;
+    border-color: #3f3f46;
+    color: #ffffff;
+  }
+
+  .tv-btn-turquoise {
+    background-color: #facc15;
+    color: #000000;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    transition: background-color 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .tv-btn-turquoise:hover {
+    background-color: #fde047;
+    box-shadow: 0 4px 14px 0 rgba(250, 204, 21, 0.3);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #facc15;
+}
+
+/* Leaflet map popup overrides for dark theme */
+.leaflet-popup-content-wrapper {
+  background: #121214 !important;
+  color: #f4f4f5 !important;
+  border-radius: 10px !important;
+  border: 1px solid #27272a !important;
+  box-shadow: 0 16px 36px -4px rgba(0, 0, 0, 0.9) !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+.leaflet-popup-content {
+  margin: 12px 14px !important;
+  line-height: 1.4 !important;
+}
+
+.leaflet-popup-tip {
+  background: #121214 !important;
+  border: 1px solid #27272a !important;
+}
+
+.leaflet-container {
+  font-family: inherit !important;
+}
+
+/* Dark mode map tiles styling for seamless dark-theme UI */
+.map-tiles-dark {
+  filter: brightness(0.65) contrast(1.2) invert(0.92) hue-rotate(180deg) saturate(0.3) !important;
+}
+
+/* Number input spinner reset */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}

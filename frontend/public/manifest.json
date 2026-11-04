@@ -1,0 +1,21 @@
+{
+  "name": "TripVista — Your AI Travel Guide",
+  "short_name": "TripVista",
+  "description": "Plan Smarter. Travel Better. Even Offline. Your AI Travel Guide with multi-agent orchestration, pgvector RAG, and offline resilience.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#060b17",
+  "theme_color": "#06d6a0",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

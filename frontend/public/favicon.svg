@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <!-- Deep Navy Background Gradient -->
+    <linearGradient id="tv-navy-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a142f" />
+      <stop offset="50%" stop-color="#0f1f44" />
+      <stop offset="100%" stop-color="#060b17" />
+    </linearGradient>
+
+    <!-- Sunshine Yellow Sun Gradient -->
+    <linearGradient id="tv-sun-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="50%" stop-color="#facc15" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+
+    <!-- Scenic Landscape Turquoise Gradients -->
+    <linearGradient id="tv-mountain-back" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14b8a6" />
+      <stop offset="100%" stop-color="#0f766e" />
+    </linearGradient>
+
+    <linearGradient id="tv-mountain-front" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2dd4bf" />
+      <stop offset="50%" stop-color="#06d6a0" />
+      <stop offset="100%" stop-color="#0d9488" />
+    </linearGradient>
+
+    <linearGradient id="tv-valley-water" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="50%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#14b8a6" />
+    </linearGradient>
+
+    <!-- Pin Border Gradient -->
+    <linearGradient id="tv-pin-stroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#facc15" />
+      <stop offset="50%" stop-color="#2dd4bf" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+
+    <!-- Pin Mask / ClipPath -->
+    <clipPath id="tv-pin-clip">
+      <path d="M 60 8 C 36 8 16 28 16 52 C 16 75 42 98 60 114 C 78 98 104 75 104 52 C 104 28 84 8 60 8 Z" />
+    </clipPath>
+  </defs>
+
+  <!-- Location Pin Silhouette Base & Stroke -->
+  <path 
+    d="M 60 8 C 36 8 16 28 16 52 C 16 75 42 98 60 114 C 78 98 104 75 104 52 C 104 28 84 8 60 8 Z" 
+    fill="url(#tv-navy-grad)" 
+    stroke="url(#tv-pin-stroke)" 
+    stroke-width="3.5" 
+    stroke-linejoin="round"
+  />
+
+  <!-- Internal Landscape + Flight Elements clipped to Pin -->
+  <g clip-path="url(#tv-pin-clip)">
+    <!-- Sky background with deep navy hue -->
+    <circle cx="60" cy="50" r="48" fill="url(#tv-navy-grad)" />
+
+    <!-- Sunshine Yellow Sun -->
+    <circle cx="76" cy="38" r="11" fill="url(#tv-sun-grad)" />
+    <!-- Sun Ray Glow Halo -->
+    <circle cx="76" cy="38" r="16" fill="#facc15" opacity="0.22" />
+
+    <!-- Back Scenic Mountain Peak (Teal / Turquoise) -->
+    <polygon points="26,82 48,46 72,82" fill="url(#tv-mountain-back)" />
+    <!-- Crest highlight -->
+    <polygon points="48,46 54,55 48,53 43,55" fill="#a7f3d0" opacity="0.75" />
+
+    <!-- Front Scenic Mountain Peak (Vibrant Turquoise) -->
+    <polygon points="44,88 72,52 98,88" fill="url(#tv-mountain-front)" />
+    <!-- Highlight facet -->
+    <polygon points="72,52 82,66 72,62 65,66" fill="#e0f2fe" opacity="0.85" />
+
+    <!-- Scenic Coastline / Water -->
+    <path 
+      d="M 12 78 Q 40 70 65 77 T 108 76 L 108 120 L 12 120 Z" 
+      fill="url(#tv-valley-water)" 
+      opacity="0.85" 
+    />
+    <path 
+      d="M 12 85 Q 45 80 75 84 T 108 83 L 108 120 L 12 120 Z" 
+      fill="#060b17" 
+      opacity="0.95" 
+    />
+
+    <!-- Travel Route Arc (Sunshine Yellow dotted trail) -->
+    <path 
+      d="M 28 86 Q 52 70 74 46 Q 84 34 94 24" 
+      stroke="#facc15" 
+      stroke-width="2.5" 
+      stroke-dasharray="4 3" 
+      stroke-linecap="round"
+      fill="none" 
+    />
+
+    <!-- Airplane Silhouette soaring along travel route -->
+    <g transform="translate(93, 23) rotate(42) scale(0.95)">
+      <path 
+        d="M 0 -8 L 3 -1 L 10 3 L 10 5 L 3 3 L 3 8 L 6 10 L 6 12 L 0 10 L -6 12 L -6 10 L -3 8 L -3 3 L -10 5 L -10 3 L -3 -1 Z" 
+        fill="#facc15" 
+        stroke="#ffffff" 
+        stroke-width="0.8" 
+        stroke-linejoin="round"
+      />
+    </g>
+  </g>
+</svg>

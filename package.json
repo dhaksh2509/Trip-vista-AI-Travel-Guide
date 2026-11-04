@@ -1,0 +1,12 @@
+{
+  "name": "tripvista-root",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TripVista — Your AI Travel Guide: Plan Smarter. Travel Better. Even Offline.",
+  "scripts": {
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && npm run build"
+  }
+}

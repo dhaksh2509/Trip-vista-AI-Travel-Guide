@@ -1,0 +1,116 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id                String   @id @default(uuid())
+  email             String   @unique
+  name              String
+  passwordHash      String
+  preferredCurrency String   @default("INR")
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  trips             Trip[]
+}
+
+model Destination {
+  id               String            @id @default(uuid())
+  name             String            @unique
+  state            String?
+  country          String            @default("India")
+  description      String
+  latitude         Float
+  longitude        Float
+  bestTimeToVisit  String?
+  tags             String[]
+  documents        Document[]
+  createdAt        DateTime          @default(now())
+}
+
+model Document {
+  id            String          @id @default(uuid())
+  destinationId String
+  destination   Destination     @relation(fields: [destinationId], references: [id], onDelete: Cascade)
+  title         String
+  category      String
+  sourceUrl     String?
+  chunks        DocumentChunk[]
+  createdAt     DateTime        @default(now())
+}
+
+model DocumentChunk {
+  id              String   @id @default(uuid())
+  documentId      String
+  document        Document @relation(fields: [documentId], references: [id], onDelete: Cascade)
+  destinationName String
+  sectionTitle    String
+  chunkContent    String
+  chunkIndex      Int
+  createdAt       DateTime @default(now())
+
+  @@index([destinationName])
+}
+
+model Trip {
+  id                  String         @id @default(uuid())
+  userId              String?
+  user                User?          @relation(fields: [userId], references: [id], onDelete: SetNull)
+  destinationName     String
+  durationDays        Int
+  travelersCount      Int
+  budgetInr           Float
+  travelType          String
+  interests           String[]
+  travelPace          String
+  startingLocation    String?
+  transportPreference String?
+  totalEstimatedCost  Float?
+  createdAt           DateTime       @default(now())
+  updatedAt           DateTime       @updatedAt
+  days                ItineraryDay[]
+  chatMessages        ChatMessage[]
+  notes               UserNote[]
+}
+
+model ItineraryDay {
+  id                 String   @id @default(uuid())
+  tripId             String
+  trip               Trip     @relation(fields: [tripId], references: [id], onDelete: Cascade)
+  dayNumber          Int
+  title              String
+  summary            String?
+  morningActivity    Json
+  afternoonActivity  Json
+  eveningActivity    Json
+  meals              Json     @default("[]")
+  estimatedCostInr   Float
+  travelDistanceKm   Float
+  travelTimeMinutes  Int
+  weatherAdvice      String?
+
+  @@unique([tripId, dayNumber])
+}
+
+model ChatMessage {
+  id         String   @id @default(uuid())
+  tripId     String
+  trip       Trip     @relation(fields: [tripId], references: [id], onDelete: Cascade)
+  sender     String
+  message    String
+  agentUsed  String?
+  ragSources Json?
+  createdAt  DateTime @default(now())
+}
+
+model UserNote {
+  id        String   @id @default(uuid())
+  tripId    String
+  trip      Trip     @relation(fields: [tripId], references: [id], onDelete: Cascade)
+  content   String
+  createdAt DateTime @default(now())
+}
