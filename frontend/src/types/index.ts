@@ -21,7 +21,7 @@ export interface TravelPreferences {
 export interface ActivityItem {
   id: string;
   name: string;
-  category: 'Nature' | 'Food' | 'History' | 'Beaches' | 'Adventure' | 'Shopping' | 'Photography' | 'Temples' | 'Sightseeing';
+  category: 'Nature' | 'Food' | 'History' | 'Beaches' | 'Adventure' | 'Shopping' | 'Photography' | 'Temples' | 'Sightseeing' | string;
   timeSlot: 'Morning' | 'Afternoon' | 'Evening';
   description: string;
   visitDurationMinutes: number;

@@ -33,6 +33,9 @@ CREATE TABLE IF NOT EXISTS destinations (
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE INDEX IF NOT EXISTS destinations_name_idx ON destinations(name);
+CREATE INDEX IF NOT EXISTS destinations_state_idx ON destinations(state);
+
 -- 4. Documents Knowledge Base (for RAG system)
 CREATE TABLE IF NOT EXISTS documents (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
@@ -54,6 +57,8 @@ CREATE TABLE IF NOT EXISTS document_chunks (
     embedding vector(768), -- pgvector cosine similarity
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE INDEX IF NOT EXISTS places_dest_name_idx ON places(destination_name);
 
 -- Index for blazing-fast vector cosine similarity search
 CREATE INDEX IF NOT EXISTS document_chunks_embedding_idx 
@@ -78,6 +83,9 @@ CREATE TABLE IF NOT EXISTS trips (
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE INDEX IF NOT EXISTS trips_dest_name_idx ON trips(destination_name);
+CREATE INDEX IF NOT EXISTS trips_starting_loc_idx ON trips(starting_location);
 
 -- 7. Itinerary Days Table
 CREATE TABLE IF NOT EXISTS itinerary_days (
@@ -112,6 +120,8 @@ CREATE TABLE IF NOT EXISTS places (
     weather_backup TEXT,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE INDEX IF NOT EXISTS places_dest_name_idx ON places(destination_name);
 
 -- 9. Chat Messages Table
 CREATE TABLE IF NOT EXISTS chat_messages (

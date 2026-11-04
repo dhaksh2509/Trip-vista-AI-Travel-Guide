@@ -2,10 +2,10 @@
 
 import React, { useState, useEffect, useRef, useId } from 'react';
 import { MapPin, X, Loader2, ChevronDown } from 'lucide-react';
-import { 
-  searchAllIndiaDestinations, 
+import {
+  searchAllIndiaDestinations,
   findAllIndiaDestination,
-  DestinationCatalogueItem 
+  DestinationCatalogueItem
 } from '@/lib/data/allIndiaCatalogue';
 
 export interface DestinationAutocompleteProps {
@@ -57,8 +57,8 @@ export default function DestinationAutocomplete({
     if (!isOpen) return;
 
     setIsLoading(true);
-    // Instant local catalogue search (sorted A-Z when empty or prioritized by match tiers)
-    const results = searchAllIndiaDestinations(searchTerm, 40);
+    // Instant local catalogue search across all destinations in India
+    const results = searchAllIndiaDestinations(searchTerm);
     setSuggestions(results);
     setHighlightedIndex(-1);
     setIsLoading(false);
@@ -110,7 +110,7 @@ export default function DestinationAutocomplete({
         setIsOpen(true);
         return;
       }
-      setHighlightedIndex(prev => 
+      setHighlightedIndex(prev =>
         prev < suggestions.length - 1 ? prev + 1 : 0
       );
     } else if (e.key === 'ArrowUp') {
@@ -119,7 +119,7 @@ export default function DestinationAutocomplete({
         setIsOpen(true);
         return;
       }
-      setHighlightedIndex(prev => 
+      setHighlightedIndex(prev =>
         prev > 0 ? prev - 1 : suggestions.length - 1
       );
     } else if (e.key === 'Enter') {
@@ -217,7 +217,7 @@ export default function DestinationAutocomplete({
               {headerTitle}
             </span>
             <span className="text-yellow-400 font-mono text-[10px] px-1.5 py-0.5 rounded bg-yellow-400/10 border border-yellow-400/30">
-              {suggestions.length} available
+              {searchTerm ? `${suggestions.length} found` : `${suggestions.length} destinations across India`}
             </span>
           </div>
 
@@ -245,11 +245,10 @@ export default function DestinationAutocomplete({
                     aria-selected={isSelected}
                     onClick={() => handleSelect(dest)}
                     onMouseEnter={() => setHighlightedIndex(idx)}
-                    className={`px-3.5 py-2.5 cursor-pointer flex items-center justify-between transition-colors ${
-                      isSelected
+                    className={`px-3.5 py-2.5 cursor-pointer flex items-center justify-between transition-colors ${isSelected
                         ? 'bg-yellow-400/15 text-yellow-300 border-l-2 border-yellow-400 pl-3'
                         : 'text-zinc-200 hover:bg-zinc-800/80'
-                    }`}
+                      }`}
                   >
                     <div className="flex items-center space-x-2.5 min-w-0">
                       <MapPin className={`w-3.5 h-3.5 shrink-0 ${isSelected ? 'text-yellow-400' : 'text-zinc-500'}`} />

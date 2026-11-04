@@ -30,6 +30,9 @@ model Destination {
   tags             String[]
   documents        Document[]
   createdAt        DateTime          @default(now())
+
+  @@index([name])
+  @@index([state])
 }
 
 model Document {
@@ -75,6 +78,9 @@ model Trip {
   days                ItineraryDay[]
   chatMessages        ChatMessage[]
   notes               UserNote[]
+
+  @@index([destinationName])
+  @@index([startingLocation])
 }
 
 model ItineraryDay {

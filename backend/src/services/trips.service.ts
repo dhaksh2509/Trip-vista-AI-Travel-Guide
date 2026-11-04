@@ -3,6 +3,7 @@ import { geminiService } from './gemini.service';
 import { weatherService } from './weather.service';
 import { ragService } from './rag.service';
 import { dbService } from './db.service';
+import { findAllIndiaDestination } from '../data/allIndiaCatalogue';
 
 export class TripsService {
   public async generateTrip(preferences: TravelPreferences): Promise<TripPlan> {
@@ -11,6 +12,12 @@ export class TripsService {
     const travelersCount = preferences.travelersCount || 1;
     const budgetInr = preferences.budgetInr || 15000;
     const startingLocation = preferences.startingLocation || 'Current Location';
+
+    // 0. Resolve destination metadata from All-India catalogue
+    const destMeta = findAllIndiaDestination(destination);
+    const baseCoords = destMeta?.coordinates || { lat: 20.5937, lng: 78.9629 };
+    const curatedAttractions = destMeta?.attractions || [];
+    const curatedMeals = destMeta?.meals || [];
 
     // 1. Fetch Weather
     const weather = await weatherService.getWeather(destination, true);
@@ -23,30 +30,46 @@ export class TripsService {
     const baseDailyCost = Math.round(budgetInr / durationDays);
 
     for (let dayNum = 1; dayNum <= durationDays; dayNum++) {
+      // Pick or synthesize activities using verified destination data and coordinates
+      const morningAttraction = curatedAttractions[(dayNum - 1) * 2];
+      const afternoonAttraction = curatedAttractions[(dayNum - 1) * 2 + 1];
+
       const morning: ActivityItem = {
         id: `act-${dayNum}-m`,
         name: dayNum === 1 && startingLocation !== destination
           ? `Departure from ${startingLocation} & Arrival in ${destination}`
-          : `${destination} Landmark Sightseeing & Viewpoint`,
-        category: 'Sightseeing',
+          : (morningAttraction?.name || `${destination} Landmark Sightseeing & Viewpoint`),
+        category: morningAttraction?.category || 'Sightseeing',
         timeSlot: 'Morning',
-        description: `Explore prime landmarks, scenic vistas, and historical highlights of ${destination}.`,
-        visitDurationMinutes: 120,
-        estimatedCostInr: Math.round(baseDailyCost * 0.15),
-        coordinates: { lat: 18.3273 + (dayNum * 0.01), lng: 82.8775 + (dayNum * 0.01) },
-        isOutdoor: true
+        description: morningAttraction?.description || `Explore prime landmarks, scenic vistas, and historical highlights of ${destination}.`,
+        visitDurationMinutes: morningAttraction?.visitDurationMinutes || 120,
+        estimatedCostInr: morningAttraction?.estimatedCostInr || Math.round(baseDailyCost * 0.15),
+        coordinates: morningAttraction?.coordinates || {
+          lat: baseCoords.lat + (dayNum * 0.004),
+          lng: baseCoords.lng + (dayNum * 0.004)
+        },
+        address: morningAttraction?.address,
+        imageUrl: morningAttraction?.imageUrl,
+        isOutdoor: morningAttraction?.isOutdoor ?? true,
+        tips: morningAttraction?.tips
       };
 
       const afternoon: ActivityItem = {
         id: `act-${dayNum}-a`,
-        name: `${destination} Cultural Promenade & Heritage Site`,
-        category: 'Culture',
+        name: afternoonAttraction?.name || `${destination} Cultural Promenade & Heritage Site`,
+        category: afternoonAttraction?.category || 'Culture',
         timeSlot: 'Afternoon',
-        description: `Immerse in local crafts, historic corridors, and cultural exhibits.`,
-        visitDurationMinutes: 90,
-        estimatedCostInr: Math.round(baseDailyCost * 0.10),
-        coordinates: { lat: 18.3300 + (dayNum * 0.01), lng: 82.8800 + (dayNum * 0.01) },
-        isOutdoor: false
+        description: afternoonAttraction?.description || `Immerse in local crafts, historic corridors, and cultural exhibits across ${destination}.`,
+        visitDurationMinutes: afternoonAttraction?.visitDurationMinutes || 90,
+        estimatedCostInr: afternoonAttraction?.estimatedCostInr || Math.round(baseDailyCost * 0.10),
+        coordinates: afternoonAttraction?.coordinates || {
+          lat: baseCoords.lat + (dayNum * 0.006),
+          lng: baseCoords.lng + (dayNum * 0.006)
+        },
+        address: afternoonAttraction?.address,
+        imageUrl: afternoonAttraction?.imageUrl,
+        isOutdoor: afternoonAttraction?.isOutdoor ?? false,
+        tips: afternoonAttraction?.tips
       };
 
       const evening: ActivityItem = {
@@ -54,22 +77,29 @@ export class TripsService {
         name: `${destination} Evening Market & Sunset Walk`,
         category: 'Nature',
         timeSlot: 'Evening',
-        description: `Stroll through vibrant evening stalls, taste local street snacks, and watch the sunset.`,
+        description: `Stroll through vibrant evening stalls, taste local street snacks, and watch the sunset in ${destination}.`,
         visitDurationMinutes: 90,
         estimatedCostInr: Math.round(baseDailyCost * 0.08),
-        coordinates: { lat: 18.3320 + (dayNum * 0.01), lng: 82.8820 + (dayNum * 0.01) },
+        coordinates: {
+          lat: baseCoords.lat + 0.002,
+          lng: baseCoords.lng + 0.002
+        },
         isOutdoor: true
       };
 
+      const recommendedMeal = curatedMeals[(dayNum - 1) % Math.max(1, curatedMeals.length)];
       const meals: MealRecommendation[] = [
         {
           id: `meal-${dayNum}-1`,
-          name: `${destination} Regional Bistro`,
+          name: recommendedMeal?.name || `${destination} Traditional Regional Diner`,
           mealType: 'Lunch',
-          cuisine: 'Authentic Regional Indian',
-          famousFor: 'Traditional Thali & Spiced Curries',
-          estimatedCostPerPersonInr: 300,
-          coordinates: { lat: 18.3280, lng: 82.8790 }
+          cuisine: recommendedMeal?.cuisine || 'Authentic Regional Indian',
+          famousFor: recommendedMeal?.famousFor || 'Traditional Thali & Spiced Curries',
+          estimatedCostPerPersonInr: recommendedMeal?.estimatedCostPerPersonInr || 300,
+          coordinates: recommendedMeal?.coordinates || {
+            lat: baseCoords.lat + 0.001,
+            lng: baseCoords.lng + 0.001
+          }
         }
       ];
 
@@ -118,7 +148,7 @@ export class TripsService {
     };
 
     // 5. Optional Gemini AI enhancement
-    let tagline = `A curated ${durationDays}-day experience in ${destination}`;
+    let tagline = destMeta?.tagline || `A curated ${durationDays}-day experience in ${destination}`;
     if (geminiService.isAvailable()) {
       tagline = await geminiService.generateContent(
         `Write a brief 10-word poetic tagline for a travel trip to ${destination}.`,

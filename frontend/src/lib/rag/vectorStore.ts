@@ -1,4 +1,5 @@
 import { KNOWLEDGE_BASE_DOCUMENTS } from './documents/knowledgeBase';
+import { ALL_INDIA_DESTINATIONS } from '../data/allIndiaCatalogue';
 import { RAGSource } from '@/types';
 
 export interface VectorChunk {
@@ -95,7 +96,10 @@ export class VectorStoreService {
 
   private ingestBaseDocuments() {
     let chunkCount = 0;
+    const coveredDests = new Set<string>();
+
     for (const doc of KNOWLEDGE_BASE_DOCUMENTS) {
+      coveredDests.add(doc.destination.toLowerCase());
       for (const section of doc.sections) {
         chunkCount++;
         const textToEmbed = `${doc.destination}: ${section.sectionTitle} - ${section.content} Tags: ${section.tags.join(', ')}`;
@@ -111,6 +115,39 @@ export class VectorStoreService {
           tags: section.tags,
           embedding
         });
+      }
+    }
+
+    // Ingest all destinations from ALL_INDIA_DESTINATIONS catalogue
+    for (const dest of ALL_INDIA_DESTINATIONS) {
+      if (!coveredDests.has(dest.normalizedName) && !coveredDests.has(dest.name.toLowerCase())) {
+        chunkCount++;
+        const overviewText = `${dest.name} (${dest.state}): ${dest.tagline}. ${dest.description}. Category: ${dest.category}. Best time to visit: ${dest.bestMonths}. Duration: ${dest.idealDays} days. Cultural highlights: ${dest.culturalHighlights?.join('. ') || ''}.`;
+        this.chunks.push({
+          id: `chunk-cat-${dest.id}-overview`,
+          documentId: `doc-${dest.id}`,
+          destination: dest.name,
+          documentTitle: `${dest.name} Official Tourism Guide`,
+          sectionTitle: `Overview & Cultural Highlights of ${dest.name}`,
+          content: overviewText,
+          tags: [dest.normalizedName, dest.state.toLowerCase(), dest.category.toLowerCase(), ...dest.aliases.map(a => a.toLowerCase())],
+          embedding: this.embeddingEngine.embed(overviewText)
+        });
+
+        if (dest.attractions && dest.attractions.length > 0) {
+          chunkCount++;
+          const attText = `${dest.name} Attractions: ` + dest.attractions.map(a => `${a.name} (${a.category}) - ${a.description}`).join('; ');
+          this.chunks.push({
+            id: `chunk-cat-${dest.id}-attractions`,
+            documentId: `doc-${dest.id}`,
+            destination: dest.name,
+            documentTitle: `${dest.name} Attractions & Points of Interest`,
+            sectionTitle: `Sightseeing & Key Attractions in ${dest.name}`,
+            content: attText,
+            tags: [dest.normalizedName, 'attractions', 'sightseeing'],
+            embedding: this.embeddingEngine.embed(attText)
+          });
+        }
       }
     }
   }

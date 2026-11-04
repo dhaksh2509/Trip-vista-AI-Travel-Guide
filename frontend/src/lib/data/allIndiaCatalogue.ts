@@ -18,8 +18,9 @@ export interface DestinationCatalogueItem {
   aliases: string[];
   transportInfo: {
     nearestAirport: string;
-    nearestRailway: string;
+    nearestRailway?: string;
     roadConnectivity: string;
+    nearestPort?: string;
   };
   culturalHighlights: string[];
   sourceUrl: string;
@@ -7945,32 +7946,5802 @@ export const ALL_INDIA_DESTINATIONS: DestinationCatalogueItem[] = [
         }
       }
     ]
+  },
+  {
+    "id": "jodhpur",
+    "name": "Jodhpur & Mehrangarh Fort",
+    "normalizedName": "jodhpur & mehrangarh fort",
+    "state": "Rajasthan",
+    "isUnionTerritory": false,
+    "district": "Jodhpur",
+    "category": "Historical Monuments & Heritage",
+    "tagline": "The Blue City - Colossal Mehrangarh Fort towering over indigo painted streets",
+    "description": "Famed for its imposing hilltop Mehrangarh Fort, ornate Jaswant Thada cenotaphs, majestic Umaid Bhawan Palace, and iconic blue-washed Brahmin houses in the old walled city.",
+    "coordinates": {
+      "lat": 26.2978,
+      "lng": 73.0185
+    },
+    "bestMonths": "October to March",
+    "idealDays": 3,
+    "popularInterests": [
+      "History",
+      "Architecture",
+      "Photography",
+      "Culture",
+      "Food"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1575881875475-31024b156660?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Jodhpur",
+      "Blue City",
+      "Mehrangarh",
+      "Sun City",
+      "Marwar Capital"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Jodhpur Airport (JDH) - 5 km",
+      "nearestRailway": "Jodhpur Junction (JU)",
+      "roadConnectivity": "Connected via NH 62 and NH 112"
+    },
+    "culturalHighlights": [
+      "Mehrangarh Fort museum housing royal palanquins and howdahs",
+      "Jaswant Thada milky white marble memorial by Lake Devkund",
+      "Clock Tower (Ghanta Ghar) and vibrant Sardar Market spice lanes"
+    ],
+    "sourceUrl": "https://www.tourism.rajasthan.gov.in",
+    "attractions": [
+      {
+        "id": "jod-mehrangarh",
+        "name": "Mehrangarh Fort & Museum",
+        "category": "History",
+        "timeSlot": "Morning",
+        "description": "Formidable 15th-century cliff citadel rising 400 feet above Jodhpur, featuring Sheesh Mahal, Phool Mahal, and expansive battlements with panoramic city views.",
+        "visitDurationMinutes": 150,
+        "estimatedCostInr": 200,
+        "coordinates": {
+          "lat": 26.2978,
+          "lng": 73.0185
+        },
+        "address": "The Fort, Jodhpur, Rajasthan",
+        "imageUrl": "https://images.unsplash.com/photo-1575881875475-31024b156660?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": false,
+        "tips": [
+          "Audio guides are exceptional and included in international tickets"
+        ]
+      },
+      {
+        "id": "jod-jaswant-thada",
+        "name": "Jaswant Thada Royal Cenotaphs",
+        "category": "Heritage",
+        "timeSlot": "Afternoon",
+        "description": "Intricately carved translucent marble cenotaph built in 1899 by Maharaja Sardar Singh with serene lakeside gardens.",
+        "visitDurationMinutes": 60,
+        "estimatedCostInr": 50,
+        "coordinates": {
+          "lat": 26.3015,
+          "lng": 73.0235
+        },
+        "address": "Lawaran, Jodhpur, Rajasthan",
+        "imageUrl": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Visit in late afternoon for golden hour light filtering through marble"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-jod-1",
+        "name": "Janta Sweet Home & Gypsy Thali",
+        "mealType": "Lunch",
+        "cuisine": "Marwari Traditional",
+        "famousFor": "Pyaaz Kachori, Mawa Kachori, Mirchi Bada, and 29-dish Rajasthani royal thali",
+        "estimatedCostPerPersonInr": 350,
+        "coordinates": {
+          "lat": 26.287,
+          "lng": 73.02
+        }
+      }
+    ]
+  },
+  {
+    "id": "pushkar",
+    "name": "Pushkar Holy Lake & Brahma Temple",
+    "normalizedName": "pushkar holy lake & brahma temple",
+    "state": "Rajasthan",
+    "isUnionTerritory": false,
+    "district": "Ajmer",
+    "category": "Pilgrimage & Spiritual",
+    "tagline": "Sacred Lotus Lake - Rare Brahma Temple, 52 holy ghats, and camel desert culture",
+    "description": "A tranquil sacred pilgrimage oasis encircling the holy Pushkar Lake, revered as one of the oldest existing cities in India with the rare 14th-century Jagatpita Brahma Temple and colorful desert bazaars.",
+    "coordinates": {
+      "lat": 26.4897,
+      "lng": 74.5511
+    },
+    "bestMonths": "October to March",
+    "idealDays": 2,
+    "popularInterests": [
+      "Temples",
+      "Culture",
+      "Photography",
+      "Desert"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Pushkar",
+      "Pushkar Lake",
+      "Brahma Temple Pushkar",
+      "Pushkar Camel Fair"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Kishangarh Airport (KQH) - 45 km",
+      "nearestRailway": "Ajmer Junction (AII) - 14 km",
+      "roadConnectivity": "Scenic mountain pass connects Pushkar to Ajmer"
+    },
+    "culturalHighlights": [
+      "Jagatpita Brahma Mandir, one of very few temples dedicated to Creator Brahma",
+      "Evening Maha Aarti ceremony along the sacred Pushkar Lake ghats",
+      "Annual Kartik Purnima Pushkar Camel Fair drawing nomadic traders"
+    ],
+    "sourceUrl": "https://www.tourism.rajasthan.gov.in",
+    "attractions": [
+      {
+        "id": "psk-brahma-temple",
+        "name": "Jagatpita Brahma Temple",
+        "category": "Temples",
+        "timeSlot": "Morning",
+        "description": "Historic 14th-century temple crowned by a striking red spire (shikhara) and motif of the hamsa swan, housing the four-faced icon of Lord Brahma.",
+        "visitDurationMinutes": 60,
+        "estimatedCostInr": 0,
+        "coordinates": {
+          "lat": 26.4885,
+          "lng": 74.5504
+        },
+        "address": "Brahma Temple Rd, Pushkar, Rajasthan",
+        "imageUrl": "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": false,
+        "tips": [
+          "Dress modestly and leave footwear at designated cloakrooms outside"
+        ]
+      },
+      {
+        "id": "psk-lake-ghats",
+        "name": "Pushkar Holy Lake & Varaha Ghat",
+        "category": "Culture",
+        "timeSlot": "Evening",
+        "description": "Serene semi-circular sacred lake fringed by 52 bathing ghats and over 500 whitewashed temples where bells and Vedic chants resonate at dusk.",
+        "visitDurationMinutes": 90,
+        "estimatedCostInr": 0,
+        "coordinates": {
+          "lat": 26.4897,
+          "lng": 74.5511
+        },
+        "address": "Varaha Ghat, Pushkar, Rajasthan",
+        "imageUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Respect pilgrims bathing; photography should be discreet"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-psk-1",
+        "name": "Halwai Gali Sweet Center & Falafel Cafe",
+        "mealType": "Lunch",
+        "cuisine": "Pure Vegetarian Rajasthani",
+        "famousFor": "Rabdi Malpua, fresh Gulkand lassi, and wood-fired pita falafel",
+        "estimatedCostPerPersonInr": 200,
+        "coordinates": {
+          "lat": 26.489,
+          "lng": 74.552
+        }
+      }
+    ]
+  },
+  {
+    "id": "mount-abu",
+    "name": "Mount Abu & Dilwara Jain Temples",
+    "normalizedName": "mount abu & dilwara jain temples",
+    "state": "Rajasthan",
+    "isUnionTerritory": false,
+    "district": "Sirohi",
+    "category": "Hill Stations & Nature",
+    "tagline": "Oasis in the Aravallis - Breathtaking marble Dilwara temples and scenic Nakki Lake",
+    "description": "The sole hill station of Rajasthan set amidst lush coniferous forests in the ancient Aravalli Range, celebrated worldwide for the peerless 11th to 13th-century Dilwara marble temples.",
+    "coordinates": {
+      "lat": 24.5926,
+      "lng": 72.7156
+    },
+    "bestMonths": "October to June",
+    "idealDays": 2,
+    "popularInterests": [
+      "Nature",
+      "Temples",
+      "Architecture",
+      "Viewpoints"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Mt Abu",
+      "Dilwara",
+      "Nakki Lake",
+      "Guru Shikhar",
+      "Abu Road"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Udaipur Maharana Pratap Airport (UDR) - 185 km",
+      "nearestRailway": "Abu Road Railway Station (ABR) - 28 km",
+      "roadConnectivity": "Ghat road ascent from Abu Road via NH 27"
+    },
+    "culturalHighlights": [
+      "Dilwara Jain Temples featuring filigree marble ceilings resembling fine lace",
+      "Nakki Lake boating and Toad Rock climbing viewpoint",
+      "Guru Shikhar summit at 1,722m, highest peak in the Aravalli Range"
+    ],
+    "sourceUrl": "https://www.tourism.rajasthan.gov.in",
+    "attractions": [
+      {
+        "id": "abu-dilwara",
+        "name": "Dilwara Jain Temples",
+        "category": "Architecture",
+        "timeSlot": "Morning",
+        "description": "Five marble temples constructed between the 11th and 13th centuries displaying unsurpassed, paper-thin marble carving of lotus pendants and mythological figures.",
+        "visitDurationMinutes": 120,
+        "estimatedCostInr": 0,
+        "coordinates": {
+          "lat": 24.6095,
+          "lng": 72.7226
+        },
+        "address": "Delwara, Mount Abu, Rajasthan",
+        "imageUrl": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": false,
+        "tips": [
+          "Open for tourists from 12 noon; strictly no cameras or mobile phones inside"
+        ]
+      },
+      {
+        "id": "abu-nakki-lake",
+        "name": "Nakki Lake & Sunset Point",
+        "category": "Nature",
+        "timeSlot": "Evening",
+        "description": "Picturesque hill lake legendarily scooped out by gods with their fingernails (nakh), flanked by granite rock formations like Toad Rock.",
+        "visitDurationMinutes": 90,
+        "estimatedCostInr": 100,
+        "coordinates": {
+          "lat": 24.594,
+          "lng": 72.705
+        },
+        "address": "Nakki Lake Promenade, Mount Abu, Rajasthan",
+        "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Pedal boats and shikara-style boat rides available till dusk"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-abu-1",
+        "name": "Chacha Cafe & Arbuda Restaurant",
+        "mealType": "Dinner",
+        "cuisine": "Gujarati & Rajasthani",
+        "famousFor": "Kathiyawadi Sev Tameta, Dal Baati Churma, and fresh fruit sundaes",
+        "estimatedCostPerPersonInr": 300,
+        "coordinates": {
+          "lat": 24.595,
+          "lng": 72.708
+        }
+      }
+    ]
+  },
+  {
+    "id": "ranthambore",
+    "name": "Ranthambore National Park",
+    "normalizedName": "ranthambore national park",
+    "state": "Rajasthan",
+    "isUnionTerritory": false,
+    "district": "Sawai Madhopur",
+    "category": "Wildlife & National Parks",
+    "tagline": "Royal Tiger Realm - Bengal tiger safari against ancient ruined fortresses",
+    "description": "One of India's most celebrated tiger reserves, where royal Bengal tigers roam freely amidst deciduous forests, picturesque lakes, and the towering 10th-century Ranthambore UNESCO Fort.",
+    "coordinates": {
+      "lat": 26.0173,
+      "lng": 76.5026
+    },
+    "bestMonths": "October to June",
+    "idealDays": 3,
+    "popularInterests": [
+      "Wildlife",
+      "Adventure",
+      "Photography",
+      "History"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Ranthambhore",
+      "Ranthambore Tiger Reserve",
+      "Sawai Madhopur",
+      "Tiger Safari Rajasthan"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Jaipur International Airport (JAI) - 160 km",
+      "nearestRailway": "Sawai Madhopur Junction (SWM) - 11 km",
+      "roadConnectivity": "Delhi-Mumbai Expressway connects nearby"
+    },
+    "culturalHighlights": [
+      "Open Gypsy & Canter jungle safaris across Zones 1 to 10",
+      "Ranthambore UNESCO World Heritage hilltop fort and Trinetra Ganesha Temple",
+      "Padam Talao lake reflecting the historic Jogi Mahal pavilion"
+    ],
+    "sourceUrl": "https://www.tourism.rajasthan.gov.in",
+    "attractions": [
+      {
+        "id": "ran-safari",
+        "name": "Ranthambore Tiger Safari (Zones 1-5)",
+        "category": "Wildlife",
+        "timeSlot": "Morning",
+        "description": "Thrilling 3.5-hour wildlife safari inside Project Tiger reserve known for high diurnal tiger sightings, leopards, sloth bears, and marsh crocodiles.",
+        "visitDurationMinutes": 210,
+        "estimatedCostInr": 1200,
+        "coordinates": {
+          "lat": 26.0173,
+          "lng": 76.5026
+        },
+        "address": "Sawai Madhopur, Rajasthan",
+        "imageUrl": "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Book safaris 90 days in advance via Rajasthan Forest Department portal"
+        ]
+      },
+      {
+        "id": "ran-fort",
+        "name": "Ranthambore Fort & Trinetra Ganesha Temple",
+        "category": "History",
+        "timeSlot": "Afternoon",
+        "description": "Massive 10th-century Chauhan fort perched on a high plateau offering panoramic vistas of the national park forests and lakes.",
+        "visitDurationMinutes": 120,
+        "estimatedCostInr": 25,
+        "coordinates": {
+          "lat": 26.0204,
+          "lng": 76.4526
+        },
+        "address": "Ranthambore Fort, Sawai Madhopur, Rajasthan",
+        "imageUrl": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Beware of langur monkeys near the temple entrance"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-ran-1",
+        "name": "Dawat Heritage Canteen & The Oberoi Vanyavilas Lounge",
+        "mealType": "Dinner",
+        "cuisine": "Rajasthani Jungle Specialty",
+        "famousFor": "Laal Maas (fiery red mutton curry), Ker Sangri, and Bajra Roti with white butter",
+        "estimatedCostPerPersonInr": 450,
+        "coordinates": {
+          "lat": 26.03,
+          "lng": 76.48
+        }
+      }
+    ]
+  },
+  {
+    "id": "ayodhya",
+    "name": "Ayodhya & Ram Janmabhoomi",
+    "normalizedName": "ayodhya & ram janmabhoomi",
+    "state": "Uttar Pradesh",
+    "isUnionTerritory": false,
+    "district": "Ayodhya",
+    "category": "Pilgrimage & Spiritual",
+    "tagline": "Sacred Capital of Kosala - Grand Ram Mandir, Hanuman Garhi, and Saryu River Ghats",
+    "description": "One of Hinduism's seven sacred Moksha puris, situated along the tranquil Saryu River. Known for the grand newly consecrated Nagara-style Shri Ram Janmabhoomi Mandir, ancient Hanuman Garhi fortress, and historic Kanak Bhawan.",
+    "coordinates": {
+      "lat": 26.7922,
+      "lng": 82.1998
+    },
+    "bestMonths": "October to March",
+    "idealDays": 2,
+    "popularInterests": [
+      "Temples",
+      "Culture",
+      "History",
+      "Photography"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Ayodhya",
+      "Saket",
+      "Ram Janmabhoomi",
+      "Faizabad",
+      "Hanuman Garhi",
+      "Saryu Ghats"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Maharishi Valmiki International Airport, Ayodhya (AYJ) - 8 km",
+      "nearestRailway": "Ayodhya Dham Junction (AY) and Ayodhya Cantt (AYC)",
+      "roadConnectivity": "Direct 4-lane expressway from Lucknow and Gorakhpur"
+    },
+    "culturalHighlights": [
+      "Shri Ram Janmabhoomi Mandir carved from pink Bansi Paharpur sandstone",
+      "Hanuman Garhi 10th-century fortress temple reachable by 76 steep steps",
+      "Evening Saryu River Aarti at Ram Ki Paidi illuminated by grand laser shows"
+    ],
+    "sourceUrl": "https://uptourism.gov.in",
+    "attractions": [
+      {
+        "id": "ayo-ram-mandir",
+        "name": "Shri Ram Janmabhoomi Mandir",
+        "category": "Temples",
+        "timeSlot": "Morning",
+        "description": "Monumental traditional Nagara architectural temple complex spanning 70 acres, housing the sacred idol of Ram Lalla carved in Krishna Shila stone.",
+        "visitDurationMinutes": 120,
+        "estimatedCostInr": 0,
+        "coordinates": {
+          "lat": 26.7922,
+          "lng": 82.1998
+        },
+        "address": "Ram Janmabhoomi Complex, Ayodhya, Uttar Pradesh",
+        "imageUrl": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": false,
+        "tips": [
+          "Electronic devices and leather items must be deposited at security counters"
+        ]
+      },
+      {
+        "id": "ayo-hanuman-garhi",
+        "name": "Hanuman Garhi & Kanak Bhawan",
+        "category": "Heritage",
+        "timeSlot": "Afternoon",
+        "description": "Fortress temple dedicated to Lord Hanuman who is traditionally believed to guard Ayodhya, followed by the palace temple of Kanak Bhawan.",
+        "visitDurationMinutes": 90,
+        "estimatedCostInr": 0,
+        "coordinates": {
+          "lat": 26.7956,
+          "lng": 82.2045
+        },
+        "address": "Hanuman Garhi, Ayodhya, Uttar Pradesh",
+        "imageUrl": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": false,
+        "tips": [
+          "Try the famous Besan Laddu prasad made with pure desi ghee"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-ayo-1",
+        "name": "Makhan Malai & Sita Rasoi Thali",
+        "mealType": "Lunch",
+        "cuisine": "Awadhi Pure Vegetarian",
+        "famousFor": "Ayodhya Peda, Khurchan, Baati Chokha, and authentic sattvic feast",
+        "estimatedCostPerPersonInr": 200,
+        "coordinates": {
+          "lat": 26.794,
+          "lng": 82.201
+        }
+      }
+    ]
+  },
+  {
+    "id": "prayagraj",
+    "name": "Prayagraj & Triveni Sangam",
+    "normalizedName": "prayagraj & triveni sangam",
+    "state": "Uttar Pradesh",
+    "isUnionTerritory": false,
+    "district": "Prayagraj",
+    "category": "Pilgrimage & Spiritual",
+    "tagline": "The King of Pilgrimages - Confluence of Ganga, Yamuna & mystical Saraswati",
+    "description": "Ancient holy city of Prayagraj (formerly Allahabad), host of the world-famous Maha Kumbh Mela at the sacred Triveni Sangam, featuring the Mughal Allahabad Fort, Anand Bhavan, and grand colonial architecture.",
+    "coordinates": {
+      "lat": 25.4358,
+      "lng": 81.8463
+    },
+    "bestMonths": "October to March",
+    "idealDays": 2,
+    "popularInterests": [
+      "Culture",
+      "History",
+      "Photography",
+      "Temples"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Allahabad",
+      "Triveni Sangam",
+      "Prayag",
+      "Kumbh Mela",
+      "Anand Bhavan"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Prayagraj Airport (IXD) - 12 km",
+      "nearestRailway": "Prayagraj Junction (PRYJ)",
+      "roadConnectivity": "National Highways connect Varanasi, Lucknow, and Kanpur"
+    },
+    "culturalHighlights": [
+      "Boat ride to Triveni Sangam to witness color demarcation between Ganga and Yamuna",
+      "Anand Bhavan historic ancestral home of the Nehru-Gandhi family",
+      "Akshayavat immortal banyan tree and underground Patalpuri temple inside Allahabad Fort"
+    ],
+    "sourceUrl": "https://uptourism.gov.in",
+    "attractions": [
+      {
+        "id": "pry-sangam",
+        "name": "Triveni Sangam Confluence",
+        "category": "Culture",
+        "timeSlot": "Morning",
+        "description": "Sacred confluence where the pale green waters of the Yamuna merge with the clearer waters of the Ganges and the invisible Vedic river Saraswati.",
+        "visitDurationMinutes": 120,
+        "estimatedCostInr": 150,
+        "coordinates": {
+          "lat": 25.4262,
+          "lng": 81.8845
+        },
+        "address": "Triveni Sangam Ghats, Prayagraj, Uttar Pradesh",
+        "imageUrl": "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Negotiate boat fares at the official boatman counters on the ghats"
+        ]
+      },
+      {
+        "id": "pry-anand-bhavan",
+        "name": "Anand Bhavan Memorial Museum",
+        "category": "History",
+        "timeSlot": "Afternoon",
+        "description": "Historic two-story mansion that served as the nerve center of the Indian freedom struggle, preserving personal artifacts and letters of national leaders.",
+        "visitDurationMinutes": 90,
+        "estimatedCostInr": 70,
+        "coordinates": {
+          "lat": 25.4587,
+          "lng": 81.8598
+        },
+        "address": "Tagore Town, Prayagraj, Uttar Pradesh",
+        "imageUrl": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": false,
+        "tips": [
+          "Includes Jawahar Planetarium adjacent to the mansion grounds"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-pry-1",
+        "name": "Loknath Chaat Bazaar & Netram Sweets",
+        "mealType": "Dinner",
+        "cuisine": "Purvanchal & Awadhi",
+        "famousFor": "Dahi Jalebi, Puri Sabzi with pumpkin pickle, and Tamatar Chaat",
+        "estimatedCostPerPersonInr": 180,
+        "coordinates": {
+          "lat": 25.441,
+          "lng": 81.848
+        }
+      }
+    ]
+  },
+  {
+    "id": "mathura-vrindavan",
+    "name": "Mathura & Vrindavan",
+    "normalizedName": "mathura & vrindavan",
+    "state": "Uttar Pradesh",
+    "isUnionTerritory": false,
+    "district": "Mathura",
+    "category": "Pilgrimage & Spiritual",
+    "tagline": "The Land of Krishna - Ancient Janmabhoomi, Banke Bihari, and Yamuna Ghats",
+    "description": "The sacred birthplace and playground of Lord Krishna along the sacred Yamuna River, famed for the historic Krishna Janmasthan Temple complex, Banke Bihari Mandir, and vibrant Holi celebrations.",
+    "coordinates": {
+      "lat": 27.4924,
+      "lng": 77.6737
+    },
+    "bestMonths": "September to March",
+    "idealDays": 2,
+    "popularInterests": [
+      "Temples",
+      "Culture",
+      "Photography",
+      "History"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Mathura",
+      "Vrindavan",
+      "Braj",
+      "Vrindaban",
+      "Krishna Janmabhoomi",
+      "Banke Bihari",
+      "Govardhan",
+      "Barsana"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Kheria Airport Agra (AGR) - 60 km",
+      "nearestRailway": "Mathura Junction (MTJ) - major rail junction",
+      "roadConnectivity": "Yamuna Expressway connects Delhi in 2.5 hours"
+    },
+    "culturalHighlights": [
+      "Shri Krishna Janmasthan Temple built over the underground prison cell",
+      "Banke Bihari Temple where darshan is given through oscillating curtains",
+      "Prem Mandir illuminated at night with colored fountains and dioramas"
+    ],
+    "sourceUrl": "https://uptourism.gov.in",
+    "attractions": [
+      {
+        "id": "mth-janmabhoomi",
+        "name": "Shri Krishna Janmasthan Temple Complex",
+        "category": "Temples",
+        "timeSlot": "Morning",
+        "description": "Holy temple enclave containing the Garbha Griha (birth chamber cave), Keshavdeva Temple, and Bhagavata Bhavan.",
+        "visitDurationMinutes": 90,
+        "estimatedCostInr": 0,
+        "coordinates": {
+          "lat": 27.505,
+          "lng": 77.669
+        },
+        "address": "Deeg Gate, Mathura, Uttar Pradesh",
+        "imageUrl": "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": false,
+        "tips": [
+          "Strict security check; all cameras and electronics prohibited inside"
+        ]
+      },
+      {
+        "id": "vrn-banke-bihari",
+        "name": "Banke Bihari Temple & Prem Mandir",
+        "category": "Culture",
+        "timeSlot": "Evening",
+        "description": "Vibrant Vrindavan temple dedicated to Banke Bihari (Krishna in Tribhanga posture), followed by the pristine Italian white marble Prem Mandir.",
+        "visitDurationMinutes": 120,
+        "estimatedCostInr": 0,
+        "coordinates": {
+          "lat": 27.5815,
+          "lng": 77.702
+        },
+        "address": "Godhas, Vrindavan, Uttar Pradesh",
+        "imageUrl": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": false,
+        "tips": [
+          "Beware of playful monkeys around Banke Bihari temple lanes"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-mth-1",
+        "name": "Brijwasi Mithai Wala & Govinda's",
+        "mealType": "Lunch",
+        "cuisine": "Braj Sattvic Sweets",
+        "famousFor": "Mathura Peda with caramel aroma, Bedmi Puri with spicy aloo, and Kulhad Rabdi",
+        "estimatedCostPerPersonInr": 220,
+        "coordinates": {
+          "lat": 27.498,
+          "lng": 77.674
+        }
+      }
+    ]
+  },
+  {
+    "id": "kanha-national-park",
+    "name": "Kanha National Park",
+    "normalizedName": "kanha national park",
+    "state": "Madhya Pradesh",
+    "isUnionTerritory": false,
+    "district": "Mandla",
+    "category": "Wildlife & National Parks",
+    "tagline": "The Real Jungle Book - Lush Sal forests, Royal Bengal Tigers & swamp deer (Barasingha)",
+    "description": "Rudyard Kipling's inspiration for The Jungle Book, Kanha is one of Asia's finest protected reserves featuring expansive open meadows, dense bamboo thickets, hardground barasingha, and apex royal Bengal tigers.",
+    "coordinates": {
+      "lat": 22.3345,
+      "lng": 80.6115
+    },
+    "bestMonths": "October to June",
+    "idealDays": 3,
+    "popularInterests": [
+      "Wildlife",
+      "Photography",
+      "Adventure",
+      "Nature"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Kanha Tiger Reserve",
+      "Kisli",
+      "Mukki",
+      "Khatia",
+      "Jungle Book forest"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Jabalpur Dumna Airport (JLR) - 160 km",
+      "nearestRailway": "Gondia Junction (G) - 145 km / Jabalpur (JBP)",
+      "roadConnectivity": "Well paved forest corridors from Jabalpur and Nagpur"
+    },
+    "culturalHighlights": [
+      "Open-top 4x4 Gypsy jungle safaris in Kanha, Kisli, Mukki, and Sarhi zones",
+      "Bamni Dadar (Sunset Point) overlooking grazing herds of Indian gaur and barasingha",
+      "Kanha Museum educating visitors on Baiga tribal folklore and wildlife conservation"
+    ],
+    "sourceUrl": "https://www.mptourism.com",
+    "attractions": [
+      {
+        "id": "kan-safari",
+        "name": "Kanha Core Zone Morning Safari",
+        "category": "Wildlife",
+        "timeSlot": "Morning",
+        "description": "Early morning expedition through misty sal forest tracks tracking tiger pugmarks, leopards, dholes (wild dogs), and the rare southern barasingha.",
+        "visitDurationMinutes": 240,
+        "estimatedCostInr": 1500,
+        "coordinates": {
+          "lat": 22.3345,
+          "lng": 80.6115
+        },
+        "address": "Kanha Tiger Reserve, Mandla, Madhya Pradesh",
+        "imageUrl": "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Dress in earthy neutral colors (greens/khakis); morning safaris get very chilly"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-kan-1",
+        "name": "Singinawa Jungle Lodge & Baiga Kitchen",
+        "mealType": "Dinner",
+        "cuisine": "Central Indian Tribal",
+        "famousFor": "Bhutte Ka Kees, Desi Murgi Curry, and Mahua flower dessert",
+        "estimatedCostPerPersonInr": 400,
+        "coordinates": {
+          "lat": 22.32,
+          "lng": 80.6
+        }
+      }
+    ]
+  },
+  {
+    "id": "gwalior",
+    "name": "Gwalior & Scindia Palace",
+    "normalizedName": "gwalior & scindia palace",
+    "state": "Madhya Pradesh",
+    "isUnionTerritory": false,
+    "district": "Gwalior",
+    "category": "Historical Monuments & Heritage",
+    "tagline": "The Pearl in the Necklace of Forts - Hilltop citadel, Saas Bahu Temples & Jai Vilas Palace",
+    "description": "Historic princely seat of central India dominated by the dramatic 8th-century sandstone Gwalior Fort described by Mughal Emperor Babur as 'the pearl among forts', the crystal-adorned Jai Vilas Palace, and the mausoleum of music maestro Tansen.",
+    "coordinates": {
+      "lat": 26.2298,
+      "lng": 78.1734
+    },
+    "bestMonths": "October to March",
+    "idealDays": 2,
+    "popularInterests": [
+      "History",
+      "Architecture",
+      "Music",
+      "Palaces"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Gwalior",
+      "Gwalior Fort",
+      "Tansen Tomb",
+      "Jai Vilas Palace",
+      "Scindia Fort"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Gwalior Rajmata Vijaya Raje Scindia Airport (GWL) - 10 km",
+      "nearestRailway": "Gwalior Junction (GWL) on Delhi-Chennai trunk line",
+      "roadConnectivity": "Connected via North-South Corridor NH 44"
+    },
+    "culturalHighlights": [
+      "Man Mandir Palace with bright blue and yellow glazed ceramic tile friezes",
+      "Jai Vilas Palace Durbar Hall housing the world's largest pair of chandeliers",
+      "Annual Tansen Music Festival celebrated near Tansen's tomb in December"
+    ],
+    "sourceUrl": "https://www.mptourism.com",
+    "attractions": [
+      {
+        "id": "gwl-fort",
+        "name": "Gwalior Fort (Man Mandir & Gujari Mahal)",
+        "category": "History",
+        "timeSlot": "Morning",
+        "description": "Stupendous 3 km-long fortress crowning an isolated sandstone hill, housing Man Mandir, Karan Palace, and monolithic rock-cut Jain tirthankara colossi.",
+        "visitDurationMinutes": 180,
+        "estimatedCostInr": 75,
+        "coordinates": {
+          "lat": 26.2307,
+          "lng": 78.1695
+        },
+        "address": "Gwalior Fort Plateau, Gwalior, Madhya Pradesh",
+        "imageUrl": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Sound and Light show in evening brings fort legends to life"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-gwl-1",
+        "name": "SS Kachori Wala & Kwality Restaurant",
+        "mealType": "Breakfast",
+        "cuisine": "Gwaliori Sweets & Snacks",
+        "famousFor": "Bedai with spicy Aloo Sabzi, Moong Dal Kachori, and sweet Gwalior Gajak",
+        "estimatedCostPerPersonInr": 150,
+        "coordinates": {
+          "lat": 26.218,
+          "lng": 78.175
+        }
+      }
+    ]
+  },
+  {
+    "id": "orchha",
+    "name": "Orchha Heritage Palaces & Chhatris",
+    "normalizedName": "orchha heritage palaces & chhatris",
+    "state": "Madhya Pradesh",
+    "isUnionTerritory": false,
+    "district": "Niwari",
+    "category": "Historical Monuments & Heritage",
+    "tagline": "The Hidden Gem of Bundelkhand - Jahangir Mahal, Ram Raja Temple & Betwa River Cenotaphs",
+    "description": "Atmospheric 16th-century capital of the Bundela Rajput kings situated on a tranquil rocky island along the pristine Betwa River. Renowned for multi-tiered spires, Jahangir Mahal, Raja Mahal frescoes, and the revered Ram Raja Temple where Rama is worshipped as king.",
+    "coordinates": {
+      "lat": 25.3516,
+      "lng": 78.6416
+    },
+    "bestMonths": "October to March",
+    "idealDays": 2,
+    "popularInterests": [
+      "History",
+      "Architecture",
+      "Photography",
+      "Rivers"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Orcha",
+      "Ram Raja Temple",
+      "Jahangir Mahal",
+      "Betwa River Cenotaphs",
+      "Bundelkhand Heritage"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Gwalior Airport (GWL) - 120 km",
+      "nearestRailway": "Jhansi Junction (VGLB) - 16 km",
+      "roadConnectivity": "Short scenic drive from Jhansi along the Betwa River"
+    },
+    "culturalHighlights": [
+      "Jahangir Mahal, a grand fusion of Rajput and Mughal architecture built for Emperor Jahangir",
+      "14 riverside cenotaphs (Chhatris) glowing under sunrise along Kanchana Ghat",
+      "Ram Raja Temple where police offer a daily guard of honor to Lord Rama"
+    ],
+    "sourceUrl": "https://www.mptourism.com",
+    "attractions": [
+      {
+        "id": "orc-palaces",
+        "name": "Jahangir Mahal & Raja Mahal Complex",
+        "category": "History",
+        "timeSlot": "Morning",
+        "description": "Monumental quadrangular palace complex with ornamental gateways, domed pavilions, hanging balconies, and vibrant Bundela court paintings.",
+        "visitDurationMinutes": 150,
+        "estimatedCostInr": 100,
+        "coordinates": {
+          "lat": 25.3516,
+          "lng": 78.6416
+        },
+        "address": "Orchha Fort Complex, Orchha, Madhya Pradesh",
+        "imageUrl": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": false,
+        "tips": [
+          "Climb to upper ramparts for stunning panoramas of the Betwa river basin"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-orc-1",
+        "name": "Betwa Tarang & Ramraja Bhojanalaya",
+        "mealType": "Lunch",
+        "cuisine": "Bundelkhandi Special",
+        "famousFor": "Bafauri, Kadhi Chawal, and freshly pressed sugarcane juice",
+        "estimatedCostPerPersonInr": 180,
+        "coordinates": {
+          "lat": 25.35,
+          "lng": 78.64
+        }
+      }
+    ]
+  },
+  {
+    "id": "pachmarhi",
+    "name": "Pachmarhi Queen of Satpura",
+    "normalizedName": "pachmarhi queen of satpura",
+    "state": "Madhya Pradesh",
+    "isUnionTerritory": false,
+    "district": "Narmadapuram",
+    "category": "Hill Stations & Nature",
+    "tagline": "The Queen of Satpura - Cascading Bee Falls, Pandav Caves & Dhoopgarh Sunset",
+    "description": "Madhya Pradesh's only hill station nestled 1,067m high in the Satpura Biosphere Reserve, renowned for prehistoric rock shelters, perennial waterfalls, canyon gorges, and Dhoopgarh—the highest point in central India.",
+    "coordinates": {
+      "lat": 22.4674,
+      "lng": 78.4346
+    },
+    "bestMonths": "October to June",
+    "idealDays": 3,
+    "popularInterests": [
+      "Nature",
+      "Waterfalls",
+      "Trekking",
+      "History"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Queen of Satpura",
+      "Bee Falls",
+      "Dhoopgarh",
+      "Jata Shankar",
+      "Satpura Hill Station"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Bhopal Raja Bhoj Airport (BHO) - 200 km",
+      "nearestRailway": "Pipariya Railway Station (PPI) - 47 km",
+      "roadConnectivity": "Scenic hill road winding through Satpura Tiger Reserve"
+    },
+    "culturalHighlights": [
+      "Dhoopgarh peak (1,352m) offering breathtaking sunrise and sunset across Satpura ravines",
+      "Bee Falls (Jamuna Prapat) dramatic 35m plunge pool in deep sal forest",
+      "Jata Shankar naturally formed stalactite cave shrine resembling Lord Shiva's matted hair"
+    ],
+    "sourceUrl": "https://www.mptourism.com",
+    "attractions": [
+      {
+        "id": "pac-bee-falls",
+        "name": "Bee Falls (Jamuna Prapat)",
+        "category": "Nature",
+        "timeSlot": "Morning",
+        "description": "Spectacular perennial waterfall tumbling into a forested ravine where travelers can swim in clean crystal pool waters.",
+        "visitDurationMinutes": 120,
+        "estimatedCostInr": 60,
+        "coordinates": {
+          "lat": 22.471,
+          "lng": 78.418
+        },
+        "address": "Pachmarhi Forest, Madhya Pradesh",
+        "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Requires descending about 400 steps; wear comfortable walking shoes"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-pac-1",
+        "name": "Chunmun Dhaba & Satpura Retreat Cafe",
+        "mealType": "Dinner",
+        "cuisine": "Central Indian Homestyle",
+        "famousFor": "Dal Bafla with churma, Poha Jalebi, and forest honey",
+        "estimatedCostPerPersonInr": 220,
+        "coordinates": {
+          "lat": 22.465,
+          "lng": 78.43
+        }
+      }
+    ]
+  },
+  {
+    "id": "mahabaleshwar",
+    "name": "Mahabaleshwar & Panchgani",
+    "normalizedName": "mahabaleshwar & panchgani",
+    "state": "Maharashtra",
+    "isUnionTerritory": false,
+    "district": "Satara",
+    "category": "Hill Stations & Nature",
+    "tagline": "Strawberry Capital of the Western Ghats - Arthur Seat, Venna Lake & Table Land",
+    "description": "Spectacular plateau resort in the UNESCO-recognized Western Ghats producing over 85% of India's strawberries, famed for sheer cliff viewpoints like Arthur's Seat, Venna Lake boating, and the ancient source temple of River Krishna.",
+    "coordinates": {
+      "lat": 17.9237,
+      "lng": 73.6586
+    },
+    "bestMonths": "September to May",
+    "idealDays": 3,
+    "popularInterests": [
+      "Nature",
+      "Viewpoints",
+      "Food",
+      "Boating"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Mahabaleshwar",
+      "Panchgani",
+      "Venna Lake",
+      "Arthur Seat",
+      "Table Land",
+      "Strawberry Capital"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Pune International Airport (PNQ) - 120 km",
+      "nearestRailway": "Satara (STR) - 55 km / Pune Junction (PUNE) - 115 km",
+      "roadConnectivity": "Connected from Mumbai (230 km) and Pune via Wai ghat road"
+    },
+    "culturalHighlights": [
+      "Fresh strawberry picking tours and Mapro Garden farm kitchen",
+      "Arthur's Seat clifftop viewpoint overlooking the sheer Savitri river valley",
+      "Panchgani Table Land, Asia's second-longest volcanic mountain plateau"
+    ],
+    "sourceUrl": "https://www.maharashtratourism.gov.in",
+    "attractions": [
+      {
+        "id": "mhb-arthur-seat",
+        "name": "Arthur's Seat & Window Point",
+        "category": "Nature",
+        "timeSlot": "Morning",
+        "description": "Dramatic clifftop standing 1,340 meters high where geological stratifications of the Konkan coast and Deccan plateau are uniquely visible.",
+        "visitDurationMinutes": 90,
+        "estimatedCostInr": 20,
+        "coordinates": {
+          "lat": 17.985,
+          "lng": 73.615
+        },
+        "address": "Arthur Seat Road, Mahabaleshwar, Maharashtra",
+        "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Light objects thrown off the cliff float back up due to high air pressure"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-mhb-1",
+        "name": "Mapro Garden Cafe & Bagicha Corner",
+        "mealType": "Lunch",
+        "cuisine": "Farm Fresh Specialties",
+        "famousFor": "Fresh Strawberries with thick clotted cream, wood-fired pizza, and Makai Pattice",
+        "estimatedCostPerPersonInr": 300,
+        "coordinates": {
+          "lat": 17.93,
+          "lng": 73.68
+        }
+      }
+    ]
+  },
+  {
+    "id": "shirdi",
+    "name": "Shirdi Sai Baba Temple",
+    "normalizedName": "shirdi sai baba temple",
+    "state": "Maharashtra",
+    "isUnionTerritory": false,
+    "district": "Ahmednagar",
+    "category": "Pilgrimage & Spiritual",
+    "tagline": "Sacred Shrine of Compassion - Samadhi Mandir, Dwarkamai & Gurusthan",
+    "description": "One of the most revered spiritual destinations in India where 19th-century saint Sai Baba spent his life preaching universal love and self-realization, centered around the sanctified Samadhi Mandir and historic Dwarkamai mosque.",
+    "coordinates": {
+      "lat": 19.7667,
+      "lng": 74.4764
+    },
+    "bestMonths": "All year around",
+    "idealDays": 2,
+    "popularInterests": [
+      "Pilgrimage",
+      "Culture",
+      "Spiritual"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Shirdi",
+      "Shirdi Sai Baba",
+      "Sai Nagar",
+      "Samadhi Mandir",
+      "Dwarkamai"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Shirdi International Airport (SAG) - 14 km",
+      "nearestRailway": "Sainagar Shirdi Railway Station (SNSI)",
+      "roadConnectivity": "Samruddhi Mahamarg expressway connects Mumbai in 4 hours"
+    },
+    "culturalHighlights": [
+      "Samadhi Mandir housing the pure Italian white marble statue of Sai Baba",
+      "Dwarkamai mosque where the eternal sacred flame (Dhuni) burns continuously",
+      "Mega Prasadalaya serving wholesome sattvic meals to over 40,000 pilgrims daily"
+    ],
+    "sourceUrl": "https://www.maharashtratourism.gov.in",
+    "attractions": [
+      {
+        "id": "shd-mandir",
+        "name": "Shri Sai Baba Samadhi Mandir & Dwarkamai",
+        "category": "Temples",
+        "timeSlot": "Morning",
+        "description": "The primary shrine holding the mortal remains and marble murti of Sai Baba, flanked by the neem tree at Gurusthan and Chavadi procession hall.",
+        "visitDurationMinutes": 120,
+        "estimatedCostInr": 0,
+        "coordinates": {
+          "lat": 19.7667,
+          "lng": 74.4764
+        },
+        "address": "Sai Nagar, Shirdi, Maharashtra",
+        "imageUrl": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": false,
+        "tips": [
+          "Book online VIP darshan passes via Shri Saibaba Sansthan Trust portal to save queue time"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-shd-1",
+        "name": "Shri Sai Prasadalaya & Rajdhani Thali",
+        "mealType": "Lunch",
+        "cuisine": "Pure Sattvic Maharashtrian",
+        "famousFor": "Sansthan Maha Prasad Thali, Puran Poli, and hot sweet Guava halwa",
+        "estimatedCostPerPersonInr": 100,
+        "coordinates": {
+          "lat": 19.765,
+          "lng": 74.475
+        }
+      }
+    ]
+  },
+  {
+    "id": "nashik",
+    "name": "Nashik & Trimbakeshwar",
+    "normalizedName": "nashik & trimbakeshwar",
+    "state": "Maharashtra",
+    "isUnionTerritory": false,
+    "district": "Nashik",
+    "category": "Pilgrimage & Spiritual",
+    "tagline": "Wine Capital & Holy Godavari - Trimbakeshwar Jyotirlinga, Panchavati & Sula Vineyards",
+    "description": "Unique fusion of profound spiritual heritage and modern viticulture along the holy Godavari river. Home to one of the 12 sacred Jyotirlingas at Trimbakeshwar, historic Ramayana sites at Panchavati, and India's finest vineyards.",
+    "coordinates": {
+      "lat": 19.9975,
+      "lng": 73.7898
+    },
+    "bestMonths": "October to March",
+    "idealDays": 3,
+    "popularInterests": [
+      "Temples",
+      "Culture",
+      "Wine Tours",
+      "History"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Nasik",
+      "Trimbak",
+      "Trimbakeshwar",
+      "Wine Capital of India",
+      "Panchavati",
+      "Godavari Ghats"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Nashik Ozar Airport (ISK) - 20 km / Mumbai (BOM) - 165 km",
+      "nearestRailway": "Nashik Road Railway Station (NK)",
+      "roadConnectivity": "NH 160 connects Mumbai in 3.5 hours through Kasara Ghat"
+    },
+    "culturalHighlights": [
+      "Trimbakeshwar Shiva Jyotirlinga temple built in classic black basalt Hemadpanthi style",
+      "Panchavati Ramkund sacred bathing ghat where Lord Rama spent his exile",
+      "Vineyard tasting and grape stomping tours at Sula and York wineries"
+    ],
+    "sourceUrl": "https://www.maharashtratourism.gov.in",
+    "attractions": [
+      {
+        "id": "nsk-trimbak",
+        "name": "Trimbakeshwar Jyotirlinga Temple",
+        "category": "Temples",
+        "timeSlot": "Morning",
+        "description": "Ancient stone temple located at the foot of Brahmagiri Mountain, originating point of River Godavari, housing the unique three-faced lingam.",
+        "visitDurationMinutes": 120,
+        "estimatedCostInr": 0,
+        "coordinates": {
+          "lat": 19.9328,
+          "lng": 73.5307
+        },
+        "address": "Trimbak, Nashik, Maharashtra",
+        "imageUrl": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": false,
+        "tips": [
+          "Traditional dhoti/kurta attire recommended for inner sanctum entry"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-nsk-1",
+        "name": "Sadhana Chulivarchi Misal & Sula Cafe",
+        "mealType": "Lunch",
+        "cuisine": "Maharashtrian Khandeshi",
+        "famousFor": "Wood-fired spicy Misal Pav with Jalebi, and locally produced artisanal cheeses",
+        "estimatedCostPerPersonInr": 250,
+        "coordinates": {
+          "lat": 19.98,
+          "lng": 73.76
+        }
+      }
+    ]
+  },
+  {
+    "id": "alibaug",
+    "name": "Alibaug Coastal Forts & Beaches",
+    "normalizedName": "alibaug coastal forts & beaches",
+    "state": "Maharashtra",
+    "isUnionTerritory": false,
+    "district": "Raigad",
+    "category": "Beaches & Coastal",
+    "tagline": "The Coastal Getaway of Mumbai - Sea-bound Kolaba Fort, Kashid Beach & Konkani seafood",
+    "description": "Picturesque coastal town on the Konkan coast accessible via scenic catamaran ferry from the Gateway of India. Celebrated for 17th-century sea forts built by Chhatrapati Shivaji Maharaj, golden sand beaches, and fresh Malvani seafood.",
+    "coordinates": {
+      "lat": 18.6414,
+      "lng": 72.8722
+    },
+    "bestMonths": "October to May",
+    "idealDays": 2,
+    "popularInterests": [
+      "Beaches",
+      "History",
+      "Food",
+      "Water Sports"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Alibag",
+      "Kolaba Fort",
+      "Kashid Beach",
+      "Nagaon Beach",
+      "Varsoli Beach",
+      "Mandwa Ferry"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Chhatrapati Shivaji Maharaj International Airport Mumbai (BOM) - 100 km",
+      "nearestRailway": "Roha Railway Station (ROHA) - 40 km / Panvel (PNVL)",
+      "roadConnectivity": "Ro-Ro car ferry and speedboats connect Mandwa to Mumbai in 50 minutes"
+    },
+    "culturalHighlights": [
+      "Kolaba Sea Fort reachable on foot during low tide and by horse-drawn cart",
+      "Kashid Beach renowned for white sand shores, surfing, and casuarina groves",
+      "Murud-Janjira impenetrable island marine fortress with 26 bastions"
+    ],
+    "sourceUrl": "https://www.maharashtratourism.gov.in",
+    "attractions": [
+      {
+        "id": "abg-kolaba",
+        "name": "Kolaba Sea Fort",
+        "category": "History",
+        "timeSlot": "Morning",
+        "description": "Sturdy maritime fortress constructed in 1680 amidst Arabian Sea waves, featuring freshwater temple tanks, canons, and ancient battlements.",
+        "visitDurationMinutes": 120,
+        "estimatedCostInr": 25,
+        "coordinates": {
+          "lat": 18.6444,
+          "lng": 72.8631
+        },
+        "address": "Arabian Sea, Alibaug, Maharashtra",
+        "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Check local tide charts before visiting; safe to walk only during low tide"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-abg-1",
+        "name": "Sanman Restaurant & Hotel Suruchi",
+        "mealType": "Lunch",
+        "cuisine": "Konkani Coastal Seafood",
+        "famousFor": "Surmai Fry, Pomfret Thali, Crab Masala with freshly steamed rice bhakri",
+        "estimatedCostPerPersonInr": 400,
+        "coordinates": {
+          "lat": 18.642,
+          "lng": 72.871
+        }
+      }
+    ]
+  },
+  {
+    "id": "chikmagalur",
+    "name": "Chikmagalur Coffee Hills",
+    "normalizedName": "chikmagalur coffee hills",
+    "state": "Karnataka",
+    "isUnionTerritory": false,
+    "district": "Chikkamagaluru",
+    "category": "Hill Stations & Nature",
+    "tagline": "The Birthplace of Indian Coffee - Mullayanagiri peak, Baba Budangiri & coffee estates",
+    "description": "Serene hill destination in the Malnad region of the Western Ghats where Sufi saint Baba Budan first planted coffee seeds smuggled from Yemen in 1670. Crowned by Mullayanagiri (1,930m), the highest mountain peak in Karnataka.",
+    "coordinates": {
+      "lat": 13.3161,
+      "lng": 75.772
+    },
+    "bestMonths": "September to May",
+    "idealDays": 3,
+    "popularInterests": [
+      "Nature",
+      "Trekking",
+      "Coffee",
+      "Waterfalls"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Chikkamagaluru",
+      "Mullayanagiri",
+      "Baba Budangiri",
+      "Coffee Capital",
+      "Kemmangundi"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Mangaluru International Airport (IXE) - 150 km",
+      "nearestRailway": "Kadur Railway Station (DRU) - 40 km",
+      "roadConnectivity": "Smooth 4-lane highway from Bengaluru (245 km)"
+    },
+    "culturalHighlights": [
+      "Mullayanagiri summit trek offering 360-degree views of mist-clad Western Ghats",
+      "Coffee plantation estate walks, bean harvesting, and artisanal filter coffee tasting",
+      "Hebbe and Jhari (Buttermilk) cascading jungle waterfalls reachable by 4x4 jeeps"
+    ],
+    "sourceUrl": "https://karnatakatourism.org",
+    "attractions": [
+      {
+        "id": "ckm-mullayanagiri",
+        "name": "Mullayanagiri Peak Summit",
+        "category": "Adventure",
+        "timeSlot": "Morning",
+        "description": "Highest peak in Karnataka at 1,930 meters offering exhilarating ridge walks, a hilltop Shiva temple, and dramatic sea of clouds views.",
+        "visitDurationMinutes": 150,
+        "estimatedCostInr": 0,
+        "coordinates": {
+          "lat": 13.3916,
+          "lng": 75.7214
+        },
+        "address": "Mullayanagiri Peak, Chikkamagaluru, Karnataka",
+        "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Arrive by 6:30 AM to witness the sun rising above the cloud blanket"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-ckm-1",
+        "name": "Town Canteen & Siri Coffee Cafe",
+        "mealType": "Breakfast",
+        "cuisine": "Malnad Karnataka",
+        "famousFor": "Benne Dosa with coconut chutney, Akki Roti, and freshly brewed Malnad Filter Coffee",
+        "estimatedCostPerPersonInr": 150,
+        "coordinates": {
+          "lat": 13.32,
+          "lng": 75.77
+        }
+      }
+    ]
+  },
+  {
+    "id": "badami-pattadakal",
+    "name": "Badami & Pattadakal UNESCO Caves",
+    "normalizedName": "badami & pattadakal unesco caves",
+    "state": "Karnataka",
+    "isUnionTerritory": false,
+    "district": "Bagalkot",
+    "category": "Historical Monuments & Heritage",
+    "tagline": "The Cradle of Temple Architecture - Chalukyan red sandstone caves & Pattadakal monuments",
+    "description": "Ancient 6th-century royal capital of the Early Chalukyas set around the green waters of Agastya Lake, world-renowned for four monolithic rock-cut cave temples cut into red sandstone cliffs and the nearby UNESCO World Heritage monuments at Pattadakal.",
+    "coordinates": {
+      "lat": 15.9189,
+      "lng": 75.6766
+    },
+    "bestMonths": "October to March",
+    "idealDays": 2,
+    "popularInterests": [
+      "History",
+      "Architecture",
+      "Photography",
+      "Archaeology"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Badami",
+      "Badami Caves",
+      "Pattadakal UNESCO",
+      "Aihole",
+      "Chalukya Heritage",
+      "Vatapi"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Hubballi Airport (HBX) - 105 km",
+      "nearestRailway": "Badami Railway Station (BDM)",
+      "roadConnectivity": "Well connected via state highways from Hampi (140 km) and Hubli"
+    },
+    "culturalHighlights": [
+      "Four Badami Cave Temples displaying Nataraja with 81 dancing postures",
+      "Pattadakal UNESCO complex exhibiting northern Nagara and southern Dravida temple styles side by side",
+      "Bhuthanatha Group of Temples reflected in the quiet waters of Agastya Lake"
+    ],
+    "sourceUrl": "https://karnatakatourism.org",
+    "attractions": [
+      {
+        "id": "bdm-caves",
+        "name": "Badami Rock-Cut Cave Temples",
+        "category": "History",
+        "timeSlot": "Morning",
+        "description": "Four magnificent 6th-century rock-cut sanctuaries carved into sandstone cliffs dedicated to Shiva, Vishnu, and Jain tirthankaras.",
+        "visitDurationMinutes": 150,
+        "estimatedCostInr": 25,
+        "coordinates": {
+          "lat": 15.9189,
+          "lng": 75.6766
+        },
+        "address": "Badami Cave Complex, Bagalkot, Karnataka",
+        "imageUrl": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Beware of monkeys; climb early before sandstone absorbs noon heat"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-bdm-1",
+        "name": "Banashankari Khanavali & Heritage Diner",
+        "mealType": "Lunch",
+        "cuisine": "North Karnataka Lingayat Thali",
+        "famousFor": "Jolada Roti (Sorghum flatbread) with Yennegai stuffed brinjal and Shenga Chutney powder",
+        "estimatedCostPerPersonInr": 120,
+        "coordinates": {
+          "lat": 15.92,
+          "lng": 75.68
+        }
+      }
+    ]
+  },
+  {
+    "id": "udupi-murudeshwar",
+    "name": "Udupi & Murudeshwar",
+    "normalizedName": "udupi & murudeshwar",
+    "state": "Karnataka",
+    "isUnionTerritory": false,
+    "district": "Udupi",
+    "category": "Pilgrimage & Spiritual",
+    "tagline": "Coastal Divinity - Sri Krishna Matha, St. Mary's volcanic islands & giant Murudeshwar Shiva",
+    "description": "Iconic coastal Karnataka destination famous for the 13th-century Sri Krishna Matha where Lord Krishna is viewed through a silver nine-hole window (Kanakana Kindi), volcanic hexagonal basalt rock columns of St. Mary's Island, and the world's second-tallest Shiva statue rising over Murudeshwar beach.",
+    "coordinates": {
+      "lat": 13.3409,
+      "lng": 74.7421
+    },
+    "bestMonths": "October to April",
+    "idealDays": 3,
+    "popularInterests": [
+      "Temples",
+      "Beaches",
+      "Food",
+      "Architecture"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Udupi",
+      "Murudeshwar",
+      "Udupi Sri Krishna",
+      "Murudeshwar Shiva Statue",
+      "Malpe Beach",
+      "St Marys Island"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Mangaluru International Airport (IXE) - 55 km",
+      "nearestRailway": "Udupi Railway Station (UD) on Konkan Railway",
+      "roadConnectivity": "Scenic NH 66 Coastal Highway connects Goa and Mangaluru"
+    },
+    "culturalHighlights": [
+      "Sri Krishna Temple founded by sage Madhvacharya and daily Anna Daan feast",
+      "Murudeshwar 123-foot Shiva statue overlooking Arabian Sea and 20-story Raja Gopura lift",
+      "Malpe Beach boat ride to St. Mary's Island geological wonder"
+    ],
+    "sourceUrl": "https://karnatakatourism.org",
+    "attractions": [
+      {
+        "id": "udp-krishna-temple",
+        "name": "Sri Krishna Matha & Temple Square",
+        "category": "Temples",
+        "timeSlot": "Morning",
+        "description": "Historic temple where devotees take darshan through Kanakana Kindi window, surrounded by eight traditional Ashta Mathas.",
+        "visitDurationMinutes": 90,
+        "estimatedCostInr": 0,
+        "coordinates": {
+          "lat": 13.3409,
+          "lng": 74.7421
+        },
+        "address": "Car Street, Udupi, Karnataka",
+        "imageUrl": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": false,
+        "tips": [
+          "Men must remove shirts to enter the sanctum; free temple lunch (Maha Prasada) served at noon"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-udp-1",
+        "name": "Mitra Samaj & Woodlands Udupi",
+        "mealType": "Breakfast",
+        "cuisine": "Authentic Udupi Brahmin",
+        "famousFor": "Original Masala Dosa, Goli Baje (Mangalore Bajji), and Podi Idli with filter coffee",
+        "estimatedCostPerPersonInr": 120,
+        "coordinates": {
+          "lat": 13.342,
+          "lng": 74.745
+        }
+      }
+    ]
+  },
+  {
+    "id": "varkala",
+    "name": "Varkala Cliff & Papanasam Beach",
+    "normalizedName": "varkala cliff & papanasam beach",
+    "state": "Kerala",
+    "isUnionTerritory": false,
+    "district": "Thiruvananthapuram",
+    "category": "Beaches & Coastal",
+    "tagline": "The Bohemian Red Cliffs of Kerala - Sunset cliff walk, natural mineral springs & surf",
+    "description": "Picturesque coastal gem in southern Kerala where towering tertiary red sedimentary cliffs drop dramatically into the Arabian Sea. Renowned for Papanasam beach (believed to cleanse sins), cliff-edge artisan cafes, yoga retreats, and pristine surfing waves.",
+    "coordinates": {
+      "lat": 8.7379,
+      "lng": 76.7163
+    },
+    "bestMonths": "October to March",
+    "idealDays": 3,
+    "popularInterests": [
+      "Beaches",
+      "Surfing",
+      "Yoga",
+      "Sunsets",
+      "Food"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Varkala",
+      "Varkala Cliff",
+      "Papanasam Beach",
+      "Janardhana Swamy",
+      "North Cliff Varkala"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Trivandrum International Airport (TRV) - 45 km",
+      "nearestRailway": "Varkala Sivagiri Railway Station (VAK) - 3 km",
+      "roadConnectivity": "Connected via NH 66 corridor"
+    },
+    "culturalHighlights": [
+      "Varkala North Cliff promenade buzzing with rooftop seafood grills and craft shops",
+      "2,000-year-old Janardhana Swamy Temple dedicated to Lord Vishnu",
+      "Natural freshwater mineral springs bubbling directly along the coastline"
+    ],
+    "sourceUrl": "https://www.keralatourism.org",
+    "attractions": [
+      {
+        "id": "vrk-cliff",
+        "name": "Varkala North Cliff & Papanasam Beach",
+        "category": "Beaches",
+        "timeSlot": "Evening",
+        "description": "Stunning geological red laterite cliff overlooking white sand beaches where visitors watch dramatic Arabian Sea sunsets and practice coastal yoga.",
+        "visitDurationMinutes": 120,
+        "estimatedCostInr": 0,
+        "coordinates": {
+          "lat": 8.7379,
+          "lng": 76.7163
+        },
+        "address": "North Cliff, Varkala, Kerala",
+        "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Steps lead down the cliff face directly to the beach; take care during high tide"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-vrk-1",
+        "name": "Cafe del Mar & Darjeeling Cafe Varkala",
+        "mealType": "Dinner",
+        "cuisine": "Kerala Coastal & Mediterranean",
+        "famousFor": "Grilled catch of the day in banana leaf with Malabar spices and fresh tender coconut juice",
+        "estimatedCostPerPersonInr": 350,
+        "coordinates": {
+          "lat": 8.74,
+          "lng": 76.715
+        }
+      }
+    ]
+  },
+  {
+    "id": "thekkady",
+    "name": "Thekkady & Periyar Tiger Reserve",
+    "normalizedName": "thekkady & periyar tiger reserve",
+    "state": "Kerala",
+    "isUnionTerritory": false,
+    "district": "Idukki",
+    "category": "Wildlife & National Parks",
+    "tagline": "The Spice Sanctuary - Periyar lake boat safari, wild elephant herds & cardamom hills",
+    "description": "One of India's most pristine biodiversity hotspots located in the Cardamom Hills of Kerala, centered around artificial Periyar Lake where wild elephants, sambar deer, and gaurs can be observed directly from quiet motorboat safaris.",
+    "coordinates": {
+      "lat": 9.6031,
+      "lng": 77.1615
+    },
+    "bestMonths": "September to April",
+    "idealDays": 2,
+    "popularInterests": [
+      "Wildlife",
+      "Spices",
+      "Nature",
+      "Boating",
+      "Culture"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Thekkady",
+      "Periyar National Park",
+      "Kumily",
+      "Periyar Lake Boat Safari",
+      "Spice Plantations Kerala"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Madurai Airport (IXM) - 140 km / Cochin (COK) - 150 km",
+      "nearestRailway": "Kottayam Railway Station (KTYM) - 105 km",
+      "roadConnectivity": "Scenic ghat highway through tea and rubber plantations"
+    },
+    "culturalHighlights": [
+      "Periyar Lake boat cruise along the submerged forest tree trunks",
+      "Aromatic spice garden plantation walks discovering green cardamom, black pepper, and cinnamon",
+      "Evening Kalaripayattu martial arts and Kathakali cultural performances in Kumily"
+    ],
+    "sourceUrl": "https://www.keralatourism.org",
+    "attractions": [
+      {
+        "id": "tkd-periyar-lake",
+        "name": "Periyar Lake Wildlife Boat Safari",
+        "category": "Wildlife",
+        "timeSlot": "Morning",
+        "description": "Peaceful 90-minute boat cruise inside the sanctuary waters observing elephants bathing and birdlife nesting in submerged trees.",
+        "visitDurationMinutes": 120,
+        "estimatedCostInr": 255,
+        "coordinates": {
+          "lat": 9.6031,
+          "lng": 77.1615
+        },
+        "address": "Periyar National Park, Thekkady, Kerala",
+        "imageUrl": "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Book the earliest 7:30 AM boat slot online via Kerala Forest Department for best animal sightings"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-tkd-1",
+        "name": "Ebonys Cafe & Spice Garden Kitchen",
+        "mealType": "Dinner",
+        "cuisine": "Kerala Syrian Christian",
+        "famousFor": "Duck Roast, Kerala Beef fry with Malabar Porotta, and Cardamom tea",
+        "estimatedCostPerPersonInr": 300,
+        "coordinates": {
+          "lat": 9.608,
+          "lng": 77.165
+        }
+      }
+    ]
+  },
+  {
+    "id": "kovalam",
+    "name": "Kovalam Lighthouse Beach",
+    "normalizedName": "kovalam lighthouse beach",
+    "state": "Kerala",
+    "isUnionTerritory": false,
+    "district": "Thiruvananthapuram",
+    "category": "Beaches & Coastal",
+    "tagline": "The Crescent Coast - Striped red-white lighthouse, calm reef lagoons & Ayurvedic healing",
+    "description": "Internationally acclaimed beach destination comprising three adjacent crescent beaches separated by rocky outcroppings, renowned for the 35m Vizhinjam Lighthouse, shallow swimming waters, and authentic Ayurvedic rejuvenation centers.",
+    "coordinates": {
+      "lat": 8.4004,
+      "lng": 76.9787
+    },
+    "bestMonths": "October to March",
+    "idealDays": 2,
+    "popularInterests": [
+      "Beaches",
+      "Ayurveda",
+      "Sunsets",
+      "Water Sports"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Kovalam",
+      "Kovalam Beach",
+      "Lighthouse Beach",
+      "Hawa Beach",
+      "Samudra Beach",
+      "Vizhinjam"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Trivandrum International Airport (TRV) - 15 km",
+      "nearestRailway": "Thiruvananthapuram Central (TVC) - 14 km",
+      "roadConnectivity": "Direct 4-lane bypass road from Trivandrum city"
+    },
+    "culturalHighlights": [
+      "Vizhinjam Lighthouse spiral climb offering panoramic views of the Arabian Sea coastline",
+      "Hawa and Samudra beaches featuring traditional wooden catamaran fishermen at dawn",
+      "Ayurvedic Panchakarma massage and wellness therapy centers along the promenade"
+    ],
+    "sourceUrl": "https://www.keralatourism.org",
+    "attractions": [
+      {
+        "id": "kvm-lighthouse",
+        "name": "Kovalam Lighthouse & Crescent Beach",
+        "category": "Beaches",
+        "timeSlot": "Morning",
+        "description": "Vibrant palm-fringed shoreline anchored by the 118-foot red-and-white stone lighthouse on Kurumkal hilltop.",
+        "visitDurationMinutes": 120,
+        "estimatedCostInr": 20,
+        "coordinates": {
+          "lat": 8.397,
+          "lng": 76.978
+        },
+        "address": "Lighthouse Beach, Kovalam, Kerala",
+        "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Lighthouse opens for visitors in the afternoon from 3:00 PM to 5:00 PM"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-kvm-1",
+        "name": "Fusion Restaurant & Bait Seafood",
+        "mealType": "Dinner",
+        "cuisine": "Coastal Kerala Cuisine",
+        "famousFor": "Karimeen Pollichathu (pearl spot in banana leaf) and Appam with Vegetable Stew",
+        "estimatedCostPerPersonInr": 350,
+        "coordinates": {
+          "lat": 8.402,
+          "lng": 76.98
+        }
+      }
+    ]
+  },
+  {
+    "id": "rameswaram",
+    "name": "Rameswaram & Dhanushkodi",
+    "normalizedName": "rameswaram & dhanushkodi",
+    "state": "Tamil Nadu",
+    "isUnionTerritory": false,
+    "district": "Ramanathapuram",
+    "category": "Pilgrimage & Spiritual",
+    "tagline": "Sacred Island & Land's End - Pamban Sea Bridge, 1000-pillar corridors & Ram Setu",
+    "description": "Sacred pilgrimage island connected to mainland India by the historic 2 km Pamban sea bridge over Palk Strait. Receptive to millions of pilgrims at Ramanathaswamy Temple with the longest pillared corridor in the world, and the haunting ghost town of Dhanushkodi at India's tip.",
+    "coordinates": {
+      "lat": 9.2876,
+      "lng": 79.3129
+    },
+    "bestMonths": "October to April",
+    "idealDays": 2,
+    "popularInterests": [
+      "Pilgrimage",
+      "History",
+      "Beaches",
+      "Photography"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Rameshwaram",
+      "Dhanushkodi",
+      "Pamban Bridge",
+      "Ram Setu",
+      "Adams Bridge",
+      "Agni Theertham",
+      "APJ Abdul Kalam Memorial"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Madurai International Airport (IXM) - 170 km",
+      "nearestRailway": "Rameswaram Railway Station (RMM) / Mandapam",
+      "roadConnectivity": "Annai Indira Gandhi Road Bridge over Pamban Sea Channel"
+    },
+    "culturalHighlights": [
+      "Ramanathaswamy Temple housing 22 holy freshwater theertham wells inside sanctum",
+      "World's longest temple corridor boasting 1,212 granite pillars with vibrant ceilings",
+      "Dhanushkodi Land's End where the Bay of Bengal meets the Indian Ocean"
+    ],
+    "sourceUrl": "https://www.tamilnadutourism.tn.gov.in",
+    "attractions": [
+      {
+        "id": "rmm-temple",
+        "name": "Arulmigu Ramanathaswamy Temple",
+        "category": "Temples",
+        "timeSlot": "Morning",
+        "description": "Massive Dravidian temple complex sacred to both Shaivites and Vaishnavites, featuring the Jyotirlinga installed by Lord Rama.",
+        "visitDurationMinutes": 150,
+        "estimatedCostInr": 0,
+        "coordinates": {
+          "lat": 9.2881,
+          "lng": 79.3174
+        },
+        "address": "Rameswaram, Tamil Nadu",
+        "imageUrl": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": false,
+        "tips": [
+          "Pilgrims traditionally take a holy dip in Agni Theertham sea before bathing in the 22 temple wells"
+        ]
+      },
+      {
+        "id": "rmm-dhanushkodi",
+        "name": "Dhanushkodi Ghost Town & Ram Setu Point",
+        "category": "Heritage",
+        "timeSlot": "Afternoon",
+        "description": "Deserted town submerged by the 1964 cyclone, showing ruins of a church, railway station, and the sandbar bridge extending toward Sri Lanka.",
+        "visitDurationMinutes": 120,
+        "estimatedCostInr": 100,
+        "coordinates": {
+          "lat": 9.1764,
+          "lng": 79.4184
+        },
+        "address": "Dhanushkodi Tip, Tamil Nadu",
+        "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "New paved road allows passenger cars to reach Arichal Munai viewpoint"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-rmm-1",
+        "name": "Sri Saravana Bhawan & Ram Nivas Mess",
+        "mealType": "Lunch",
+        "cuisine": "Tamil Traditional Vegetarian",
+        "famousFor": "Plantain leaf South Indian Thali, Ghee Podi Dosa, and fresh Filter Coffee",
+        "estimatedCostPerPersonInr": 150,
+        "coordinates": {
+          "lat": 9.289,
+          "lng": 79.315
+        }
+      }
+    ]
+  },
+  {
+    "id": "kodaikanal",
+    "name": "Kodaikanal Princess of Hill Stations",
+    "normalizedName": "kodaikanal princess of hill stations",
+    "state": "Tamil Nadu",
+    "isUnionTerritory": false,
+    "district": "Dindigul",
+    "category": "Hill Stations & Nature",
+    "tagline": "The Princess of Hill Stations - Star-shaped Kodai Lake, Coaker's Walk & Pillar Rocks",
+    "description": "Picturesque hill retreat 2,133m high in the Palani Hills of the Western Ghats. Blessed with cool pine forests, rolling meadows, mist-clad Pillar Rocks, and a man-made star-shaped lake created in 1863.",
+    "coordinates": {
+      "lat": 10.2381,
+      "lng": 77.4892
+    },
+    "bestMonths": "September to May",
+    "idealDays": 3,
+    "popularInterests": [
+      "Nature",
+      "Viewpoints",
+      "Boating",
+      "Trekking"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Kodaikanal",
+      "Kodai",
+      "Princess of Hill Stations",
+      "Kodai Lake",
+      "Coakers Walk",
+      "Pillar Rocks"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Madurai International Airport (IXM) - 120 km",
+      "nearestRailway": "Kodai Road Railway Station (KQN) - 80 km",
+      "roadConnectivity": "Scenic mountain ghat road from Batlagundu"
+    },
+    "culturalHighlights": [
+      "Star-shaped Kodaikanal Lake encircled by a 5 km walking and cycling boulevard",
+      "Pillar Rocks, three giant granite boulders towering 122 meters vertically",
+      "Coaker's Walk panoramic pedestrian path cut along the steep mountain ridge"
+    ],
+    "sourceUrl": "https://www.tamilnadutourism.tn.gov.in",
+    "attractions": [
+      {
+        "id": "kod-lake",
+        "name": "Kodaikanal Lake & Bryant Park",
+        "category": "Nature",
+        "timeSlot": "Morning",
+        "description": "Iconic 60-acre star-shaped lake offering rowboats and pedal boats, flanked by the vibrant horticultural gardens of Bryant Park.",
+        "visitDurationMinutes": 120,
+        "estimatedCostInr": 150,
+        "coordinates": {
+          "lat": 10.235,
+          "lng": 77.489
+        },
+        "address": "Lake Road, Kodaikanal, Tamil Nadu",
+        "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Rent a bicycle to ride along the scenic perimeter road of the lake"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-kod-1",
+        "name": "Pastry Corner & Cloud Street Cafe",
+        "mealType": "Dinner",
+        "cuisine": "Hill Station Bakeries & South Indian",
+        "famousFor": "Handcrafted homemade chocolates, hot cinnamon rolls, and wood-fired pizza",
+        "estimatedCostPerPersonInr": 250,
+        "coordinates": {
+          "lat": 10.239,
+          "lng": 77.49
+        }
+      }
+    ]
+  },
+  {
+    "id": "thanjavur",
+    "name": "Thanjavur Brihadisvara Temple",
+    "normalizedName": "thanjavur brihadisvara temple",
+    "state": "Tamil Nadu",
+    "isUnionTerritory": false,
+    "district": "Thanjavur",
+    "category": "Historical Monuments & Heritage",
+    "tagline": "The Great Living Chola Capital - Thousand-year-old Brihadisvara Temple & Maratha Palace",
+    "description": "The historical royal seat of the Chola Empire in the fertile Cauvery delta. Celebrated for the UNESCO World Heritage 11th-century Brihadisvara Temple (Big Temple) built by Raja Raja Chola I with an 80-tonne monolithic granite dome apex, Thanjavur gold-foil paintings, and bronze sculptures.",
+    "coordinates": {
+      "lat": 10.787,
+      "lng": 79.1378
+    },
+    "bestMonths": "October to March",
+    "idealDays": 2,
+    "popularInterests": [
+      "History",
+      "Architecture",
+      "Art",
+      "Culture"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Tanjore",
+      "Brihadeeswara Temple",
+      "Big Temple",
+      "Peruvudaiyar Kovil",
+      "Maratha Palace Thanjavur"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Tiruchirappalli International Airport (TRZ) - 55 km",
+      "nearestRailway": "Thanjavur Junction (TJ)",
+      "roadConnectivity": "Direct 4-lane highway from Trichy and Madurai"
+    },
+    "culturalHighlights": [
+      "Brihadisvara Temple granite vimana rising 66 meters, casting no shadow at noon",
+      "Thanjavur Royal Palace complex housing the Saraswathi Mahal Library founded in 1535",
+      "Artisan workshops crafting traditional Thanjavur Veena and gold-embossed paintings"
+    ],
+    "sourceUrl": "https://www.tamilnadutourism.tn.gov.in",
+    "attractions": [
+      {
+        "id": "tjv-big-temple",
+        "name": "Brihadisvara Temple (The Big Temple)",
+        "category": "Architecture",
+        "timeSlot": "Morning",
+        "description": "Architectural masterpiece of pure granite completed in 1010 CE, featuring a colossal 13-foot high Shiva Lingam and massive monolithic Nandi statue.",
+        "visitDurationMinutes": 150,
+        "estimatedCostInr": 0,
+        "coordinates": {
+          "lat": 10.7828,
+          "lng": 79.1318
+        },
+        "address": "Membalam Rd, Thanjavur, Tamil Nadu",
+        "imageUrl": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Visit in late afternoon to watch temple illumination and avoid hot stone floors"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-tjv-1",
+        "name": "Sathars Restaurant & Hotel Gnanam",
+        "mealType": "Lunch",
+        "cuisine": "Cauvery Delta Traditional",
+        "famousFor": "Ashoka Halwa (Thiruvaiyaru sweet), Thanjavur Kadamba Sambar, and Chettinad specialties",
+        "estimatedCostPerPersonInr": 200,
+        "coordinates": {
+          "lat": 10.785,
+          "lng": 79.135
+        }
+      }
+    ]
+  },
+  {
+    "id": "mahabalipuram",
+    "name": "Mahabalipuram Shore Temple & Monoliths",
+    "normalizedName": "mahabalipuram shore temple & monoliths",
+    "state": "Tamil Nadu",
+    "isUnionTerritory": false,
+    "district": "Chengalpattu",
+    "category": "Historical Monuments & Heritage",
+    "tagline": "The Pallava Ocean Sanctuary - UNESCO Shore Temple, Pancha Rathas & Arjuna's Penance",
+    "description": "7th-century coastal port city of the Pallava dynasty along the Bay of Bengal, UNESCO World Heritage listed for spectacular open-air rock reliefs including Arjuna's Penance, monolithic stone chariot shrines (Pancha Rathas), and the wave-lashed Shore Temple.",
+    "coordinates": {
+      "lat": 12.6269,
+      "lng": 80.1927
+    },
+    "bestMonths": "October to March",
+    "idealDays": 2,
+    "popularInterests": [
+      "History",
+      "Architecture",
+      "Beaches",
+      "Sculpture"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Mamallapuram",
+      "Shore Temple",
+      "Pancha Rathas",
+      "Arjunas Penance",
+      "Krishnas Butter Ball",
+      "ECR Coastal Heritage"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Chennai International Airport (MAA) - 55 km",
+      "nearestRailway": "Chengalpattu Junction (CGL) - 30 km",
+      "roadConnectivity": "Scenic East Coast Road (ECR) connects Chennai in 1.5 hours"
+    },
+    "culturalHighlights": [
+      "Shore Temple standing bravely against ocean spray since 700 CE",
+      "Arjuna's Penance, the world's largest open-air stone relief carved on twin boulders",
+      "Krishna's Butter Ball, a 250-tonne gigantic granite boulder balancing on a 45-degree slope"
+    ],
+    "sourceUrl": "https://www.tamilnadutourism.tn.gov.in",
+    "attractions": [
+      {
+        "id": "mbl-shore-temple",
+        "name": "Shore Temple & Pancha Rathas",
+        "category": "History",
+        "timeSlot": "Morning",
+        "description": "Magnificent structural temple complex erected on the sea edge, followed by monolithic rock shrines carved in the likeness of royal processional chariots.",
+        "visitDurationMinutes": 150,
+        "estimatedCostInr": 40,
+        "coordinates": {
+          "lat": 12.6163,
+          "lng": 80.1992
+        },
+        "address": "Shore Temple Complex, Mahabalipuram, Tamil Nadu",
+        "imageUrl": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Single ASI composite ticket covers Shore Temple and Pancha Rathas"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-mbl-1",
+        "name": "Moonrakers Restaurant & Santana Beach Shack",
+        "mealType": "Dinner",
+        "cuisine": "Coastal Seafood & Tandoori",
+        "famousFor": "Butter Garlic Prawns, Tawa fried Calamari, and Kerala Fish Curry with rice",
+        "estimatedCostPerPersonInr": 350,
+        "coordinates": {
+          "lat": 12.62,
+          "lng": 80.195
+        }
+      }
+    ]
+  },
+  {
+    "id": "vijayawada",
+    "name": "Vijayawada & Kanaka Durga Temple",
+    "normalizedName": "vijayawada & kanaka durga temple",
+    "state": "Andhra Pradesh",
+    "isUnionTerritory": false,
+    "district": "NTR District",
+    "category": "Culture & City",
+    "tagline": "The City of Victory - Indrakeeladri Hill Kanaka Durga, Prakasam Barrage & Undavalli Caves",
+    "description": "Bustling commercial and cultural metropolis along the holy Krishna River, famed for the hill-shrine of Goddess Kanaka Durga, the massive Prakasam Barrage, and the 7th-century rock-cut Undavalli Caves.",
+    "coordinates": {
+      "lat": 16.5062,
+      "lng": 80.648
+    },
+    "bestMonths": "October to March",
+    "idealDays": 2,
+    "popularInterests": [
+      "Temples",
+      "History",
+      "River Cruise",
+      "Food"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Vijayawada",
+      "Bezawada",
+      "Kanaka Durga Temple",
+      "Prakasam Barrage",
+      "Undavalli Caves",
+      "Bhavani Island"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Vijayawada International Airport (VGA) - 18 km",
+      "nearestRailway": "Vijayawada Junction (BZA) - A1 major rail junction",
+      "roadConnectivity": "Hub of NH 16 and NH 65"
+    },
+    "culturalHighlights": [
+      "Kanaka Durga Temple atop Indrakeeladri Hill overlooking Krishna River",
+      "4-story rock-cut Undavalli Caves featuring colossal reclining Vishnu carved from solid sandstone",
+      "Bhavani Island river resort offering watersports in the Krishna waters"
+    ],
+    "sourceUrl": "https://tourism.ap.gov.in",
+    "attractions": [
+      {
+        "id": "vja-kanaka-durga",
+        "name": "Sri Durga Malleswara Swamy Varla Devasthanam",
+        "category": "Temples",
+        "timeSlot": "Morning",
+        "description": "Ancient Swayambhu shrine of Goddess Durga on Indrakeeladri Hill with panoramic vistas of the Prakasam Barrage.",
+        "visitDurationMinutes": 120,
+        "estimatedCostInr": 0,
+        "coordinates": {
+          "lat": 16.5167,
+          "lng": 80.6062
+        },
+        "address": "Indrakeeladri, Vijayawada, Andhra Pradesh",
+        "imageUrl": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": false,
+        "tips": [
+          "Ghat road and modern lift/elevator available for seniors to ascend the hill"
+        ]
+      },
+      {
+        "id": "vja-undavalli",
+        "name": "Undavalli Rock-Cut Caves",
+        "category": "History",
+        "timeSlot": "Afternoon",
+        "description": "Monolithic cave complex carved out of solid sandstone in the 7th century by Vishnukundina kings.",
+        "visitDurationMinutes": 90,
+        "estimatedCostInr": 25,
+        "coordinates": {
+          "lat": 16.4969,
+          "lng": 80.5818
+        },
+        "address": "Undavalli, Guntur-Vijayawada border, Andhra Pradesh",
+        "imageUrl": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Marvel at the 5-meter-long Anantasayana Vishnu sculpture on the second floor"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-vja-1",
+        "name": "Babai Hotel & Sweet Magic",
+        "mealType": "Breakfast",
+        "cuisine": "Andhra Traditional",
+        "famousFor": "Babai Idli with dollop of white butter (venna) and spicy podi, and Putharekulu sweet",
+        "estimatedCostPerPersonInr": 150,
+        "coordinates": {
+          "lat": 16.51,
+          "lng": 80.62
+        }
+      }
+    ]
+  },
+  {
+    "id": "srisailam",
+    "name": "Srisailam Mallikarjuna Jyotirlinga",
+    "normalizedName": "srisailam mallikarjuna jyotirlinga",
+    "state": "Andhra Pradesh",
+    "isUnionTerritory": false,
+    "district": "Nandyal",
+    "category": "Pilgrimage & Spiritual",
+    "tagline": "Sacred Nallamala Forest Shrine - Mallikarjuna Jyotirlinga, Bhramaramba Shaktipeeth & Krishna Gorge",
+    "description": "One of India's most sanctified pilgrimage centres set deep within the dense Nallamala Forest hills above the Krishna River canyon. Uniquely represents both one of the 12 Shiva Jyotirlingas and one of the 18 Maha Shaktipeeths (Bhramaramba Devi).",
+    "coordinates": {
+      "lat": 16.0739,
+      "lng": 78.8687
+    },
+    "bestMonths": "October to March",
+    "idealDays": 2,
+    "popularInterests": [
+      "Pilgrimage",
+      "Temples",
+      "Nature",
+      "Forests"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Srisailam",
+      "Mallikarjuna Jyotirlinga",
+      "Bhramaramba Devi",
+      "Srisailam Dam",
+      "Nallamala Forest"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Hyderabad Rajiv Gandhi International Airport (HYD) - 200 km",
+      "nearestRailway": "Markapur Road Railway Station (MRK) - 85 km",
+      "roadConnectivity": "Picturesque forest ghat road through Nagarjunasagar-Srisailam Tiger Reserve"
+    },
+    "culturalHighlights": [
+      "Sri Bhramaramba Mallikarjuna Swamy Temple encircled by massive carved stone ramparts",
+      "Srisailam Dam spanning deep Krishna River gorges with dramatic 12-radial crest gates",
+      "Patala Ganga ropeway descending into the sacred river canyon for holy bath and boat rides"
+    ],
+    "sourceUrl": "https://tourism.ap.gov.in",
+    "attractions": [
+      {
+        "id": "sri-temple",
+        "name": "Sri Mallikarjuna Swamy Temple",
+        "category": "Temples",
+        "timeSlot": "Morning",
+        "description": "Centuries-old Dravidian temple where devotees are uniquely permitted to directly touch the sacred Jyotirlinga during Sparsha Darshan.",
+        "visitDurationMinutes": 120,
+        "estimatedCostInr": 0,
+        "coordinates": {
+          "lat": 16.0739,
+          "lng": 78.8687
+        },
+        "address": "Srisailam Devasthanam, Andhra Pradesh",
+        "imageUrl": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": false,
+        "tips": [
+          "Traditional attire (dhoti/sari) strictly mandated for inner sanctum entry"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-sri-1",
+        "name": "Devasthanam Annadana Hall & Haritha Restaurant",
+        "mealType": "Lunch",
+        "cuisine": "Sattvic Andhra Cuisine",
+        "famousFor": "Temple prasadam Pulihora (tamarind rice), Gongura pickle, and hot payasam",
+        "estimatedCostPerPersonInr": 100,
+        "coordinates": {
+          "lat": 16.075,
+          "lng": 78.865
+        }
+      }
+    ]
+  },
+  {
+    "id": "lepakshi",
+    "name": "Lepakshi Veerabhadra Temple",
+    "normalizedName": "lepakshi veerabhadra temple",
+    "state": "Andhra Pradesh",
+    "isUnionTerritory": false,
+    "district": "Sri Sathya Sai",
+    "category": "Historical Monuments & Heritage",
+    "tagline": "The Vijayanagara Stone Marvel - Legendary Hanging Pillar, Monolithic Nandi & ceiling frescoes",
+    "description": "Magnificent 16th-century Vijayanagara architectural sanctuary celebrated for engineering marvels like the Hanging Pillar that defies gravity, Asia's largest monolithic granite Nandi bull, and brilliant Ramayana ceiling frescoes.",
+    "coordinates": {
+      "lat": 13.8041,
+      "lng": 77.6074
+    },
+    "bestMonths": "October to March",
+    "idealDays": 1,
+    "popularInterests": [
+      "History",
+      "Architecture",
+      "Sculpture",
+      "Photography"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Lepakshi",
+      "Veerabhadra Temple",
+      "Hanging Pillar",
+      "Monolithic Nandi Lepakshi",
+      "Vijayanagara Heritage"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Kempegowda International Airport Bengaluru (BLR) - 100 km",
+      "nearestRailway": "Hindupur Railway Station (HUP) - 14 km",
+      "roadConnectivity": "Direct smooth drive from Bengaluru (120 km) via NH 44"
+    },
+    "culturalHighlights": [
+      "The Hanging Pillar of the Natya Mandapa which does not rest on the floor",
+      "Gigantic 27x15 ft Monolithic Nandi carved from a single granite boulder",
+      "Nagalinga, a 7-hooded granite serpent shielding a black polished Shiva Lingam"
+    ],
+    "sourceUrl": "https://tourism.ap.gov.in",
+    "attractions": [
+      {
+        "id": "lep-temple",
+        "name": "Veerabhadra Temple & Hanging Pillar",
+        "category": "History",
+        "timeSlot": "Morning",
+        "description": "Spectacular 1530 CE temple complex with 70 carved stone pillars, magnificent ceiling murals painted with vegetable dyes, and the mysterious floating pillar.",
+        "visitDurationMinutes": 120,
+        "estimatedCostInr": 0,
+        "coordinates": {
+          "lat": 13.8041,
+          "lng": 77.6074
+        },
+        "address": "Lepakshi Village, Andhra Pradesh",
+        "imageUrl": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Pass a thin cloth or paper under the hanging pillar to observe the clear gap"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-lep-1",
+        "name": "Haritha Lepakshi & Nandi Mess",
+        "mealType": "Lunch",
+        "cuisine": "Rayalaseema Andhra",
+        "famousFor": "Ragi Sankati with spicy Natu Kodi Pulusu (country chicken curry) and Mirchi bajji",
+        "estimatedCostPerPersonInr": 150,
+        "coordinates": {
+          "lat": 13.802,
+          "lng": 77.605
+        }
+      }
+    ]
+  },
+  {
+    "id": "nagarjuna-sagar",
+    "name": "Nagarjuna Sagar Dam & Buddhist Remains",
+    "normalizedName": "nagarjuna sagar dam & buddhist remains",
+    "state": "Telangana",
+    "isUnionTerritory": false,
+    "district": "Nalgonda",
+    "category": "Historical Monuments & Heritage",
+    "tagline": "The World's Largest Masonry Dam - Island Buddhist Museum at Nagarjunakonda & Ethipothala Falls",
+    "description": "Colossal engineering marvel built across the Krishna River flanked by lush hills. Features the unique island archaeological museum of Nagarjunakonda holding 2nd-century Mahayana Buddhist relics, and cascading Ethipothala waterfalls nearby.",
+    "coordinates": {
+      "lat": 16.5772,
+      "lng": 79.3129
+    },
+    "bestMonths": "August to March",
+    "idealDays": 2,
+    "popularInterests": [
+      "History",
+      "Architecture",
+      "Boating",
+      "Waterfalls"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Nagarjunasagar",
+      "Nagarjunakonda",
+      "Ethipothala Falls",
+      "Buddhist Museum Island",
+      "Krishna Dam"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Hyderabad Rajiv Gandhi International Airport (HYD) - 150 km",
+      "nearestRailway": "Macherla Railway Station (MCLA) - 24 km",
+      "roadConnectivity": "State Highway 19 connects directly from Hyderabad in 3.5 hours"
+    },
+    "culturalHighlights": [
+      "Scenic 45-minute motorboat launch ride to Nagarjunakonda island",
+      "Island museum preserving original stupas, monastic cells, and statues of Acharya Nagarjuna",
+      "Nagarjuna Sagar Dam crest gates releasing roaring waters during monsoon peaks"
+    ],
+    "sourceUrl": "https://tourism.telangana.gov.in",
+    "attractions": [
+      {
+        "id": "ngs-island",
+        "name": "Nagarjunakonda Island Museum",
+        "category": "History",
+        "timeSlot": "Morning",
+        "description": "Island museum surrounded by reservoir waters, preserving excavated Buddhist monasteries and Roman coins from ancient Ikshvaku dynasty.",
+        "visitDurationMinutes": 180,
+        "estimatedCostInr": 200,
+        "coordinates": {
+          "lat": 16.525,
+          "lng": 79.245
+        },
+        "address": "Nagarjunakonda Island, Telangana",
+        "imageUrl": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": false,
+        "tips": [
+          "Boats operate from Vijayapuri North Launch Station from 9:30 AM"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-ngs-1",
+        "name": "Telangana Haritha Vijayavihar Dining",
+        "mealType": "Lunch",
+        "cuisine": "Telangana Regional",
+        "famousFor": "Fresh Krishna River Fish Fry, Jowar Roti, and spicy Gongura Mamsam",
+        "estimatedCostPerPersonInr": 250,
+        "coordinates": {
+          "lat": 16.58,
+          "lng": 79.315
+        }
+      }
+    ]
+  },
+  {
+    "id": "ramappa-temple",
+    "name": "Ramappa Temple UNESCO Kakatiya Heritage",
+    "normalizedName": "ramappa temple unesco kakatiya heritage",
+    "state": "Telangana",
+    "isUnionTerritory": false,
+    "district": "Mulugu",
+    "category": "Historical Monuments & Heritage",
+    "tagline": "The Floating Brick Wonder - UNESCO World Heritage Rudreshwara Temple & Laknavaram Lake",
+    "description": "Inscribed on the UNESCO World Heritage list, this 1213 CE Kakatiya masterpiece is the only temple in India named after its chief architect, Ramappa. Famed for lightweight floating bricks, sandbox foundation engineering, and black basalt dancing bracket figures.",
+    "coordinates": {
+      "lat": 18.2647,
+      "lng": 79.9431
+    },
+    "bestMonths": "October to March",
+    "idealDays": 2,
+    "popularInterests": [
+      "History",
+      "Architecture",
+      "UNESCO",
+      "Lakes"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Ramappa",
+      "Rudreshwara Temple",
+      "Ramappa UNESCO",
+      "Palampet Lake",
+      "Laknavaram Lake",
+      "Kakatiya Architecture"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Hyderabad Rajiv Gandhi International Airport (HYD) - 210 km",
+      "nearestRailway": "Warangal / Kazipet Junction (WL/KZJ) - 65 km",
+      "roadConnectivity": "Paved highway through lush forest from Warangal (70 km)"
+    },
+    "culturalHighlights": [
+      "Lightweight bricks used in the temple tower (shikhara) that float on water",
+      "Sensuous Madanika and Salabhanjika dancing stone figures carved from polished dolerite",
+      "Scenic Laknavaram Lake suspension bridge walk across mini forest islands"
+    ],
+    "sourceUrl": "https://tourism.telangana.gov.in",
+    "attractions": [
+      {
+        "id": "rmp-temple",
+        "name": "Kakatiya Rudreshwara (Ramappa) Temple",
+        "category": "History",
+        "timeSlot": "Morning",
+        "description": "Star-shaped platform temple surviving earthquakes for 800 years due to ingenious sandbox foundation technique, showcasing intricate sculpted ceilings.",
+        "visitDurationMinutes": 120,
+        "estimatedCostInr": 25,
+        "coordinates": {
+          "lat": 18.2647,
+          "lng": 79.9431
+        },
+        "address": "Palampet Village, Mulugu District, Telangana",
+        "imageUrl": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Inspect the acoustic properties of the carved pillars producing distinct musical tones"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-rmp-1",
+        "name": "Haritha Ramappa & Laknavaram Island Cafe",
+        "mealType": "Lunch",
+        "cuisine": "Telangana Country Kitchen",
+        "famousFor": "Sarva Pindi (spiced rice flour pancake), Golichina Mamsam, and Bagara Rice with Dalcha",
+        "estimatedCostPerPersonInr": 200,
+        "coordinates": {
+          "lat": 18.26,
+          "lng": 79.94
+        }
+      }
+    ]
+  },
+  {
+    "id": "corbett-national-park",
+    "name": "Jim Corbett National Park",
+    "normalizedName": "jim corbett national park",
+    "state": "Uttarakhand",
+    "isUnionTerritory": false,
+    "district": "Nainital",
+    "category": "Wildlife & National Parks",
+    "tagline": "India's First National Park - Iconic Dhikala grasslands, Ramganga river & Royal Bengal Tigers",
+    "description": "Established in 1936 as Hailey National Park, Corbett is India's oldest national park and cradle of Project Tiger. Spans dense Sal forests, misty grasslands, and the Ramganga river basin harboring elephants, leopards, gharials, and over 600 bird species.",
+    "coordinates": {
+      "lat": 29.53,
+      "lng": 78.7747
+    },
+    "bestMonths": "November to June",
+    "idealDays": 3,
+    "popularInterests": [
+      "Wildlife",
+      "Photography",
+      "Adventure",
+      "Nature"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Corbett",
+      "Jim Corbett",
+      "Dhikala",
+      "Bijrani",
+      "Ramnagar",
+      "Oldest National Park India"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Pantnagar Airport (PGH) - 80 km / Delhi (DEL) - 250 km",
+      "nearestRailway": "Ramnagar Railway Station (RMR) - 12 km",
+      "roadConnectivity": "Direct 6-hour highway drive from Delhi via Moradabad"
+    },
+    "culturalHighlights": [
+      "Open 4x4 Gypsy jungle safaris in Dhikala, Bijrani, Jhirna, and Dhela safari zones",
+      "Historic Dhikala Forest Rest House overlooking Ramganga river meadows",
+      "Corbett Falls and heritage museum at Kaladhungi (winter home of hunter-conservationist Jim Corbett)"
+    ],
+    "sourceUrl": "https://uttarakhandtourism.gov.in",
+    "attractions": [
+      {
+        "id": "cbt-safari",
+        "name": "Corbett Morning Jeep Safari (Dhikala/Bijrani)",
+        "category": "Wildlife",
+        "timeSlot": "Morning",
+        "description": "Early morning wilderness safari tracking tiger movements along elephant corridors, river beds, and tall grassland trails.",
+        "visitDurationMinutes": 240,
+        "estimatedCostInr": 1500,
+        "coordinates": {
+          "lat": 29.53,
+          "lng": 78.7747
+        },
+        "address": "Ramnagar, Uttarakhand",
+        "imageUrl": "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Book permit slots 45 days in advance on official Uttarakhand Forest Department portal"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-cbt-1",
+        "name": "Corbett Riverside Deck & Kumaoni Rasoi",
+        "mealType": "Dinner",
+        "cuisine": "Kumaoni Pahadi",
+        "famousFor": "Bhatt Ki Churkani (black soybean curry), Aloo Ke Gutke, and Singodi sweet",
+        "estimatedCostPerPersonInr": 350,
+        "coordinates": {
+          "lat": 29.5,
+          "lng": 78.8
+        }
+      }
+    ]
+  },
+  {
+    "id": "auli",
+    "name": "Auli Himalayan Ski Resort & Meadows",
+    "normalizedName": "auli himalayan ski resort & meadows",
+    "state": "Uttarakhand",
+    "isUnionTerritory": false,
+    "district": "Chamoli",
+    "category": "Adventure & Trekking",
+    "tagline": "India's Premier Ski Paradise - Nanda Devi 360-degree panorama, cable car & Gorson Bugyal",
+    "description": "High-altitude meadow (bugyal) situated 2,800 to 3,050 meters above sea level in the Garhwal Himalayas. Celebrated for world-class snow skiing slopes, Asia's highest ropeway from Joshimath, and jaw-dropping views of peak Nanda Devi, Kamet, and Trishul.",
+    "coordinates": {
+      "lat": 30.5293,
+      "lng": 79.5694
+    },
+    "bestMonths": "December to March for skiing; May to October for alpine meadows",
+    "idealDays": 3,
+    "popularInterests": [
+      "Skiing",
+      "Snow",
+      "Trekking",
+      "Viewpoints",
+      "Adventure"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Auli",
+      "Auli Ski Resort",
+      "Gorson Bugyal",
+      "Joshimath Cable Car",
+      "Nanda Devi View",
+      "Skiing India"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Dehradun Jolly Grant Airport (DED) - 280 km",
+      "nearestRailway": "Rishikesh Railway Station (RKSH) - 250 km",
+      "roadConnectivity": "Joshimath connected via Badrinath National Highway NH 7"
+    },
+    "culturalHighlights": [
+      "Joshimath-to-Auli Ropeway spanning 4 km over oak forests with Nanda Devi vistas",
+      "International ski slopes equipped with snow-making machines and chairlifts",
+      "Trek to Gorson Bugyal alpine meadow blanketed in wildflowers in summer and powdery snow in winter"
+    ],
+    "sourceUrl": "https://uttarakhandtourism.gov.in",
+    "attractions": [
+      {
+        "id": "aul-slopes",
+        "name": "Auli Ski Slopes & Artificial Lake",
+        "category": "Adventure",
+        "timeSlot": "Morning",
+        "description": "Gently sloping snowfields offering beginner and certified advanced ski courses against the backdrop of sacred Himalayan peaks.",
+        "visitDurationMinutes": 180,
+        "estimatedCostInr": 1000,
+        "coordinates": {
+          "lat": 30.5293,
+          "lng": 79.5694
+        },
+        "address": "Auli, Chamoli, Uttarakhand",
+        "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Ski gear, waterproof jackets, and certified instructors available on rent from GMVN"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-aul-1",
+        "name": "GMVN Cliff Top Club & Himalayan Maggi Shack",
+        "mealType": "Lunch",
+        "cuisine": "Garhwali High Altitude",
+        "famousFor": "Chainsoo (roasted black gram broth), piping hot butter Maggi, and ginger cardamom tea",
+        "estimatedCostPerPersonInr": 250,
+        "coordinates": {
+          "lat": 30.531,
+          "lng": 79.57
+        }
+      }
+    ]
+  },
+  {
+    "id": "kedarnath-badrinath",
+    "name": "Kedarnath & Badrinath (Char Dham)",
+    "normalizedName": "kedarnath & badrinath (char dham)",
+    "state": "Uttarakhand",
+    "isUnionTerritory": false,
+    "district": "Rudraprayag & Chamoli",
+    "category": "Pilgrimage & Spiritual",
+    "tagline": "The Pinnacle of Devotion - High altitude Jyotirlinga, Neelkanth peak & Alaknanda sanctuary",
+    "description": "The two holiest Himalayan Char Dham pilgrimage shrines in India. Kedarnath stands at 3,584m in the Mandakini valley near Chorabari glacier; Badrinath rests at 3,300m along the Alaknanda river beneath the shadow of the Neelkanth peak.",
+    "coordinates": {
+      "lat": 30.7352,
+      "lng": 79.0669
+    },
+    "bestMonths": "May to June, September to October",
+    "idealDays": 4,
+    "popularInterests": [
+      "Pilgrimage",
+      "Trekking",
+      "Himalayas",
+      "Spiritual"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Kedarnath",
+      "Badrinath",
+      "Char Dham",
+      "Mana Village",
+      "Mandakini Valley",
+      "Neelkanth Peak"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Dehradun Jolly Grant Airport (DED) - 235 km",
+      "nearestRailway": "Rishikesh Railway Station (RKSH) - 220 km",
+      "roadConnectivity": "All-weather Char Dham Highway connects Rudraprayag and Joshimath"
+    },
+    "culturalHighlights": [
+      "1,200-year-old Kedarnath stone temple that survived the 2013 flash floods undamaged",
+      "Badrinath colorful traditional Garhwal wooden facade and Tapt Kund hot springs",
+      "Mana, the first Indian village on the border featuring Vyas Gufa and Bhim Pul"
+    ],
+    "sourceUrl": "https://uttarakhandtourism.gov.in",
+    "attractions": [
+      {
+        "id": "kdr-temple",
+        "name": "Shri Kedarnath Jyotirlinga Temple",
+        "category": "Temples",
+        "timeSlot": "Morning",
+        "description": "One of the 12 sacred Jyotirlingas constructed from massive grey granite slabs set against the snow-covered Kedarnath peak.",
+        "visitDurationMinutes": 120,
+        "estimatedCostInr": 0,
+        "coordinates": {
+          "lat": 30.7352,
+          "lng": 79.0669
+        },
+        "address": "Kedarnath, Rudraprayag, Uttarakhand",
+        "imageUrl": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "16 km trek from Gaurikund; helicopter shuttle services available from Phata and Guptkashi"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-kdr-1",
+        "name": "BKTC Pilgrim Kitchen & Annapurna Bhojanalaya",
+        "mealType": "Lunch",
+        "cuisine": "Pure Sattvic Himalayan",
+        "famousFor": "Gehat (Horsegram) Dal, hot Mandua Roti with ghee, and sweet dry fruit halwa",
+        "estimatedCostPerPersonInr": 150,
+        "coordinates": {
+          "lat": 30.736,
+          "lng": 79.067
+        }
+      }
+    ]
+  },
+  {
+    "id": "dalhousie-khajjiar",
+    "name": "Dalhousie & Khajjiar (Mini Switzerland)",
+    "normalizedName": "dalhousie & khajjiar (mini switzerland)",
+    "state": "Himachal Pradesh",
+    "isUnionTerritory": false,
+    "district": "Chamba",
+    "category": "Hill Stations & Nature",
+    "tagline": "The Mini Switzerland of India - Saucer-shaped pine meadow, colonial estates & Dainkund Peak",
+    "description": "Idyllic hill retreat established in 1854 across five wooded hills in the Dhauladhar Range. Near Dalhousie lies Khajjiar, officially baptized as 'Mini Switzerland of India' featuring a saucer-shaped meadow and floating island lake encircled by towering deodar trees.",
+    "coordinates": {
+      "lat": 32.5387,
+      "lng": 75.971
+    },
+    "bestMonths": "March to June, October to December",
+    "idealDays": 3,
+    "popularInterests": [
+      "Nature",
+      "Meadows",
+      "Colonial Heritage",
+      "Photography"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Dalhousie",
+      "Khajjiar",
+      "Mini Switzerland of India",
+      "Dainkund Peak",
+      "Kalatop Wildlife",
+      "Subhash Baoli"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Gaggal Airport, Kangra (DHM) - 110 km",
+      "nearestRailway": "Pathankot Junction (PTK) - 80 km",
+      "roadConnectivity": "Scenic mountain highway ascends from Pathankot"
+    },
+    "culturalHighlights": [
+      "Khajjiar Lake meadow designated by Swiss Envoy Willy P. Blazer in 1992",
+      "Dainkund Peak ('Singing Mountain') at 2,755m offering views of three rivers: Chenab, Beas, and Ravi",
+      "Colonial Scottish and Victorian stone churches: St. John's and St. Francis"
+    ],
+    "sourceUrl": "https://himachaltourism.gov.in",
+    "attractions": [
+      {
+        "id": "dlh-khajjiar",
+        "name": "Khajjiar Meadow & Floating Island Lake",
+        "category": "Nature",
+        "timeSlot": "Morning",
+        "description": "Breathtaking natural emerald meadow surrounded by dense cedar forests, featuring zorbing, horse riding, and the 12th-century Khajji Nag Temple.",
+        "visitDurationMinutes": 180,
+        "estimatedCostInr": 50,
+        "coordinates": {
+          "lat": 32.551,
+          "lng": 76.06
+        },
+        "address": "Khajjiar, Chamba District, Himachal Pradesh",
+        "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Visit early morning when morning mist hovers over the pine woods"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-dlh-1",
+        "name": "Kwality Restaurant Gandhi Chowk & Cafe Dalhousie",
+        "mealType": "Lunch",
+        "cuisine": "Himachali & North Indian",
+        "famousFor": "Himachali Madra (chickpea yogurt curry), freshly fried Momos, and apple pie",
+        "estimatedCostPerPersonInr": 250,
+        "coordinates": {
+          "lat": 32.535,
+          "lng": 75.975
+        }
+      }
+    ]
+  },
+  {
+    "id": "kasauli",
+    "name": "Kasauli Gilbert Trail & Pine Hills",
+    "normalizedName": "kasauli gilbert trail & pine hills",
+    "state": "Himachal Pradesh",
+    "isUnionTerritory": false,
+    "district": "Solan",
+    "category": "Hill Stations & Nature",
+    "tagline": "The Quiet Cantonment - Gilbert Nature Trail, colonial Christ Church & Sunset Point",
+    "description": "Charming, unhurried colonial cantonment town established in 1842 amidst chestnut and oak forests. Celebrated for cobblestone heritage walks, the picturesque 1.5 km cliff-edge Gilbert Nature Trail, and sweeping views of the Punjab plains.",
+    "coordinates": {
+      "lat": 30.9013,
+      "lng": 76.9649
+    },
+    "bestMonths": "Throughout the year",
+    "idealDays": 2,
+    "popularInterests": [
+      "Nature",
+      "Trekking",
+      "Colonial History",
+      "Bird Watching"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Kasauli",
+      "Kasauli Hills",
+      "Gilbert Trail",
+      "Monkey Point",
+      "Christ Church Kasauli"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Chandigarh International Airport (IXC) - 65 km",
+      "nearestRailway": "Kalka Railway Station (KLK) - 25 km / Dharampur Himachal (DMP) - 10 km",
+      "roadConnectivity": "Himalayan Expressway connects Chandigarh in 1.5 hours"
+    },
+    "culturalHighlights": [
+      "Gilbert Nature Trail with steep drop-offs and exceptional birdwatching of scarlet minivets and blue whistling thrushes",
+      "Christ Church built in 1853 with magnificent stained glass windows depicting St. Francis and St. Barnabas",
+      "Manki Point (Monkey Point) Air Force station offering aerial views of River Sutlej"
+    ],
+    "sourceUrl": "https://himachaltourism.gov.in",
+    "attractions": [
+      {
+        "id": "kas-gilbert",
+        "name": "Gilbert Nature Trail",
+        "category": "Nature",
+        "timeSlot": "Morning",
+        "description": "Peaceful 1.5 km stone-paved walking trail winding along a cliff edge through fragrant pine woods and mountain vistas.",
+        "visitDurationMinutes": 90,
+        "estimatedCostInr": 0,
+        "coordinates": {
+          "lat": 30.898,
+          "lng": 76.962
+        },
+        "address": "Near Sunset Point, Kasauli, Himachal Pradesh",
+        "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Early morning walk provides crisp mountain air and active birdlife sightings"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-kas-1",
+        "name": "Heritage Market Bun Samosa & Old Kasauli Cafe",
+        "mealType": "Lunch",
+        "cuisine": "Himachali Local Street Food",
+        "famousFor": "Kasauli's iconic Bun Samosa with spicy chana gravy, and plum fruit wines",
+        "estimatedCostPerPersonInr": 120,
+        "coordinates": {
+          "lat": 30.902,
+          "lng": 76.966
+        }
+      }
+    ]
+  },
+  {
+    "id": "bir-billing",
+    "name": "Bir Billing Paragliding Capital",
+    "normalizedName": "bir billing paragliding capital",
+    "state": "Himachal Pradesh",
+    "isUnionTerritory": false,
+    "district": "Kangra",
+    "category": "Adventure & Trekking",
+    "tagline": "World's Premier Paragliding Hub - Take-off at Billing (2,400m), Tibetan monasteries & tea gardens",
+    "description": "Globally celebrated as one of the world's top paragliding destinations. Tandem flights launch from the high ridge at Billing (2,400m) and glide gracefully over pine-covered valleys to land at Bir (1,400m), home to Tibetan monasteries and organic tea gardens.",
+    "coordinates": {
+      "lat": 32.0465,
+      "lng": 76.7196
+    },
+    "bestMonths": "March to June, September to November",
+    "idealDays": 2,
+    "popularInterests": [
+      "Paragliding",
+      "Adventure",
+      "Monasteries",
+      "Cafes",
+      "Tea"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Bir",
+      "Billing",
+      "Bir Billing",
+      "Paragliding Capital India",
+      "Chokling Monastery",
+      "Deer Park Institute"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Gaggal Kangra Airport (DHM) - 68 km",
+      "nearestRailway": "Pathankot Junction (PTK) - 140 km / Ahju Toy Train Station - 3 km",
+      "roadConnectivity": "Scenic mountain road from Dharamshala (70 km) and Baijnath"
+    },
+    "culturalHighlights": [
+      "Tandem paragliding with certified pilots flying 15-30 minutes across Dhauladhar peaks",
+      "Chokling Monastery and Palpung Sherabling Monastic Seat displaying Tibetan frescoes",
+      "Scenic Baijnath 13th-century stone Shiva Temple set along the Binwa River"
+    ],
+    "sourceUrl": "https://himachaltourism.gov.in",
+    "attractions": [
+      {
+        "id": "bir-flight",
+        "name": "Billing Paragliding Take-Off Site",
+        "category": "Adventure",
+        "timeSlot": "Morning",
+        "description": "High mountain takeoff point perched 2,400m above sea level providing world-class thermals and safe launch conditions.",
+        "visitDurationMinutes": 120,
+        "estimatedCostInr": 2500,
+        "coordinates": {
+          "lat": 32.059,
+          "lng": 76.735
+        },
+        "address": "Billing Ridge, Kangra District, Himachal Pradesh",
+        "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "GoPro in-flight video recording is usually available for an extra ₹500"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-bir-1",
+        "name": "Glider's Pizzeria & Garden Cafe Bir",
+        "mealType": "Dinner",
+        "cuisine": "Tibetan & Italian Artisan",
+        "famousFor": "Wood-fired thin crust pizza, Thukpa soup, and freshly baked carrot cake",
+        "estimatedCostPerPersonInr": 250,
+        "coordinates": {
+          "lat": 32.045,
+          "lng": 76.72
+        }
+      }
+    ]
+  },
+  {
+    "id": "anandpur-sahib",
+    "name": "Anandpur Sahib & Virasat-e-Khalsa",
+    "normalizedName": "anandpur sahib & virasat-e-khalsa",
+    "state": "Punjab",
+    "isUnionTerritory": false,
+    "district": "Rupnagar",
+    "category": "Pilgrimage & Spiritual",
+    "tagline": "The Holy City of Bliss - Takht Sri Kesgarh Sahib, Birthplace of the Khalsa & Virasat-e-Khalsa",
+    "description": "One of the most sacred pilgrimage destinations in Sikhism nestled between the Shivalik Hills and Sutlej River. Founded in 1665 by Guru Tegh Bahadur, this is where Guru Gobind Singh created the Khalsa Panth in 1699. Boasts the world-class Virasat-e-Khalsa museum designed by Moshe Safdie.",
+    "coordinates": {
+      "lat": 31.2361,
+      "lng": 76.4989
+    },
+    "bestMonths": "October to March (and Hola Mohalla festival in March)",
+    "idealDays": 2,
+    "popularInterests": [
+      "Pilgrimage",
+      "History",
+      "Culture",
+      "Architecture"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Anandpur",
+      "Takht Sri Kesgarh Sahib",
+      "Virasat-e-Khalsa",
+      "Hola Mohalla",
+      "City of Bliss"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Chandigarh International Airport (IXC) - 85 km",
+      "nearestRailway": "Anandpur Sahib Railway Station (ANSB)",
+      "roadConnectivity": "Direct 4-lane highway from Chandigarh (80 km)"
+    },
+    "culturalHighlights": [
+      "Takht Sri Kesgarh Sahib, one of the five temporal seats of authority in Sikhism",
+      "Virasat-e-Khalsa museum featuring dramatic fortress architecture and interactive 500-year history exhibits",
+      "Spectacular Hola Mohalla celebrations displaying martial arts (Gatka) and mock horse charges"
+    ],
+    "sourceUrl": "https://punjabtourism.punjab.gov.in",
+    "attractions": [
+      {
+        "id": "ans-virasat",
+        "name": "Virasat-e-Khalsa Museum",
+        "category": "History",
+        "timeSlot": "Morning",
+        "description": "Stunning modern museum designed in hand-chiseled Gwalior sandstone commemorating five centuries of Sikh heritage with immersive multimedia galleries.",
+        "visitDurationMinutes": 180,
+        "estimatedCostInr": 0,
+        "coordinates": {
+          "lat": 31.2325,
+          "lng": 76.5025
+        },
+        "address": "Virasat-e-Khalsa Complex, Anandpur Sahib, Punjab",
+        "imageUrl": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": false,
+        "tips": [
+          "Allow at least 2.5 to 3 hours to absorb the 27 exhibition galleries"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-ans-1",
+        "name": "Guru Ka Langar & Anandpur Highway Dhaba",
+        "mealType": "Lunch",
+        "cuisine": "Punjabi Langar & Desi Ghee Dhaba",
+        "famousFor": "Sacred community Langar Dal, hot Tandoori Roti with makkhan, and Makki Di Roti with Sarson Da Saag",
+        "estimatedCostPerPersonInr": 100,
+        "coordinates": {
+          "lat": 31.235,
+          "lng": 76.5
+        }
+      }
+    ]
+  },
+  {
+    "id": "patiala",
+    "name": "Patiala Royal Heritage & Qila Mubarak",
+    "normalizedName": "patiala royal heritage & qila mubarak",
+    "state": "Punjab",
+    "isUnionTerritory": false,
+    "district": "Patiala",
+    "category": "Historical Monuments & Heritage",
+    "tagline": "The Royal Heart of Malwa - 18th-century Qila Mubarak, Sheesh Mahal & Phulkari craft",
+    "description": "Historic princely capital of the Phulkian dynasty renowned for monumental Sikh-Mughal architecture, including the 10-acre Qila Mubarak fortress palace, Baradari Gardens, traditional Patiala Shahi turbans, and exquisite handcrafted Phulkari embroidery.",
+    "coordinates": {
+      "lat": 30.3398,
+      "lng": 76.3869
+    },
+    "bestMonths": "October to March",
+    "idealDays": 2,
+    "popularInterests": [
+      "History",
+      "Architecture",
+      "Shopping",
+      "Food"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Patiala",
+      "Qila Mubarak",
+      "Sheesh Mahal Patiala",
+      "Baradari Gardens",
+      "Royal City Punjab"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Chandigarh International Airport (IXC) - 65 km",
+      "nearestRailway": "Patiala Railway Station (PTA)",
+      "roadConnectivity": "4-lane highway from Chandigarh (70 km) and Delhi via NH 44"
+    },
+    "culturalHighlights": [
+      "Qila Androon inner palace holding the subterranean Flame of Baba Ala Singh kept burning since 1763",
+      "Sheesh Mahal (Palace of Mirrors) with royal medal gallery holding over 3,200 world decorations",
+      "Heritage bazaars for handcrafted Patiala Juttis (embroidered footwear) and Parandi hair braids"
+    ],
+    "sourceUrl": "https://punjabtourism.punjab.gov.in",
+    "attractions": [
+      {
+        "id": "ptl-qila",
+        "name": "Qila Mubarak Complex & Sheesh Mahal",
+        "category": "History",
+        "timeSlot": "Morning",
+        "description": "Sprawling 18th-century palace fort built by Baba Ala Singh containing rare Kangra and Rajasthani wall paintings and the royal armory.",
+        "visitDurationMinutes": 120,
+        "estimatedCostInr": 20,
+        "coordinates": {
+          "lat": 30.33,
+          "lng": 76.39
+        },
+        "address": "Old City, Patiala, Punjab",
+        "imageUrl": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": false,
+        "tips": [
+          "Visit the Darbar Hall to see the weaponry collection of Guru Gobind Singh"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-ptl-1",
+        "name": "Gopal Sweets & Sahni Dhaba",
+        "mealType": "Lunch",
+        "cuisine": "Royal Punjabi",
+        "famousFor": "Patiala Shahi Butter Chicken, Dal Makhani, and thick Kesar Badam Lassi in tall brass glasses",
+        "estimatedCostPerPersonInr": 250,
+        "coordinates": {
+          "lat": 30.335,
+          "lng": 76.385
+        }
+      }
+    ]
+  },
+  {
+    "id": "morni-hills",
+    "name": "Morni Hills & Tikkar Taal",
+    "normalizedName": "morni hills & tikkar taal",
+    "state": "Haryana",
+    "isUnionTerritory": false,
+    "district": "Panchkula",
+    "category": "Hill Stations & Nature",
+    "tagline": "Haryana's Only Hill Station - Serene Tikkar Taal twin lakes & Shivalik pine slopes",
+    "description": "The sole hill station in Haryana situated 1,220 meters high in the outer Shivalik Range. Renowned for pine-covered hills, the twin interconnected sacred lakes of Tikkar Taal (Bada Taal and Chhota Taal), and rich avian biodiversity.",
+    "coordinates": {
+      "lat": 30.6974,
+      "lng": 77.0864
+    },
+    "bestMonths": "September to April",
+    "idealDays": 2,
+    "popularInterests": [
+      "Nature",
+      "Lakes",
+      "Boating",
+      "Trekking"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Morni",
+      "Morni Hills",
+      "Tikkar Taal",
+      "Only Hill Station Haryana",
+      "Karoh Peak"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Chandigarh International Airport (IXC) - 45 km",
+      "nearestRailway": "Chandigarh Junction (CDG) - 40 km",
+      "roadConnectivity": "Scenic winding hill road from Panchkula"
+    },
+    "culturalHighlights": [
+      "Tikkar Taal scenic boating and camping along water fringed by deodars",
+      "Morni Fort 17th-century ramparts converted into a biodiversity nature park",
+      "Trek to Karoh Peak (1,467m), the highest geographic summit in Haryana"
+    ],
+    "sourceUrl": "https://haryanatourism.gov.in",
+    "attractions": [
+      {
+        "id": "mrn-tikkar-taal",
+        "name": "Tikkar Taal Twin Lakes",
+        "category": "Nature",
+        "timeSlot": "Morning",
+        "description": "Tranquil natural lake separated by a hillock where boating, canoeing, and peaceful lakeside picnics take place beneath Shivalik hills.",
+        "visitDurationMinutes": 120,
+        "estimatedCostInr": 50,
+        "coordinates": {
+          "lat": 30.6974,
+          "lng": 77.0864
+        },
+        "address": "Morni Hills, Panchkula, Haryana",
+        "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Paddle boats and kayaks are available for rent from Haryana Tourism"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-mrn-1",
+        "name": "Mountain Quail Resort & Lake Diner",
+        "mealType": "Lunch",
+        "cuisine": "Haryanvi & North Indian",
+        "famousFor": "Bajra Khichdi with country ghee and jaggery, Paneer Tikka, and fresh Masala Chai",
+        "estimatedCostPerPersonInr": 200,
+        "coordinates": {
+          "lat": 30.695,
+          "lng": 77.085
+        }
+      }
+    ]
+  },
+  {
+    "id": "pinjore-gardens",
+    "name": "Pinjore Yadavindra Mughal Gardens",
+    "normalizedName": "pinjore yadavindra mugal gardens",
+    "state": "Haryana",
+    "isUnionTerritory": false,
+    "district": "Panchkula",
+    "category": "Historical Monuments & Heritage",
+    "tagline": "The 17th-Century Terraced Marvel - Seven descending water terraces & Mughal pavilions",
+    "description": "Magnificent 17th-century terraced Mughal garden built by architect Fidai Khan under Emperor Aurangzeb, restored by the Patiala rulers. Features seven descending terraces, flowing canal channels, arched fountains, and royal pavilions against the foothills of the Himalayas.",
+    "coordinates": {
+      "lat": 30.7963,
+      "lng": 76.9142
+    },
+    "bestMonths": "October to April",
+    "idealDays": 1,
+    "popularInterests": [
+      "History",
+      "Architecture",
+      "Gardens",
+      "Fountains"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Pinjore",
+      "Pinjore Gardens",
+      "Yadavindra Gardens",
+      "Pinjore Heritage Garden",
+      "Mughal Terraced Gardens"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Chandigarh International Airport (IXC) - 25 km",
+      "nearestRailway": "Kalka Railway Station (KLK) - 5 km",
+      "roadConnectivity": "Located directly off NH 5 Himalayan Expressway"
+    },
+    "culturalHighlights": [
+      "Seven-tiered terrace layout where water cascades down through fountains and stone aqueducts",
+      "Shish Mahal palace of glass and Rang Mahal painted pavilion",
+      "Annual Mango Festival and Baisakhi fair celebrated across the lit terraces"
+    ],
+    "sourceUrl": "https://haryanatourism.gov.in",
+    "attractions": [
+      {
+        "id": "pin-gardens",
+        "name": "Yadavindra Gardens & Shish Mahal",
+        "category": "History",
+        "timeSlot": "Evening",
+        "description": "Spectacular heritage Mughal garden illuminated at dusk with hundreds of dancing fountains and floodlit royal arches.",
+        "visitDurationMinutes": 120,
+        "estimatedCostInr": 25,
+        "coordinates": {
+          "lat": 30.7963,
+          "lng": 76.9142
+        },
+        "address": "Ambala-Shimla Highway, Pinjore, Haryana",
+        "imageUrl": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Visit in late afternoon to enjoy the fountains operating and stay for the night illumination"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-pin-1",
+        "name": "Budanpur Dhaba & Jal Mahal Cafe",
+        "mealType": "Dinner",
+        "cuisine": "Punjabi & Haryanvi",
+        "famousFor": "Tandoori Stuffed Kulcha, Chana Bhatura, and Kheer with crushed pistachios",
+        "estimatedCostPerPersonInr": 180,
+        "coordinates": {
+          "lat": 30.798,
+          "lng": 76.915
+        }
+      }
+    ]
+  },
+  {
+    "id": "kalimpong",
+    "name": "Kalimpong Hill Retreat",
+    "normalizedName": "kalimpong hill retreat",
+    "state": "West Bengal",
+    "isUnionTerritory": false,
+    "district": "Kalimpong",
+    "category": "Hill Stations & Nature",
+    "tagline": "The Orchid Sanctuary - Deolo Hill Kanchenjunga vistas, colonial cottages & Tibetan monasteries",
+    "description": "Picturesque hill station at 1,250m overlooking the deep Teesta River valley. Celebrated for exotic flower and orchid nurseries producing 80% of India's gladioli, historic Buddhist monasteries, and British colonial stone mansions like Morgan House.",
+    "coordinates": {
+      "lat": 27.0594,
+      "lng": 88.4695
+    },
+    "bestMonths": "March to May, September to December",
+    "idealDays": 2,
+    "popularInterests": [
+      "Nature",
+      "Himalayas",
+      "Monasteries",
+      "Flora"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Kalimpong",
+      "Kalimpong Hills",
+      "Deolo Hill",
+      "Morgan House",
+      "Durpin Dara Monastery",
+      "Teesta Valley"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Bagdogra International Airport (IXB) - 75 km",
+      "nearestRailway": "New Jalpaiguri Railway Station (NJP) - 70 km",
+      "roadConnectivity": "Scenic drive from Siliguri along the Teesta River gorge via NH 10"
+    },
+    "culturalHighlights": [
+      "Deolo Hill summit (1,704m) providing breathtaking panoramas of Mount Kanchenjunga",
+      "Zang Dhok Palri Phodang monastery consecrated by the Dalai Lama in 1976",
+      "Historic trade route stopover between Tibet, Sikkim, and British India"
+    ],
+    "sourceUrl": "https://wbtourism.gov.in",
+    "attractions": [
+      {
+        "id": "klp-deolo",
+        "name": "Deolo Hill Park & Viewpoint",
+        "category": "Nature",
+        "timeSlot": "Morning",
+        "description": "Highest peak within Kalimpong town featuring beautifully landscaped terraced gardens and 360-degree vistas of the snow-peaked Himalayas and Teesta river.",
+        "visitDurationMinutes": 120,
+        "estimatedCostInr": 20,
+        "coordinates": {
+          "lat": 27.085,
+          "lng": 88.485
+        },
+        "address": "Deolo, Kalimpong, West Bengal",
+        "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Paragliding flights are available right off Deolo Hill summit"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-klp-1",
+        "name": "Art Cafe & King Thai Kalimpong",
+        "mealType": "Lunch",
+        "cuisine": "Tibetan & Himalayan Fusion",
+        "famousFor": "Kalimpong Cheese, steaming Tingmo with Shapta beef/paneer, and Darjeeling First Flush tea",
+        "estimatedCostPerPersonInr": 220,
+        "coordinates": {
+          "lat": 27.06,
+          "lng": 88.47
+        }
+      }
+    ]
+  },
+  {
+    "id": "santiniketan",
+    "name": "Santiniketan Tagore Heritage",
+    "normalizedName": "santiniketan tagore heritage",
+    "state": "West Bengal",
+    "isUnionTerritory": false,
+    "district": "Birbhum",
+    "category": "Culture & City",
+    "tagline": "Abode of Peace - Rabindranath Tagore's Visva-Bharati UNESCO University & open-air ashram",
+    "description": "Inscribed as a UNESCO World Heritage site, Santiniketan is the historic open-air university town founded by Nobel Laureate Rabindranath Tagore in 1901. Celebrated for classes held under banyan canopies, Baul mystic folk music, and terracotta Dokra handicrafts.",
+    "coordinates": {
+      "lat": 23.6797,
+      "lng": 87.6976
+    },
+    "bestMonths": "October to March (Poush Mela in Dec, Basanta Utsav in March)",
+    "idealDays": 2,
+    "popularInterests": [
+      "Culture",
+      "Literature",
+      "Art",
+      "Music",
+      "Handicrafts"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Shantiniketan",
+      "Santiniketan",
+      "Rabindranath Tagore University",
+      "Visva Bharati UNESCO",
+      "Kala Bhavana",
+      "Bolpur"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Kazi Nazrul Islam Airport Durgapur (RGH) - 60 km / Kolkata (CCU) - 165 km",
+      "nearestRailway": "Bolpur Santiniketan Railway Station (BHP) - 3 km",
+      "roadConnectivity": "Connected via 4-lane NH 114 from Kolkata in 3.5 hours"
+    },
+    "culturalHighlights": [
+      "Uttarayan Complex housing Rabindra Bhavana museum, Tagore's Nobel medal replica and cars",
+      "Kala Bhavana (Institute of Fine Arts) with black-and-white murals by Ramkinkar Baij and Nandalal Bose",
+      "Khowai Shanibarer Haat (Saturday artisan open market) along the red soil banks with live Baul singers"
+    ],
+    "sourceUrl": "https://wbtourism.gov.in",
+    "attractions": [
+      {
+        "id": "stn-ashram",
+        "name": "Visva-Bharati Ashram & Uttarayan Complex",
+        "category": "History",
+        "timeSlot": "Morning",
+        "description": "Pioneering open-air institutional campus featuring prayer hall Upasana Griha made of Belgian stained glass and five architecturally distinct houses of Tagore.",
+        "visitDurationMinutes": 150,
+        "estimatedCostInr": 50,
+        "coordinates": {
+          "lat": 23.6797,
+          "lng": 87.6976
+        },
+        "address": "Visva-Bharati Campus, Bolpur Santiniketan, West Bengal",
+        "imageUrl": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Campus museum is closed on Wednesdays (the traditional day of contemplation)"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-stn-1",
+        "name": "Ghare Baire & Kasahara Cafe",
+        "mealType": "Lunch",
+        "cuisine": "Authentic Bengali Zamindari Thali",
+        "famousFor": "Posto Bora (poppy seed fritters), Ilish Bhapa (steamed hilsa), and Nolen Gur ice cream",
+        "estimatedCostPerPersonInr": 300,
+        "coordinates": {
+          "lat": 23.682,
+          "lng": 78.7
+        }
+      }
+    ]
+  },
+  {
+    "id": "digha",
+    "name": "Digha Coastal Beach",
+    "normalizedName": "digha coastal beach",
+    "state": "West Bengal",
+    "isUnionTerritory": false,
+    "district": "Purba Medinipur",
+    "category": "Beaches & Coastal",
+    "tagline": "Bengal's Favorite Seaside - Shallow flat beaches, casuarina woods & Marine Aquarium",
+    "description": "West Bengal's premier coastal resort along the northern Bay of Bengal. Characterized by wide, firm sand beaches with gentle waves safe for swimming, casuarina plantations, fresh coastal fish markets, and the Marine Aquarium and Regional Centre.",
+    "coordinates": {
+      "lat": 21.6266,
+      "lng": 87.5074
+    },
+    "bestMonths": "October to April",
+    "idealDays": 2,
+    "popularInterests": [
+      "Beaches",
+      "Seafood",
+      "Sunsets",
+      "Family"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Digha",
+      "New Digha",
+      "Old Digha",
+      "Marine Aquarium Digha",
+      "Udaipur Beach Bengal"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Kolkata Netaji Subhas Chandra Bose International Airport (CCU) - 190 km",
+      "nearestRailway": "Digha Railway Station (DGHA) with direct express trains from Howrah",
+      "roadConnectivity": "4-lane expressway from Kolkata (180 km) in 4 hours"
+    },
+    "culturalHighlights": [
+      "New Digha beach promenade with paved illuminated walking track along seaside",
+      "Marine Aquarium displaying rare sea anemones, rays, and coastal flora",
+      "Fresh fish morning auctions directly from fishing trawlers at Mohana beach"
+    ],
+    "sourceUrl": "https://wbtourism.gov.in",
+    "attractions": [
+      {
+        "id": "dgh-beach",
+        "name": "New Digha Beach & Marine Aquarium",
+        "category": "Beaches",
+        "timeSlot": "Morning",
+        "description": "Expansive beach safe for swimming, followed by an educational tour of Asia's largest marine research aquarium.",
+        "visitDurationMinutes": 120,
+        "estimatedCostInr": 0,
+        "coordinates": {
+          "lat": 21.6266,
+          "lng": 87.5074
+        },
+        "address": "New Digha, Purba Medinipur, West Bengal",
+        "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Visit Digha Mohana at sunrise to photograph dozens of colorful wooden fishing boats returning"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-dgh-1",
+        "name": "Hotel Sea Hawk & Purbasha Seafood Stall",
+        "mealType": "Dinner",
+        "cuisine": "Bengali Coastal Seafood",
+        "famousFor": "Fried Pomfret, Jumbo Prawn Malai Curry, and Crab Masala with steamed rice",
+        "estimatedCostPerPersonInr": 300,
+        "coordinates": {
+          "lat": 21.628,
+          "lng": 87.51
+        }
+      }
+    ]
+  },
+  {
+    "id": "chilika-lake",
+    "name": "Chilika Lake & Bird Sanctuary",
+    "normalizedName": "chilika lake & bird sanctuary",
+    "state": "Odisha",
+    "isUnionTerritory": false,
+    "district": "Puri, Khordha & Ganjam",
+    "category": "Wildlife & National Parks",
+    "tagline": "Asia's Largest Brackish Water Lagoon - Endangered Irrawaddy dolphins & migratory avian paradise",
+    "description": "Asia's largest brackish water lagoon designated as India's first Ramsar wetland of international importance. Home to endangered Irrawaddy dolphins at Satapada, over a million migratory birds from Siberia and Lake Baikal, and the island temple of Goddess Kalijai.",
+    "coordinates": {
+      "lat": 19.6983,
+      "lng": 85.3211
+    },
+    "bestMonths": "November to March",
+    "idealDays": 2,
+    "popularInterests": [
+      "Wildlife",
+      "Birds",
+      "Boating",
+      "Photography"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Chilka Lake",
+      "Chilika",
+      "Satapada",
+      "Barkul",
+      "Kalijai Temple Island",
+      "Irrawaddy Dolphins Odisha"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Bhubaneswar Biju Patnaik Airport (BBI) - 100 km",
+      "nearestRailway": "Balugaon Railway Station (BALU) - 5 km from Barkul / Puri (50 km from Satapada)",
+      "roadConnectivity": "NH 16 connects Barkul and Balugaon directly from Bhubaneswar"
+    },
+    "culturalHighlights": [
+      "Satapada boat cruise into the sea-mouth to spot playful Irrawaddy dolphins surfacing",
+      "Nalabana Bird Sanctuary island sheltering flamingos, pelicans, and bar-headed geese in winter",
+      "Kalijai Temple on a rocky island legendarily revered by local fishermen"
+    ],
+    "sourceUrl": "https://odishatourism.gov.in",
+    "attractions": [
+      {
+        "id": "chk-satapada",
+        "name": "Satapada Dolphin Watching Boat Safari",
+        "category": "Wildlife",
+        "timeSlot": "Morning",
+        "description": "Motorized boat expedition across the open lagoon channel where rare freshwater-tolerant Irrawaddy dolphins are viewed in their natural habitat.",
+        "visitDurationMinutes": 180,
+        "estimatedCostInr": 1200,
+        "coordinates": {
+          "lat": 19.669,
+          "lng": 85.438
+        },
+        "address": "Satapada Jetty, Puri District, Odisha",
+        "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Book official OTDC boats from the government jetty to ensure safety vests and fair rates"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-chk-1",
+        "name": "OTDC Panthanivas & Chilika Crab Dhabas",
+        "mealType": "Lunch",
+        "cuisine": "Odia Coastal Seafood",
+        "famousFor": "Giant Chilika Crab Curry, Tiger Prawn Fry, and steamed rice with Dalma",
+        "estimatedCostPerPersonInr": 350,
+        "coordinates": {
+          "lat": 19.67,
+          "lng": 85.44
+        }
+      }
+    ]
+  },
+  {
+    "id": "simlipal",
+    "name": "Simlipal National Park & Tiger Reserve",
+    "normalizedName": "simlipal national park & tiger reserve",
+    "state": "Odisha",
+    "isUnionTerritory": false,
+    "district": "Mayurbhanj",
+    "category": "Wildlife & National Parks",
+    "tagline": "The Red Silk Cotton Wilderness - Barehipani Falls, melanistic black tigers & sal forests",
+    "description": "Sprawling UNESCO Biosphere Reserve in northern Odisha named after the vibrant red 'Simul' (silk cotton) trees. Famed for holding the world's only wild population of rare melanistic (black) tigers, Asian elephants, and Barehipani Falls (399m), one of India's highest waterfalls.",
+    "coordinates": {
+      "lat": 21.8219,
+      "lng": 86.3478
+    },
+    "bestMonths": "November to June",
+    "idealDays": 3,
+    "popularInterests": [
+      "Wildlife",
+      "Waterfalls",
+      "Adventure",
+      "Nature"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Similipal",
+      "Simlipal Tiger Reserve",
+      "Barehipani Falls",
+      "Joranda Falls",
+      "Baripada"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Kolkata Airport (CCU) - 240 km / Bhubaneswar (BBI) - 270 km",
+      "nearestRailway": "Balasore Railway Station (BLS) - 75 km / Baripada",
+      "roadConnectivity": "Entry via Pithabata gate (near Baripada) or Jashipur gate via NH 49"
+    },
+    "culturalHighlights": [
+      "Two-tiered Barehipani Falls dropping 399 meters over Meghasani cliff",
+      "Unique melanistic Bengal tigers with broad merged black stripes",
+      "Joranda Falls cascading 181 meters in a single sheer drop into dense canopy"
+    ],
+    "sourceUrl": "https://odishatourism.gov.in",
+    "attractions": [
+      {
+        "id": "sml-safari",
+        "name": "Simlipal Core Jungle & Waterfall Expedition",
+        "category": "Wildlife",
+        "timeSlot": "Morning",
+        "description": "Full-day 4x4 forest safari traversing sal tree ridges, crossing jungle streams, and visiting the breathtaking Barehipani and Joranda viewpoints.",
+        "visitDurationMinutes": 300,
+        "estimatedCostInr": 1500,
+        "coordinates": {
+          "lat": 21.8219,
+          "lng": 86.3478
+        },
+        "address": "Mayurbhanj District, Odisha",
+        "imageUrl": "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Only authorized high-ground-clearance 4WD vehicles permitted inside the reserve"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-sml-1",
+        "name": "Lulung Eco-Retreat & Mayurbhanj Royal Kitchen",
+        "mealType": "Dinner",
+        "cuisine": "Odia Tribal & Mayurbhanj Royal",
+        "famousFor": "Mudhi Mansa (puffed rice with slow-cooked mutton gravy) and Chenna Poda dessert",
+        "estimatedCostPerPersonInr": 280,
+        "coordinates": {
+          "lat": 21.9,
+          "lng": 86.4
+        }
+      }
+    ]
+  },
+  {
+    "id": "vaishali",
+    "name": "Vaishali Heritage Site",
+    "normalizedName": "vaishali heritage site",
+    "state": "Bihar",
+    "isUnionTerritory": false,
+    "district": "Vaishali",
+    "category": "Historical Monuments & Heritage",
+    "tagline": "Birthplace of Lord Mahavira and world's earliest known democratic republic",
+    "description": "Ancient city renowned for the Ashokan Pillar, Buddha Relic Stupa, Abhishek Pushkarni coronation tank, and sacred Kundalpur.",
+    "coordinates": {
+      "lat": 25.9863,
+      "lng": 85.1278
+    },
+    "bestMonths": "October to March",
+    "idealDays": 2,
+    "popularInterests": [
+      "Buddhism",
+      "Jainism",
+      "History",
+      "Archaeology"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Vaishali",
+      "Vaisali",
+      "Ashokan Pillar Vaishali",
+      "Kundalpur"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Jay Prakash Narayan Airport Patna (PAT) - 55 km",
+      "nearestRailway": "Hajipur Junction (HJP) - 35 km",
+      "roadConnectivity": "Connected via NH 722 from Patna and Muzaffarpur"
+    },
+    "culturalHighlights": [
+      "Ashokan Lion Pillar carved out of a single monolithic red sandstone block",
+      "Buddha Relic Stupa where one-eighth of Lord Buddha's sacred ashes were enshrined",
+      "Vishwa Shanti Stupa erected by the Nipponzan Myohoji sect"
+    ],
+    "sourceUrl": "https://tourism.bihar.gov.in",
+    "attractions": [
+      {
+        "id": "vsh-pillar",
+        "name": "Ashokan Pillar & Relic Stupa",
+        "category": "Archaeology",
+        "timeSlot": "Morning",
+        "description": "Intact polished sandstone pillar topped by a lifelike lion facing north towards Buddha's final journey, beside an ancient brick stupa.",
+        "visitDurationMinutes": 90,
+        "estimatedCostInr": 25,
+        "coordinates": {
+          "lat": 25.9925,
+          "lng": 85.1311
+        },
+        "address": "Kolhua, Vaishali, Bihar",
+        "imageUrl": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Visit Kolhua early morning for serene reflection and gentle lighting"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-vsh-1",
+        "name": "Amrapali Bihar Tourism Restaurant",
+        "mealType": "Lunch",
+        "cuisine": "Bihari Traditional",
+        "famousFor": "Authentic Litti Chokha with sattu, ghee, and roasted brinjal mash",
+        "estimatedCostPerPersonInr": 200,
+        "coordinates": {
+          "lat": 25.9863,
+          "lng": 85.1278
+        }
+      }
+    ]
+  },
+  {
+    "id": "valmiki-national-park",
+    "name": "Valmiki National Park & Tiger Reserve",
+    "normalizedName": "valmiki national park & tiger reserve",
+    "state": "Bihar",
+    "isUnionTerritory": false,
+    "district": "West Champaran",
+    "category": "National Parks & Wildlife",
+    "tagline": "Bihar's premier tiger haven nestled on the Indo-Nepal Himalayan foothills",
+    "description": "Thriving biodiversity haven where the Gandak River meanders through Terai sal forests harboring Bengal tigers, Indian rhinoceros, leopards, and flying squirrels.",
+    "coordinates": {
+      "lat": 27.3167,
+      "lng": 84.1833
+    },
+    "bestMonths": "November to April",
+    "idealDays": 3,
+    "popularInterests": [
+      "Wildlife Safari",
+      "Bird Watching",
+      "Jungle Trekking",
+      "Nature"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Valmiki Tiger Reserve",
+      "Valmikinagar",
+      "West Champaran Sanctuary"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Gorakhpur Airport (GOP) - 130 km",
+      "nearestRailway": "Valmikinagar Road (VKNR) or Bagaha (BUG) - 45 km",
+      "roadConnectivity": "Accessible via Bettiah and Bagaha through State Highway"
+    },
+    "culturalHighlights": [
+      "Triveni confluence and historic Valmiki Ashram of Ramayana fame",
+      "Eco-tourism huts and canopy walks through pristine Sal woodlands"
+    ],
+    "sourceUrl": "https://tourism.bihar.gov.in",
+    "attractions": [
+      {
+        "id": "val-safari",
+        "name": "Valmiki Jungle Safari & Gandak River Watch",
+        "category": "Wildlife",
+        "timeSlot": "Morning",
+        "description": "Open gypsy safari through core Sal forests offering sightings of wild elephants, barking deer, chital, and vibrant avifauna.",
+        "visitDurationMinutes": 180,
+        "estimatedCostInr": 1200,
+        "coordinates": {
+          "lat": 27.3167,
+          "lng": 84.1833
+        },
+        "address": "Valmikinagar Forest Range, West Champaran, Bihar",
+        "imageUrl": "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Advance booking with forest department is recommended during winter weekends"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-val-1",
+        "name": "Valmiki Eco-Tourism Canteen",
+        "mealType": "Lunch",
+        "cuisine": "North Indian & Local",
+        "famousFor": "Freshly prepared Champaran Handi mutton and rustic dal-bhat",
+        "estimatedCostPerPersonInr": 300,
+        "coordinates": {
+          "lat": 27.3167,
+          "lng": 84.1833
+        }
+      }
+    ]
+  },
+  {
+    "id": "manas-national-park",
+    "name": "Manas National Park",
+    "normalizedName": "manas national park",
+    "state": "Assam",
+    "isUnionTerritory": false,
+    "district": "Baksa",
+    "category": "National Parks & Wildlife",
+    "tagline": "UNESCO World Heritage biosphere at the foothills of the Bhutan Himalayas",
+    "description": "Spectacular wilderness home to rare and endangered endemic wildlife such as the Assam roofed turtle, hispid hare, golden langur, and pygmy hog.",
+    "coordinates": {
+      "lat": 26.6594,
+      "lng": 90.9997
+    },
+    "bestMonths": "October to April",
+    "idealDays": 3,
+    "popularInterests": [
+      "Wildlife",
+      "Bird Watching",
+      "River Rafting",
+      "Photography"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Manas",
+      "Manas Tiger Reserve",
+      "Manas Biosphere"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Lokpriya Gopinath Bordoloi Guwahati Airport (GAU) - 145 km",
+      "nearestRailway": "Barpeta Road Railway Station (BPRD) - 32 km",
+      "roadConnectivity": "Directly accessible via NH 27 and Barpeta Road"
+    },
+    "culturalHighlights": [
+      "Bodo tribal village tours and traditional folk dance presentations",
+      "Scenic tea garden walks along the Bhutan border foothills"
+    ],
+    "sourceUrl": "https://tourism.assam.gov.in",
+    "attractions": [
+      {
+        "id": "mns-safari",
+        "name": "Manas Core Wildlife Safari",
+        "category": "Wildlife",
+        "timeSlot": "Morning",
+        "description": "Jeep safari across Bansbari range crossing elephant corridors, scenic grassland trails, and the azure Manas River.",
+        "visitDurationMinutes": 210,
+        "estimatedCostInr": 1500,
+        "coordinates": {
+          "lat": 26.6594,
+          "lng": 90.9997
+        },
+        "address": "Bansbari Range, Manas, Assam",
+        "imageUrl": "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Opt for both early morning and late afternoon safaris for optimal cat sightings"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-mns-1",
+        "name": "Musa Jungle Retreat Dining",
+        "mealType": "Dinner",
+        "cuisine": "Assamese & Bodo Cuisine",
+        "famousFor": "Authentic Oma Bedor (Bodo pork/fish preparation) and bamboo shoot curry",
+        "estimatedCostPerPersonInr": 450,
+        "coordinates": {
+          "lat": 26.655,
+          "lng": 91.002
+        }
+      }
+    ]
+  },
+  {
+    "id": "sivasagar",
+    "name": "Sivasagar Ahom Heritage",
+    "normalizedName": "sivasagar ahom heritage",
+    "state": "Assam",
+    "isUnionTerritory": false,
+    "district": "Sivasagar",
+    "category": "Historical Monuments & Heritage",
+    "tagline": "The golden capital of the six-century Ahom Dynasty",
+    "description": "Historical treasure trove featuring Rang Ghar (Asia's oldest amphitheatre), Talatal Ghar multi-storied underground royal palace, and the massive Sivasagar Borpukhuri tank.",
+    "coordinates": {
+      "lat": 26.9826,
+      "lng": 94.6425
+    },
+    "bestMonths": "October to March",
+    "idealDays": 2,
+    "popularInterests": [
+      "Ahom History",
+      "Architecture",
+      "Culture",
+      "Photography"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1598971861713-54ad16a7e72e?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Sivasagar",
+      "Sibsagar",
+      "Rang Ghar",
+      "Talatal Ghar"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Jorhat Airport (JRH) - 60 km; Dibrugarh (DIB) - 80 km",
+      "nearestRailway": "Simaluguri Junction (SLGR) - 16 km",
+      "roadConnectivity": "Located on NH 715 connecting Jorhat and Dibrugarh"
+    },
+    "culturalHighlights": [
+      "Rang Ghar - the 18th-century two-storied royal pavilion for bull fights and buffalo bouts",
+      "Siva Dol - one of the tallest Shiva temple shikharas in India towering over Borpukhuri"
+    ],
+    "sourceUrl": "https://tourism.assam.gov.in",
+    "attractions": [
+      {
+        "id": "svg-rangghar",
+        "name": "Rang Ghar & Talatal Ghar Complex",
+        "category": "Heritage",
+        "timeSlot": "Morning",
+        "description": "Astonishing architectural feat of the Ahom Kingdom constructed with indigenous duck egg and sticky rice mortar.",
+        "visitDurationMinutes": 120,
+        "estimatedCostInr": 25,
+        "coordinates": {
+          "lat": 26.9634,
+          "lng": 94.6231
+        },
+        "address": "Rongpur, Sivasagar, Assam",
+        "imageUrl": "https://images.unsplash.com/photo-1598971861713-54ad16a7e72e?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Walk up the outer stairs to view the roof shaped like an inverted Ahom longboat"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-svg-1",
+        "name": "Heritage Ahom Delicacies",
+        "mealType": "Lunch",
+        "cuisine": "Traditional Assamese",
+        "famousFor": "Khar, duck curry with ash gourd, and pitika with Joha rice",
+        "estimatedCostPerPersonInr": 300,
+        "coordinates": {
+          "lat": 26.9826,
+          "lng": 94.6425
+        }
+      }
+    ]
+  },
+  {
+    "id": "netarhat",
+    "name": "Netarhat Queen of Chotanagpur",
+    "normalizedName": "netarhat queen of chotanagpur",
+    "state": "Jharkhand",
+    "isUnionTerritory": false,
+    "district": "Latehar",
+    "category": "Hill Stations & Scenic Viewpoints",
+    "tagline": "Serene plateau clothed in pine groves, cascading waterfalls, and fiery sunsets",
+    "description": "Pristine hill station perched at 3,700 feet on the Pat region, renowned for its dramatic Magnolia sunset point, Koel view point, and Upper Ghaghri waterfalls.",
+    "coordinates": {
+      "lat": 23.4833,
+      "lng": 84.2667
+    },
+    "bestMonths": "October to April",
+    "idealDays": 2,
+    "popularInterests": [
+      "Sunsets",
+      "Nature Walks",
+      "Waterfalls",
+      "Tribal Culture"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Netarhat",
+      "Queen of Chotanagpur",
+      "Magnolia Point Latehar"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Birsa Munda Airport Ranchi (IXR) - 156 km",
+      "nearestRailway": "Lohardaga Railway Station - 85 km; Ranchi Junction - 150 km",
+      "roadConnectivity": "Picturesque ghat road from Ranchi via Lohardaga"
+    },
+    "culturalHighlights": [
+      "Magnolia Sunset Point offering legendary vistas over forested ravines",
+      "Pine forest walks and Lodh Falls (Jharkhand's highest waterfall) nearby"
+    ],
+    "sourceUrl": "https://tourism.jharkhand.gov.in",
+    "attractions": [
+      {
+        "id": "nth-magnolia",
+        "name": "Magnolia Sunset Point & Pine Forest",
+        "category": "Scenic",
+        "timeSlot": "Evening",
+        "description": "Cliff-edge viewpoint overlooking rolling Chotanagpur valleys with breathtaking sunset panoramas.",
+        "visitDurationMinutes": 90,
+        "estimatedCostInr": 0,
+        "coordinates": {
+          "lat": 23.4833,
+          "lng": 84.2667
+        },
+        "address": "Netarhat Plateau, Latehar, Jharkhand",
+        "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Arrive 45 minutes before sunset to witness shifting hues over the forested horizon"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-nth-1",
+        "name": "Prabhat Vihar JTDC Dining",
+        "mealType": "Dinner",
+        "cuisine": "Jharkhand Local & North Indian",
+        "famousFor": "Dhuska with ghugni, chilka roti, and hot seasonal vegetables",
+        "estimatedCostPerPersonInr": 250,
+        "coordinates": {
+          "lat": 23.4833,
+          "lng": 84.2667
+        }
+      }
+    ]
+  },
+  {
+    "id": "betla-national-park",
+    "name": "Betla National Park & Palamu Forts",
+    "normalizedName": "betla national park & palamu forts",
+    "state": "Jharkhand",
+    "isUnionTerritory": false,
+    "district": "Latehar & Palamu",
+    "category": "National Parks & Wildlife",
+    "tagline": "One of India's earliest tiger project reserves guarded by 16th-century jungle citadels",
+    "description": "Lush sal and bamboo sanctuary harbouring wild elephants, bison (gaur), sloth bears, and leopards, featuring the mysterious twin Palamu Forts hidden deep in the forest.",
+    "coordinates": {
+      "lat": 23.8833,
+      "lng": 84.1833
+    },
+    "bestMonths": "November to April",
+    "idealDays": 2,
+    "popularInterests": [
+      "Wildlife Safari",
+      "Ancient Forts",
+      "History",
+      "Nature"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Betla",
+      "Palamu Tiger Reserve",
+      "Palamau Forts"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Ranchi Airport (IXR) - 170 km",
+      "nearestRailway": "Daltonganj Railway Station (DTO) - 25 km",
+      "roadConnectivity": "Connected via NH 39 from Ranchi and Medininagar"
+    },
+    "culturalHighlights": [
+      "Twin 16th-century Palamu Forts built by the Chero kings deep inside the forest",
+      "Elephant-back and jeep safaris across lush sal tree canopies"
+    ],
+    "sourceUrl": "https://tourism.jharkhand.gov.in",
+    "attractions": [
+      {
+        "id": "bet-safari",
+        "name": "Betla Wildlife Safari & Ancient Fort Hike",
+        "category": "Wildlife & Heritage",
+        "timeSlot": "Morning",
+        "description": "Jeep track crossing elephant waterholes followed by a walk up the ruins of the Old and New Palamu Forts.",
+        "visitDurationMinutes": 180,
+        "estimatedCostInr": 800,
+        "coordinates": {
+          "lat": 23.8833,
+          "lng": 84.1833
+        },
+        "address": "Betla, Latehar District, Jharkhand",
+        "imageUrl": "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Forest department guide is mandatory for entering the historical fort area"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-bet-1",
+        "name": "Van Vihar Tourist Complex",
+        "mealType": "Lunch",
+        "cuisine": "North Indian & Tribal",
+        "famousFor": "Rural Thali with seasonal greens and hand-pounded village chutneys",
+        "estimatedCostPerPersonInr": 220,
+        "coordinates": {
+          "lat": 23.8833,
+          "lng": 84.1833
+        }
+      }
+    ]
+  },
+  {
+    "id": "barnawapara",
+    "name": "Barnawapara Wildlife Sanctuary",
+    "normalizedName": "barnawapara wildlife sanctuary",
+    "state": "Chhattisgarh",
+    "isUnionTerritory": false,
+    "district": "Mahasamund",
+    "category": "National Parks & Wildlife",
+    "tagline": "Teak canopy oasis alive with leopards, flying squirrels, and Indian gaur",
+    "description": "Peaceful wildlife reserve dominated by flat and undulating terrain crisscrossed by the Balamdehi and Jonk rivers, celebrated for high herbivore and leopard density.",
+    "coordinates": {
+      "lat": 21.4056,
+      "lng": 82.4283
+    },
+    "bestMonths": "November to June",
+    "idealDays": 2,
+    "popularInterests": [
+      "Wildlife",
+      "Photography",
+      "Bird Watching",
+      "Eco-Tourism"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1575550959106-5a7defe28b56?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Barnawapara",
+      "Barna Wildlife",
+      "Mahasamund Reserve"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Swami Vivekananda Airport Raipur (RPR) - 100 km",
+      "nearestRailway": "Mahasamund (MSMD) - 60 km; Raipur (R) - 100 km",
+      "roadConnectivity": "Scenic drive from Raipur via Pithora on NH 53"
+    },
+    "culturalHighlights": [
+      "Sirpur heritage site with Lakshmana Temple just 35 km away",
+      "Traditional Baiga and Gond tribal handicraft displays"
+    ],
+    "sourceUrl": "https://www.chhattisgarhtourism.fullcreative.com",
+    "attractions": [
+      {
+        "id": "bar-safari",
+        "name": "Barnawapara Jeep Safari",
+        "category": "Wildlife",
+        "timeSlot": "Morning",
+        "description": "Open top gypsy safari through teak and mixed deciduous forests with frequent sightings of chital herds, nilgai, and peacocks.",
+        "visitDurationMinutes": 150,
+        "estimatedCostInr": 1000,
+        "coordinates": {
+          "lat": 21.4056,
+          "lng": 82.4283
+        },
+        "address": "Barnawapara, Mahasamund, Chhattisgarh",
+        "imageUrl": "https://images.unsplash.com/photo-1575550959106-5a7defe28b56?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Spotting leopards is particularly high around water points during afternoon drives"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-bar-1",
+        "name": "Hareli Eco Resort Dining",
+        "mealType": "Lunch",
+        "cuisine": "Chhattisgarhi Cuisine",
+        "famousFor": "Chila, Faraa (steamed rice dumplings), and spicy tomato chutney",
+        "estimatedCostPerPersonInr": 250,
+        "coordinates": {
+          "lat": 21.4056,
+          "lng": 82.4283
+        }
+      }
+    ]
+  },
+  {
+    "id": "mainpat",
+    "name": "Mainpat Shimla of Chhattisgarh",
+    "normalizedName": "mainpat shimla of chhattisgarh",
+    "state": "Chhattisgarh",
+    "isUnionTerritory": false,
+    "district": "Surguja",
+    "category": "Hill Stations & Scenic Viewpoints",
+    "tagline": "The Tibet of Chhattisgarh - Bouncing soils, Tibetan monasteries, and waterfalls",
+    "description": "High-altitude tableland known for Tiger Point waterfall, Tibetan Buddhist settlement with Dhakpo Shedrupling Monastery, and the enigmatic bouncing bog of Jaljali.",
+    "coordinates": {
+      "lat": 22.8167,
+      "lng": 83.2833
+    },
+    "bestMonths": "October to March",
+    "idealDays": 2,
+    "popularInterests": [
+      "Tibetan Culture",
+      "Waterfalls",
+      "Nature",
+      "Geological Wonders"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Mainpat",
+      "Shimla of Chhattisgarh",
+      "Mini Tibet Surguja",
+      "Jaljali"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Raipur Airport (RPR) - 360 km; Ranchi Airport (IXR) - 300 km",
+      "nearestRailway": "Ambikapur Railway Station (ABKP) - 50 km",
+      "roadConnectivity": "Well-maintained ghat road from Ambikapur"
+    },
+    "culturalHighlights": [
+      "Dhakpo Monastery with monks chanting ancient Tibetan texts",
+      "Jaljali bouncing ground where the earth flexes like a trampoline"
+    ],
+    "sourceUrl": "https://www.chhattisgarhtourism.fullcreative.com",
+    "attractions": [
+      {
+        "id": "mai-tiger",
+        "name": "Tiger Point Falls & Dhakpo Monastery",
+        "category": "Scenic & Culture",
+        "timeSlot": "Morning",
+        "description": "Roaring waterfall cascading into a deep forested valley paired with visits to serene Buddhist prayer halls.",
+        "visitDurationMinutes": 150,
+        "estimatedCostInr": 20,
+        "coordinates": {
+          "lat": 22.8167,
+          "lng": 83.2833
+        },
+        "address": "Mainpat Plateau, Surguja, Chhattisgarh",
+        "imageUrl": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Walk on the bouncy peat soil at Jaljali for a unique geological surprise"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-mai-1",
+        "name": "Tibetan Camp Cafe",
+        "mealType": "Lunch",
+        "cuisine": "Tibetan & Chhattisgarhi",
+        "famousFor": "Steaming momos, Thukpa soup, and local herbal tea",
+        "estimatedCostPerPersonInr": 200,
+        "coordinates": {
+          "lat": 22.8167,
+          "lng": 83.2833
+        }
+      }
+    ]
+  },
+  {
+    "id": "pelling",
+    "name": "Pelling & Kanchenjunga Vistas",
+    "normalizedName": "pelling & kanchenjunga vistas",
+    "state": "Sikkim",
+    "isUnionTerritory": false,
+    "district": "West Sikkim",
+    "category": "Hill Stations & Scenic Viewpoints",
+    "tagline": "Unrivalled panoramas of Mount Kanchenjunga and sacred Himalayan monasteries",
+    "description": "Breathtaking West Sikkim town featuring Pemayangtse Monastery, Rabdentse royal palace ruins, India's first glass skywalk at Chenrezig, and holy Khecheopalri Lake.",
+    "coordinates": {
+      "lat": 27.3167,
+      "lng": 88.2333
+    },
+    "bestMonths": "October to May",
+    "idealDays": 3,
+    "popularInterests": [
+      "Mountain Views",
+      "Monasteries",
+      "Glass Skywalk",
+      "Trekking"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Pelling",
+      "West Sikkim",
+      "Pemayangtse",
+      "Rabdentse"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Pakyong Airport (PYG) - 110 km; Bagdogra (IXB) - 140 km",
+      "nearestRailway": "New Jalpaiguri (NJP) - 135 km",
+      "roadConnectivity": "Connected via Geyzing through NH 510 from Siliguri or Gangtok"
+    },
+    "culturalHighlights": [
+      "Pemayangtse Monastery housing the iconic wooden seven-tiered model of Zandogpalri",
+      "Rabdentse Ruins walking trail winding through mystical moss-draped forest"
+    ],
+    "sourceUrl": "https://www.sikkimtourism.gov.in",
+    "attractions": [
+      {
+        "id": "pel-skywalk",
+        "name": "Pelling Glass Skywalk & Chenrezig Statue",
+        "category": "Scenic",
+        "timeSlot": "Morning",
+        "description": "Thrilling transparent glass walkway perched high over mountain ridges leading to a monumental 137-foot Chenrezig statue.",
+        "visitDurationMinutes": 120,
+        "estimatedCostInr": 100,
+        "coordinates": {
+          "lat": 27.305,
+          "lng": 88.241
+        },
+        "address": "Sanga Choeling, Pelling, West Sikkim",
+        "imageUrl": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Head there at sunrise for the clearest uninterrupted views of Kanchenjunga"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-pel-1",
+        "name": "Lotus Bakery & Himalayan Cafe",
+        "mealType": "Breakfast",
+        "cuisine": "Sikkimese & Continental",
+        "famousFor": "Fresh cinnamon rolls, Shaphalay (Tibetan meat pie), and butter tea",
+        "estimatedCostPerPersonInr": 250,
+        "coordinates": {
+          "lat": 27.3167,
+          "lng": 88.2333
+        }
+      }
+    ]
+  },
+  {
+    "id": "yumthang-valley",
+    "name": "Yumthang Valley of Flowers & Lachung",
+    "normalizedName": "yumthang valley of flowers & lachung",
+    "state": "Sikkim",
+    "isUnionTerritory": false,
+    "district": "North Sikkim",
+    "category": "Valleys & Scenic",
+    "tagline": "Himalayan alpine paradise blanketed in wild rhododendrons and hot springs",
+    "description": "Spectacular valley at 11,800 feet cradled by snow-capped peaks, alpine meadows grazed by yaks, hot sulfur springs, and gateway to Zero Point (Yumesamdong).",
+    "coordinates": {
+      "lat": 27.8286,
+      "lng": 88.6958
+    },
+    "bestMonths": "March to June (Flowers) & Dec to Feb (Snow)",
+    "idealDays": 3,
+    "popularInterests": [
+      "Alpine Flowers",
+      "Snow Vistas",
+      "Hot Springs",
+      "High Altitudes"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Yumthang",
+      "Lachung",
+      "Sikkim Valley of Flowers",
+      "Zero Point"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Pakyong (PYG) - 150 km; Bagdogra (IXB) - 190 km",
+      "nearestRailway": "New Jalpaiguri (NJP) - 185 km",
+      "roadConnectivity": "Reached by organized 4WD convoy via Chungthang and Lachung (Protected Area Permit mandatory)"
+    },
+    "culturalHighlights": [
+      "Traditional wooden Lachung village architecture and warm Bhutia hospitality",
+      "Shingba Rhododendron Sanctuary boasting over 40 species of blooming rhododendrons"
+    ],
+    "sourceUrl": "https://www.sikkimtourism.gov.in",
+    "attractions": [
+      {
+        "id": "yum-valley",
+        "name": "Yumthang Alpine Sanctuary & Hot Spring",
+        "category": "Nature",
+        "timeSlot": "Morning",
+        "description": "Traverse rolling pastures cut by crystal mountain streams against towering glaciated peaks, culminating in natural thermal baths.",
+        "visitDurationMinutes": 180,
+        "estimatedCostInr": 0,
+        "coordinates": {
+          "lat": 27.8286,
+          "lng": 88.6958
+        },
+        "address": "North Sikkim Highway, Lachung Range, Sikkim",
+        "imageUrl": "https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Requires Inner Line Permit (ILP) arranged at least 24 hours prior from Gangtok"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-yum-1",
+        "name": "Lachung Heritage Homestay",
+        "mealType": "Dinner",
+        "cuisine": "Bhutia Cuisine",
+        "famousFor": "Warm Thukpa noodle broth, local fermented radish Gundruk soup, and Tingmo bread",
+        "estimatedCostPerPersonInr": 300,
+        "coordinates": {
+          "lat": 27.7,
+          "lng": 88.75
+        }
+      }
+    ]
+  },
+  {
+    "id": "bomdila",
+    "name": "Bomdila Himalayan Town",
+    "normalizedName": "bomdila himalayan town",
+    "state": "Arunachal Pradesh",
+    "isUnionTerritory": false,
+    "district": "West Kameng",
+    "category": "Hill Stations & Scenic Viewpoints",
+    "tagline": "Apple orchards, Buddhist monasteries, and majestic views of Kangto and Gorichen peaks",
+    "description": "Picturesque hill town at 8,000 feet serving as the cultural gateway to Tawang, renowned for the Gontse Gaden Rabgyel Lling monastery, craft centres, and apple orchards.",
+    "coordinates": {
+      "lat": 27.2644,
+      "lng": 92.4278
+    },
+    "bestMonths": "October to April",
+    "idealDays": 2,
+    "popularInterests": [
+      "Monasteries",
+      "Mountain Passes",
+      "Handicrafts",
+      "Culture"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Bomdila",
+      "West Kameng",
+      "Bomdila Monastery"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Tezpur Airport (TEZ) - 150 km; Guwahati (GAU) - 300 km",
+      "nearestRailway": "Rangapara North (RPAN) - 145 km",
+      "roadConnectivity": "Connected along the Trans-Arunachal Highway via Bhalukpong"
+    },
+    "culturalHighlights": [
+      "Bomdila Monastery (Gentse Gaden Rabgyel Lling) with panoramic valley vistas",
+      "Arunachal Craft Centre showcasing Monpa handwoven carpets and traditional masks"
+    ],
+    "sourceUrl": "https://www.arunachaltourism.com",
+    "attractions": [
+      {
+        "id": "bom-monastery",
+        "name": "Gontse Rabgyel Lling Monastery",
+        "category": "Monastery",
+        "timeSlot": "Morning",
+        "description": "Seat of the reincarnated Guru Tulku Rinpoche featuring prayer wheels, ornate thangkas, and stunning Himalayan outlooks.",
+        "visitDurationMinutes": 90,
+        "estimatedCostInr": 0,
+        "coordinates": {
+          "lat": 27.2644,
+          "lng": 92.4278
+        },
+        "address": "Upper Gompa, Bomdila, Arunachal Pradesh",
+        "imageUrl": "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": false,
+        "tips": [
+          "Visit during morning puja for peaceful monastic brass horn echoes"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-bom-1",
+        "name": "Zan Tibetan Diner",
+        "mealType": "Lunch",
+        "cuisine": "Monpa & Tibetan",
+        "famousFor": "Authentic Zan porridge with roasted flour, steamed momos, and spicy churpi cheese stew",
+        "estimatedCostPerPersonInr": 220,
+        "coordinates": {
+          "lat": 27.2644,
+          "lng": 92.4278
+        }
+      }
+    ]
+  },
+  {
+    "id": "namdapha-national-park",
+    "name": "Namdapha National Park & Biosphere",
+    "normalizedName": "namdapha national park & biosphere",
+    "state": "Arunachal Pradesh",
+    "isUnionTerritory": false,
+    "district": "Changlang",
+    "category": "National Parks & Wildlife",
+    "tagline": "India's easternmost rainforest wilderness sheltering four big feline species",
+    "description": "Vast rainforest wilderness spanning elevations from 200m to 4,500m near the Myanmar border, famous for harboring tigers, leopards, snow leopards, and clouded leopards in one park.",
+    "coordinates": {
+      "lat": 27.4917,
+      "lng": 96.3833
+    },
+    "bestMonths": "October to April",
+    "idealDays": 4,
+    "popularInterests": [
+      "Trekking",
+      "Rainforest Biodiversity",
+      "Bird Watching",
+      "Expeditions"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Namdapha",
+      "Miao",
+      "Changlang Wilderness",
+      "Noa-Dihing"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Dibrugarh Airport (DIB) - 160 km",
+      "nearestRailway": "Tinsukia Junction (TSK) - 140 km",
+      "roadConnectivity": "Approached from Dibrugarh/Tinsukia via Margherita and Miao"
+    },
+    "culturalHighlights": [
+      "Miao museum displaying indigenous Tangsa and Singpho tribal artifacts",
+      "Crossing the turquoise Noa-Dihing River into primary evergreen rain forests"
+    ],
+    "sourceUrl": "https://www.arunachaltourism.com",
+    "attractions": [
+      {
+        "id": "nam-trek",
+        "name": "Deban Forest Trek & Noa-Dihing Crossing",
+        "category": "Trekking & Wildlife",
+        "timeSlot": "Morning",
+        "description": "Intrepid multi-tier rainforest expedition through dense dipterocarp trees sheltering Hoolock gibbons and hornbills.",
+        "visitDurationMinutes": 300,
+        "estimatedCostInr": 500,
+        "coordinates": {
+          "lat": 27.4917,
+          "lng": 96.3833
+        },
+        "address": "Deban, Namdapha, Changlang, Arunachal Pradesh",
+        "imageUrl": "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Mandatory ILP for Indian travellers and PAP for foreign nationals; hire a local guide in Miao"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-nam-1",
+        "name": "Singpho Eco Lodge Kitchen",
+        "mealType": "Dinner",
+        "cuisine": "Singpho Traditional",
+        "famousFor": "Fish steamed in bamboo hollows, organic indigenous sticky rice, and wild mountain herbs",
+        "estimatedCostPerPersonInr": 300,
+        "coordinates": {
+          "lat": 27.49,
+          "lng": 96.38
+        }
+      }
+    ]
+  },
+  {
+    "id": "ukhrul",
+    "name": "Ukhrul & Shirui Peak",
+    "normalizedName": "ukhrul & shirui peak",
+    "state": "Manipur",
+    "isUnionTerritory": false,
+    "district": "Ukhrul",
+    "category": "Hill Stations & Scenic Viewpoints",
+    "tagline": "Home of the rare Shirui Lily and misty Tangkhul Naga highlands",
+    "description": "Scenic hill haven famed for Shirui Kashong Peak where the unique endemic Shirui Lily blooms, mysterious Khangkhui limestone caves, and ancient megalithic sites.",
+    "coordinates": {
+      "lat": 25.1167,
+      "lng": 94.3667
+    },
+    "bestMonths": "October to May (May-June for Shirui Lily bloom)",
+    "idealDays": 2,
+    "popularInterests": [
+      "Shirui Lily Trekking",
+      "Caves",
+      "Tangkhul Culture",
+      "Nature"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Ukhrul",
+      "Shirui Kashong",
+      "Tangkhul Hills",
+      "Shirui Peak"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Bir Tikendrajit International Airport Imphal (IMF) - 84 km",
+      "nearestRailway": "Dimapur (DMV) - 215 km; Jiribam - 290 km",
+      "roadConnectivity": "Connected via NH 202 from Imphal city (3 hours drive)"
+    },
+    "culturalHighlights": [
+      "Tangkhul Naga traditional woodcarvings, handloom textiles, and pottery",
+      "Khangkhui Mangsor limestone cave shelter dating back to the Stone Age"
+    ],
+    "sourceUrl": "https://www.manipurtourism.gov.in",
+    "attractions": [
+      {
+        "id": "ukh-shirui",
+        "name": "Shirui Kashong Peak Trek",
+        "category": "Trekking",
+        "timeSlot": "Morning",
+        "description": "Rewarding hike to 2,835 meters through rhododendron shrubs and high altitude meadows where the world's only Shirui Lily blooms in May.",
+        "visitDurationMinutes": 240,
+        "estimatedCostInr": 50,
+        "coordinates": {
+          "lat": 25.1167,
+          "lng": 94.3667
+        },
+        "address": "Shirui Village, Ukhrul District, Manipur",
+        "imageUrl": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Trek starts early at Shirui foothills; wear sturdy boots for misty grassy slopes"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-ukh-1",
+        "name": "Tangkhul Traditional Cafe",
+        "mealType": "Lunch",
+        "cuisine": "Manipuri Tribal",
+        "famousFor": "Kangshoi vegetable stew, smoked pork with bamboo shoots, and fresh wild pepper relish",
+        "estimatedCostPerPersonInr": 250,
+        "coordinates": {
+          "lat": 25.1167,
+          "lng": 94.3667
+        }
+      }
+    ]
+  },
+  {
+    "id": "jowai",
+    "name": "Jowai & Krang Shuri Waterfalls",
+    "normalizedName": "jowai & krang shuri waterfalls",
+    "state": "Meghalaya",
+    "isUnionTerritory": false,
+    "district": "West Jaintia Hills",
+    "category": "Waterfalls & Nature",
+    "tagline": "Aquamarine natural pools, sacred groves, and stone megaliths of Jaintia Hills",
+    "description": "Picturesque heartland of the Pnar people famed for the azure plunge pool of Krang Shuri Falls, Nartiang monoliths (tallest megaliths in India), and Thadlaskein Lake.",
+    "coordinates": {
+      "lat": 25.45,
+      "lng": 92.2
+    },
+    "bestMonths": "September to April",
+    "idealDays": 2,
+    "popularInterests": [
+      "Waterfalls",
+      "Swimming",
+      "Megaliths",
+      "Pnar Culture"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Jowai",
+      "Krang Suri",
+      "Krang Shuri Falls",
+      "Nartiang Monoliths"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Umroi Airport Shillong (SHL) - 75 km; Guwahati (GAU) - 160 km",
+      "nearestRailway": "Guwahati Railway Station (GHY) - 155 km",
+      "roadConnectivity": "Directly connected via NH 6 from Shillong (2 hours drive)"
+    },
+    "culturalHighlights": [
+      "Nartiang Monolith Park displaying massive centuries-old commemorative stone pillars",
+      "Pristine turquoise swimming lagoon sheltered by natural limestone at Krang Shuri"
+    ],
+    "sourceUrl": "https://www.meghalayatourism.in",
+    "attractions": [
+      {
+        "id": "jow-krang",
+        "name": "Krang Shuri Waterfalls & Pool",
+        "category": "Waterfalls",
+        "timeSlot": "Morning",
+        "description": "Surreal crystal-clear copper-blue plunge pool fed by cascades, equipped with stone paths and safe swimming zones with life jackets.",
+        "visitDurationMinutes": 150,
+        "estimatedCostInr": 100,
+        "coordinates": {
+          "lat": 25.3125,
+          "lng": 92.2683
+        },
+        "address": "Amlarem, West Jaintia Hills, Meghalaya",
+        "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Rent a life jacket for 50 INR to safely swim into the cool falls cave"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-jow-1",
+        "name": "Pnar Heritage Hut",
+        "mealType": "Lunch",
+        "cuisine": "Khasi & Jaintia Traditional",
+        "famousFor": "Jadoh (rice cooked with meat stock), Dohkhlieh pork salad, and tungrymbai chutney",
+        "estimatedCostPerPersonInr": 220,
+        "coordinates": {
+          "lat": 25.45,
+          "lng": 92.2
+        }
+      }
+    ]
+  },
+  {
+    "id": "vantawng-falls",
+    "name": "Vantawng Falls & Thenzawl",
+    "normalizedName": "vantawng falls & thenzawl",
+    "state": "Mizoram",
+    "isUnionTerritory": false,
+    "district": "Serchhip",
+    "category": "Waterfalls & Nature",
+    "tagline": "Mizoram's highest two-tiered waterfall roaring amidst bamboo jungles",
+    "description": "Spectacular 750-foot waterfall dropping amidst lush green hills near Thenzawl, Mizoram's premier handloom weaving capital, accompanied by Tuirihnau Falls and deer parks.",
+    "coordinates": {
+      "lat": 23.2833,
+      "lng": 92.7667
+    },
+    "bestMonths": "October to April",
+    "idealDays": 2,
+    "popularInterests": [
+      "Waterfalls",
+      "Handloom Weaving",
+      "Mizo Culture",
+      "Photography"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Vantawng Khawhthla",
+      "Thenzawl",
+      "Serchhip Waterfall"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Lengpui Airport Aizawl (AJL) - 120 km",
+      "nearestRailway": "Bairabi Railway Station (BHRB) - 220 km",
+      "roadConnectivity": "Smooth scenic highway drive from Aizawl through Hmuifang"
+    },
+    "culturalHighlights": [
+      "Thenzawl Handloom centre where women weave intricate traditional Puan textiles",
+      "Vantawng viewing tower surrounded by thick bamboo and wild banana forests"
+    ],
+    "sourceUrl": "https://tourism.mizoram.gov.in",
+    "attractions": [
+      {
+        "id": "van-falls",
+        "name": "Vantawng Khawhthla Viewing Pavilion",
+        "category": "Waterfalls",
+        "timeSlot": "Morning",
+        "description": "Observation pavilion offering safe, dramatic views of Mizoram's highest fall plunging down a steep rocky cliff surrounded by untouched rainforest.",
+        "visitDurationMinutes": 90,
+        "estimatedCostInr": 20,
+        "coordinates": {
+          "lat": 23.2833,
+          "lng": 92.7667
+        },
+        "address": "Near Thenzawl, Serchhip District, Mizoram",
+        "imageUrl": "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Combine with a visit to the traditional Thenzawl Golf Resort and weavers colony"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-van-1",
+        "name": "Thenzawl Tourist Lodge Dining",
+        "mealType": "Lunch",
+        "cuisine": "Mizo Cuisine",
+        "famousFor": "Bai (steamed vegetables with pork and fermented bamboo shoot) and warm herbal tea",
+        "estimatedCostPerPersonInr": 200,
+        "coordinates": {
+          "lat": 23.2833,
+          "lng": 92.7667
+        }
+      }
+    ]
+  },
+  {
+    "id": "khonoma",
+    "name": "Khonoma Green Village",
+    "normalizedName": "khonoma green village",
+    "state": "Nagaland",
+    "isUnionTerritory": false,
+    "district": "Kohima",
+    "category": "Eco-Tourism & Culture",
+    "tagline": "Asia's first green eco-village famed for Angami warrior history and terraced hills",
+    "description": "Historic 700-year-old Angami Naga village that successfully banned logging and hunting to establish the Khonoma Nature Conservation and Tragopan Sanctuary, surrounded by stepped paddy fields.",
+    "coordinates": {
+      "lat": 25.65,
+      "lng": 94.0167
+    },
+    "bestMonths": "October to April",
+    "idealDays": 2,
+    "popularInterests": [
+      "Eco-Tourism",
+      "Angami Culture",
+      "Blyth's Tragopan",
+      "Terraced Farming"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Khonoma",
+      "Asia's First Green Village",
+      "Angami Eco Village"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Dimapur Airport (DMU) - 90 km",
+      "nearestRailway": "Dimapur Railway Station (DMV) - 88 km",
+      "roadConnectivity": "Short 20 km scenic mountain drive from Kohima city"
+    },
+    "culturalHighlights": [
+      "Traditional fortresses (Khels) and ceremonial carved wooden gates",
+      "Community-led sanctuary protecting the endangered Blyth's Tragopan bird"
+    ],
+    "sourceUrl": "https://tourism.nagaland.gov.in",
+    "attractions": [
+      {
+        "id": "kho-village",
+        "name": "Khonoma Village Heritage Walk & Terraced Fields",
+        "category": "Culture & Eco",
+        "timeSlot": "Morning",
+        "description": "Guided walk through village morungs, stone monuments, and terraced paddy hills demonstrating sustainable alder-tree agroforestry.",
+        "visitDurationMinutes": 150,
+        "estimatedCostInr": 300,
+        "coordinates": {
+          "lat": 25.65,
+          "lng": 94.0167
+        },
+        "address": "Khonoma Village, Kohima District, Nagaland",
+        "imageUrl": "https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Hire a local village elder as guide to hear oral accounts of the 1879 British resistance"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-kho-1",
+        "name": "Baby's Homestay Traditional Kitchen",
+        "mealType": "Lunch",
+        "cuisine": "Naga Angami",
+        "famousFor": "Galho (organic Naga rice risotto), smoked pork with axone, and garden fresh greens",
+        "estimatedCostPerPersonInr": 250,
+        "coordinates": {
+          "lat": 25.65,
+          "lng": 94.0167
+        }
+      }
+    ]
+  },
+  {
+    "id": "mon",
+    "name": "Mon & Longwa Border Village",
+    "normalizedName": "mon & longwa border village",
+    "state": "Nagaland",
+    "isUnionTerritory": false,
+    "district": "Mon",
+    "category": "Historical Monuments & Heritage",
+    "tagline": "Realm of the Konyak headhunters and the village straddling India and Myanmar",
+    "description": "Fascinating cultural frontier famous for tattooed Konyak elders, exquisite brass beadwork, and Longwa village where the international boundary bisects the Chief's house.",
+    "coordinates": {
+      "lat": 26.75,
+      "lng": 95.1
+    },
+    "bestMonths": "October to April (Aoleang Festival in April)",
+    "idealDays": 3,
+    "popularInterests": [
+      "Konyak Culture",
+      "Border Heritage",
+      "Handicrafts",
+      "Anthropology"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Mon",
+      "Longwa",
+      "Konyak Land",
+      "India Myanmar Border Village"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Jorhat (JRH) - 160 km; Dibrugarh (DIB) - 180 km",
+      "nearestRailway": "Bhojo Railway Station (Assam) - 65 km",
+      "roadConnectivity": "Reached via Sonari or Simaluguri in Assam into Mon"
+    },
+    "culturalHighlights": [
+      "The Angh's (King's) Longhouse in Longwa where the kitchen sits in Myanmar and the bedroom in India",
+      "Traditional Morung community halls adorned with woodcarvings and trophy horns"
+    ],
+    "sourceUrl": "https://tourism.nagaland.gov.in",
+    "attractions": [
+      {
+        "id": "mon-longwa",
+        "name": "Longwa Village & Angh's Palace",
+        "category": "Heritage",
+        "timeSlot": "Morning",
+        "description": "Visit the residence of the hereditary hereditary Chief of Longwa ruling over 40 villages across both India and Myanmar without travel visas.",
+        "visitDurationMinutes": 180,
+        "estimatedCostInr": 100,
+        "coordinates": {
+          "lat": 26.85,
+          "lng": 95.2
+        },
+        "address": "Longwa, Mon District, Nagaland",
+        "imageUrl": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Show respect when meeting elderly tattooed warriors; ask permission before photographs"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-mon-1",
+        "name": "Konyak Heritage Dining",
+        "mealType": "Dinner",
+        "cuisine": "Konyak Naga",
+        "famousFor": "Boiled mountain tubers, smoked meat with fiery Raja Mircha chili, and wild herb soup",
+        "estimatedCostPerPersonInr": 250,
+        "coordinates": {
+          "lat": 26.75,
+          "lng": 95.1
+        }
+      }
+    ]
+  },
+  {
+    "id": "neermahal",
+    "name": "Neermahal Water Palace & Rudrasagar Lake",
+    "normalizedName": "neermahal water palace & rudrasagar lake",
+    "state": "Tripura",
+    "isUnionTerritory": false,
+    "district": "Sipahijala",
+    "category": "Palaces & Forts",
+    "tagline": "Eastern India's only floating water palace rising out of Rudrasagar Lake",
+    "description": "Marvel of Hindu and Mughal architecture built in 1930 by King Bir Bikram Kishore Manikya in the middle of Rudrasagar Lake, featuring floodlit red-and-white pavilions.",
+    "coordinates": {
+      "lat": 23.4975,
+      "lng": 91.3197
+    },
+    "bestMonths": "October to March",
+    "idealDays": 2,
+    "popularInterests": [
+      "Palaces",
+      "Boating",
+      "Architecture",
+      "Bird Watching"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Neermahal",
+      "Rudrasagar Lake Palace",
+      "Melaghar Palace",
+      "Twijilik"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Maharaja Bir Bikram Airport Agartala (IXA) - 55 km",
+      "nearestRailway": "Agartala Railway Station (AGTL) - 50 km",
+      "roadConnectivity": "Connected via NH 8 from Agartala towards Melaghar (1.5 hours)"
+    },
+    "culturalHighlights": [
+      "Motorboat cruise across Rudrasagar wetland teeming with migratory winter waterfowl",
+      "Neermahal water festival and royal boat racing held annually in August/September"
+    ],
+    "sourceUrl": "https://tripuratourism.gov.in",
+    "attractions": [
+      {
+        "id": "nee-palace",
+        "name": "Neermahal Palace Island Tour",
+        "category": "Palaces",
+        "timeSlot": "Morning",
+        "description": "Speedboat ride to the 24-room marble and sandstone palace island featuring the Andar Mahal royal residence, open terraces, and garden courtyards.",
+        "visitDurationMinutes": 120,
+        "estimatedCostInr": 50,
+        "coordinates": {
+          "lat": 23.4975,
+          "lng": 91.3197
+        },
+        "address": "Rudrasagar Lake, Melaghar, Tripura",
+        "imageUrl": "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": false,
+        "tips": [
+          "Visit late afternoon for illuminated evening views reflecting across the water"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-nee-1",
+        "name": "Sagarmahal Tourist Lodge Canteen",
+        "mealType": "Lunch",
+        "cuisine": "Tripuri & Bengali",
+        "famousFor": "Fresh Rudrasagar lake fish curry, Mui Borok, and steamed Gobindobhog rice",
+        "estimatedCostPerPersonInr": 250,
+        "coordinates": {
+          "lat": 23.4975,
+          "lng": 91.3197
+        }
+      }
+    ]
+  },
+  {
+    "id": "jampui-hills",
+    "name": "Jampui Hills & Orange Festival",
+    "normalizedName": "jampui hills & orange festival",
+    "state": "Tripura",
+    "isUnionTerritory": false,
+    "district": "North Tripura",
+    "category": "Hill Stations & Scenic Viewpoints",
+    "tagline": "The Eternal Hills of Spring - Orange orchards and panoramic Mizo hills",
+    "description": "Highest hill range in Tripura at 3,000 feet, celebrated for lush orange plantations, pleasant temperate climate, Betlingshib peak, and vibrant Lushei Mizo village culture.",
+    "coordinates": {
+      "lat": 23.8833,
+      "lng": 92.2833
+    },
+    "bestMonths": "October to March (Orange harvest in Nov-Dec)",
+    "idealDays": 2,
+    "popularInterests": [
+      "Hill Station",
+      "Orange Orchards",
+      "Tribal Culture",
+      "Sunsets"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Jampui Hills",
+      "Jampui",
+      "Betlingshib Peak",
+      "Vanghmun"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Agartala Airport (IXA) - 200 km",
+      "nearestRailway": "Dharmanagar Railway Station (DMR) - 70 km",
+      "roadConnectivity": "Connected via Kanchanpur and Dharmanagar through mountain roads"
+    },
+    "culturalHighlights": [
+      "Betlingshib (Tripura's highest peak at 3,200 ft) offering sweeping views into Mizoram and Bangladesh",
+      "Lushei and Mizo community hospitality, neat wooden stilt homes, and orange harvest festivals"
+    ],
+    "sourceUrl": "https://tripuratourism.gov.in",
+    "attractions": [
+      {
+        "id": "jam-viewpoint",
+        "name": "Betlingshib Peak & Vanghmun Orchards",
+        "category": "Scenic",
+        "timeSlot": "Morning",
+        "description": "Trek to the highest summit watchtower of Tripura overlooking emerald misty valleys and sweet orange groves.",
+        "visitDurationMinutes": 120,
+        "estimatedCostInr": 0,
+        "coordinates": {
+          "lat": 23.8833,
+          "lng": 92.2833
+        },
+        "address": "Vanghmun, Jampui Hills, North Tripura",
+        "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Visit between November and December to witness valleys adorned in ripe bright orange fruits"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-jam-1",
+        "name": "Eden Tourist Lodge Dining",
+        "mealType": "Lunch",
+        "cuisine": "Tripuri & Mizo Cuisine",
+        "famousFor": "Steamed pork with bamboo shoots, fresh local vegetable stew, and aromatic mountain rice",
+        "estimatedCostPerPersonInr": 250,
+        "coordinates": {
+          "lat": 23.8833,
+          "lng": 92.2833
+        }
+      }
+    ]
+  },
+  {
+    "id": "pahalgam",
+    "name": "Pahalgam & Betaab Valley",
+    "normalizedName": "pahalgam & betaab valley",
+    "state": "Jammu and Kashmir",
+    "isUnionTerritory": true,
+    "district": "Anantnag",
+    "category": "Hill Stations & Scenic Viewpoints",
+    "tagline": "The Valley of Shepherds - Lidder riverbanks, pine forests, and snowy peaks",
+    "description": "Kashmir's idyllic paradise renowned for the rushing Lidder River, Betaab Valley, Aru Valley wildlife, Baisaran alpine meadow ('Mini Switzerland'), and starting point for the Amarnath Yatra.",
+    "coordinates": {
+      "lat": 34.0167,
+      "lng": 75.3167
+    },
+    "bestMonths": "March to November (Snow in Dec-Feb)",
+    "idealDays": 3,
+    "popularInterests": [
+      "Valley Views",
+      "Trekking",
+      "River Rafting",
+      "Trout Fishing",
+      "Horse Riding"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1566837945700-30057527ade0?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Pahalgam",
+      "Betaab Valley",
+      "Aru Valley",
+      "Baisaran",
+      "Valley of Shepherds"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Sheikh ul-Alam International Airport Srinagar (SXR) - 90 km",
+      "nearestRailway": "Udhampur (UHP) - 170 km; Jammu Tawi (JAT) - 240 km",
+      "roadConnectivity": "Scenic drive from Srinagar via NH 44 and Anantnag along apple orchards"
+    },
+    "culturalHighlights": [
+      "Traditional Kashmiri wooden cottages and hand-woven walnut wood handicrafts",
+      "Base camp for the annual holy pilgrimage to the sacred Shri Amarnath Cave"
+    ],
+    "sourceUrl": "https://www.jktourism.jk.gov.in",
+    "attractions": [
+      {
+        "id": "pah-betaab",
+        "name": "Betaab Valley & Aru Biosphere",
+        "category": "Scenic",
+        "timeSlot": "Morning",
+        "description": "Picturesque valley named after the Bollywood film Betaab, surrounded by snow-dusted Himalayan peaks and crystal streams.",
+        "visitDurationMinutes": 150,
+        "estimatedCostInr": 100,
+        "coordinates": {
+          "lat": 34.025,
+          "lng": 75.35
+        },
+        "address": "Betaab Valley, Pahalgam, Jammu and Kashmir",
+        "imageUrl": "https://images.unsplash.com/photo-1566837945700-30057527ade0?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Hire local pony or eco-cabs registered with the Pahalgam Development Authority"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-pah-1",
+        "name": "Dana Pani & Trout Beat Pahalgam",
+        "mealType": "Lunch",
+        "cuisine": "Kashmiri Wazwan & Vegetarian",
+        "famousFor": "Fresh Lidder river pan-fried brown trout, Rogan Josh, and saffron Kahwa",
+        "estimatedCostPerPersonInr": 450,
+        "coordinates": {
+          "lat": 34.0167,
+          "lng": 75.3167
+        }
+      }
+    ]
+  },
+  {
+    "id": "vaishno-devi",
+    "name": "Shri Mata Vaishno Devi & Katra",
+    "normalizedName": "shri mata vaishno devi & katra",
+    "state": "Jammu and Kashmir",
+    "isUnionTerritory": true,
+    "district": "Reasi",
+    "category": "Pilgrimage & Spiritual Sites",
+    "tagline": "One of India's most sacred Shakti Peeth shrines atop Trikuta Mountain",
+    "description": "Revered pilgrimage destination drawing millions of devotees to the holy cave shrine of Mata Vaishno Devi at 5,200 feet, approached via a scenic 13 km paved track from the base town of Katra.",
+    "coordinates": {
+      "lat": 33.0308,
+      "lng": 74.949
+    },
+    "bestMonths": "Throughout the year (March to October best weather)",
+    "idealDays": 2,
+    "popularInterests": [
+      "Pilgrimage",
+      "Trekking",
+      "Spiritual",
+      "Cable Car"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Vaishno Devi",
+      "Katra",
+      "Mata Vaishno Devi Shrine",
+      "Bhavan Katra"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Jammu Civil Enclave Airport (IXJ) - 50 km",
+      "nearestRailway": "Shri Mata Vaishno Devi Katra Railway Station (SVDK) - In Katra",
+      "roadConnectivity": "Four-lane highway connecting Jammu to Katra (NH 144)"
+    },
+    "culturalHighlights": [
+      "The holy natural cave containing the three pindis representing Mahakali, Mahalakshmi, and Mahasaraswati",
+      "Modern battery cars, ropeway between Bhavan and Bhairon Ghati, and scenic helicopter services"
+    ],
+    "sourceUrl": "https://www.maavaishnodevi.org",
+    "attractions": [
+      {
+        "id": "vsh-bhawan",
+        "name": "Holy Bhawan Shrine & Bhairon Ghati Ropeway",
+        "category": "Pilgrimage",
+        "timeSlot": "Morning",
+        "description": "Sacred shrine sanctum sanctorum followed by the ropeway ascension to the high-perched Bhairon Temple for sweeping mountain vistas.",
+        "visitDurationMinutes": 240,
+        "estimatedCostInr": 100,
+        "coordinates": {
+          "lat": 33.0308,
+          "lng": 74.949
+        },
+        "address": "Bhavan, Trikuta Hills, Katra, Jammu and Kashmir",
+        "imageUrl": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": false,
+        "tips": [
+          "Register online or at Katra Yatra registration counter for the free RFID Yatra Card"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-vsh-1",
+        "name": "Shrine Board Sanjichhat Bhojanalaya",
+        "mealType": "Lunch",
+        "cuisine": "Pure Vegetarian Satvik",
+        "famousFor": "Hygienic rajma-chawal, poori-chana, and piping hot herbal tea prepared without onion or garlic",
+        "estimatedCostPerPersonInr": 120,
+        "coordinates": {
+          "lat": 33.03,
+          "lng": 74.95
+        }
+      }
+    ]
+  },
+  {
+    "id": "zanskar-valley",
+    "name": "Zanskar Valley & Padum",
+    "normalizedName": "zanskar valley & padum",
+    "state": "Ladakh",
+    "isUnionTerritory": true,
+    "district": "Kargil",
+    "category": "Adventure & High Altitude",
+    "tagline": "The remote lost kingdom of glaciers, Phugtal cliff monastery, and frozen river trails",
+    "description": "Rugged Trans-Himalayan high-altitude wilderness famed for Phuktal Monastery clinging to a sheer cliff cave, Drang-Drung Glacier, and the winter Chadar frozen river trek.",
+    "coordinates": {
+      "lat": 33.4667,
+      "lng": 76.8833
+    },
+    "bestMonths": "June to September (Chadar trek in Jan-Feb)",
+    "idealDays": 4,
+    "popularInterests": [
+      "High-Altitude Trekking",
+      "Cliff Monasteries",
+      "Glaciers",
+      "Adventure"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Zanskar",
+      "Padum",
+      "Phugtal",
+      "Phuktal Gompa",
+      "Chadar"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Kushok Bakula Rimpochee Airport Leh (IXL) - 230 km via Shinku La / Nimmu-Padum road",
+      "nearestRailway": "Jammu Tawi (JAT) - 520 km",
+      "roadConnectivity": "Accessible via Kargil-Padum road or newly opened Darcha-Shinku La pass route"
+    },
+    "culturalHighlights": [
+      "Phugtal Gompa constructed around a natural cave like a honeycomb on a limestone cliff",
+      "Drang-Drung Glacier snaking like a colossal river of ice beside Pensi La pass"
+    ],
+    "sourceUrl": "https://tourism.ladakh.gov.in",
+    "attractions": [
+      {
+        "id": "zan-phugtal",
+        "name": "Phuktal Monastery Cliff Expedition",
+        "category": "Monastery & Trekking",
+        "timeSlot": "Morning",
+        "description": "Hike along the turquoise Lungnak River gorge to the dramatic 12th-century cliffside monastery established by Gangsem Sherap Sampo.",
+        "visitDurationMinutes": 240,
+        "estimatedCostInr": 50,
+        "coordinates": {
+          "lat": 33.2683,
+          "lng": 77.1772
+        },
+        "address": "Lungnak Valley, Zanskar, Ladakh",
+        "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Requires good physical fitness; acclimatize thoroughly before undertaking the canyon hike"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-zan-1",
+        "name": "Padum Traditional Kitchen",
+        "mealType": "Dinner",
+        "cuisine": "Zanskari & Ladakhi",
+        "famousFor": "Warm Skyu pasta stew, momos, yak butter tea, and roasted barley tsampa",
+        "estimatedCostPerPersonInr": 250,
+        "coordinates": {
+          "lat": 33.4667,
+          "lng": 76.8833
+        }
+      }
+    ]
+  },
+  {
+    "id": "kargil-dras",
+    "name": "Kargil & Dras War Memorial",
+    "normalizedName": "kargil & dras war memorial",
+    "state": "Ladakh",
+    "isUnionTerritory": true,
+    "district": "Kargil",
+    "category": "Historical Monuments & Heritage",
+    "tagline": "Gateway to Ladakh and the world's second coldest inhabited place honoring Indian braves",
+    "description": "Historic mountain hub on the Suru River featuring the Kargil War Memorial at Tololing foothills, ancient rock-carved Maitreya Buddha at Mulbekh, and dramatic high passes.",
+    "coordinates": {
+      "lat": 34.5539,
+      "lng": 76.1349
+    },
+    "bestMonths": "May to October",
+    "idealDays": 2,
+    "popularInterests": [
+      "War Memorial",
+      "History",
+      "Mountain Passes",
+      "Suru Valley"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Kargil",
+      "Dras",
+      "Kargil War Memorial",
+      "Tololing",
+      "Suru Valley"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Srinagar Airport (SXR) - 200 km; Leh Airport (IXL) - 215 km",
+      "nearestRailway": "Jammu Tawi (JAT) - 470 km",
+      "roadConnectivity": "Located on NH 1 connecting Srinagar and Leh via Zoji La pass"
+    },
+    "culturalHighlights": [
+      "Kargil War Memorial with the Amar Jawan Jyoti and Manoj Pandey Gallery honoring Operation Vijay",
+      "Mulbekh Chamba 9-meter rock-cut sculpture of standing Maitreya Buddha dating to the 8th century"
+    ],
+    "sourceUrl": "https://tourism.ladakh.gov.in",
+    "attractions": [
+      {
+        "id": "kar-memorial",
+        "name": "Kargil War Memorial & Tololing View",
+        "category": "Memorial & History",
+        "timeSlot": "Morning",
+        "description": "Pink sandstone war memorial built by the Indian Army at the base of Tololing and Tiger Hill commemorating the heroes of 1999.",
+        "visitDurationMinutes": 120,
+        "estimatedCostInr": 50,
+        "coordinates": {
+          "lat": 34.4294,
+          "lng": 75.7608
+        },
+        "address": "Dras, Kargil District, Ladakh",
+        "imageUrl": "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Carry government photo ID for security entry; pay homage at the brass memorial wall"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-kar-1",
+        "name": "Caravan Sarai Kargil",
+        "mealType": "Lunch",
+        "cuisine": "Balti & North Indian",
+        "famousFor": "Apricot jam parathas, aromatic Kashmiri Gushtaba, and walnut kernels",
+        "estimatedCostPerPersonInr": 300,
+        "coordinates": {
+          "lat": 34.5539,
+          "lng": 76.1349
+        }
+      }
+    ]
+  },
+  {
+    "id": "neil-island",
+    "name": "Neil Island (Shaheed Dweep)",
+    "normalizedName": "neil island (shaheed dweep)",
+    "state": "Andaman and Nicobar Islands",
+    "isUnionTerritory": true,
+    "district": "South Andaman",
+    "category": "Beaches & Coastal",
+    "tagline": "Serene vegetable bowl of the Andamans famed for natural coral bridges and sunset beaches",
+    "description": "Tranquil coral island renowned for the Howrah Bridge natural limestone arch, pristine sunset at Laxmanpur Beach, turquoise waters of Bharatpur Beach, and gentle cycling roads.",
+    "coordinates": {
+      "lat": 11.8333,
+      "lng": 93.05
+    },
+    "bestMonths": "October to May",
+    "idealDays": 2,
+    "popularInterests": [
+      "Coral Reefs",
+      "Snorkeling",
+      "Glass Bottom Boats",
+      "Sunsets",
+      "Cycling"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Neil Island",
+      "Shaheed Dweep",
+      "Bharatpur Beach",
+      "Laxmanpur Beach"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Veer Savarkar Airport Port Blair (IXZ) - 40 km via high-speed ferry",
+      "nearestPort": "Neil Island Jetty - Regular private ferries (Makruzz, Nautika) & Govt ferries",
+      "roadConnectivity": "Small flat island explored by rented scooters or bicycles"
+    },
+    "culturalHighlights": [
+      "Natural limestone rock formation known locally as Howrah Bridge exposed during low tide",
+      "Lush organic vegetable plantations that supply food across the Andaman archipelago"
+    ],
+    "sourceUrl": "https://www.andamantourism.gov.in",
+    "attractions": [
+      {
+        "id": "nei-bridge",
+        "name": "Natural Rock Bridge & Laxmanpur Beach",
+        "category": "Coastal & Geology",
+        "timeSlot": "Afternoon",
+        "description": "Walk across live reef dead coral beds to witness the towering sea-carved natural arch, followed by stunning crimson sunsets on Laxmanpur sands.",
+        "visitDurationMinutes": 120,
+        "estimatedCostInr": 0,
+        "coordinates": {
+          "lat": 11.8333,
+          "lng": 93.05
+        },
+        "address": "Laxmanpur, Shaheed Dweep, Andaman and Nicobar Islands",
+        "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Visit the Natural Bridge only during low tide hours; wear coral shoes"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-nei-1",
+        "name": "Dugong Restaurant & Seafood Hut",
+        "mealType": "Dinner",
+        "cuisine": "Island Coastal Seafood",
+        "famousFor": "Grilled red snapper with garlic butter, crab curry, and fresh coconut water",
+        "estimatedCostPerPersonInr": 500,
+        "coordinates": {
+          "lat": 11.8333,
+          "lng": 93.05
+        }
+      }
+    ]
+  },
+  {
+    "id": "kavaratti",
+    "name": "Kavaratti Island",
+    "normalizedName": "kavaratti island",
+    "state": "Lakshadweep",
+    "isUnionTerritory": true,
+    "district": "Lakshadweep",
+    "category": "Islands & Coastal",
+    "tagline": "Administrative capital with shimmering lagoons, coral reefs, and Ujra Mosque",
+    "description": "Picture-postcard coral atoll surrounded by a crystalline turquoise lagoon, known for its ornate wood-carved 17th-century Ujra Mosque, Marine Aquarium, and water sports.",
+    "coordinates": {
+      "lat": 10.5667,
+      "lng": 72.6417
+    },
+    "bestMonths": "October to April",
+    "idealDays": 3,
+    "popularInterests": [
+      "Scuba Diving",
+      "Lagoon Kayaking",
+      "Marine Life",
+      "Coral Reefs"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Kavaratti",
+      "Kavaratti Atoll",
+      "Lakshadweep Capital"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Agatti Island Airport (AGX) - 54 km via inter-island helicopter or speedboat",
+      "nearestPort": "Kavaratti Jetty - Passenger ships from Kochi (Cochin) operate regularly",
+      "roadConnectivity": "Eco-friendly electric buggies and bicycles across the island"
+    },
+    "culturalHighlights": [
+      "Ujra Mosque with ceiling intricately hand-carved out of driftwood",
+      "Kavaratti Marine Aquarium exhibiting exotic clownfish, sea anemones, and live corals"
+    ],
+    "sourceUrl": "https://lakshadweep.gov.in",
+    "attractions": [
+      {
+        "id": "kav-lagoon",
+        "name": "Kavaratti Lagoon & Water Sports Centre",
+        "category": "Water Sports",
+        "timeSlot": "Morning",
+        "description": "Glide over see-through emerald water on kayaks or participate in guided scuba dives to explore untouched coral atolls.",
+        "visitDurationMinutes": 180,
+        "estimatedCostInr": 1500,
+        "coordinates": {
+          "lat": 10.5667,
+          "lng": 72.6417
+        },
+        "address": "Kavaratti Atoll, Lakshadweep",
+        "imageUrl": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Entry requires e-permit from Lakshadweep Administration prior to travel"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-kav-1",
+        "name": "Coral Cove Island Dining",
+        "mealType": "Lunch",
+        "cuisine": "Lakshadweep Island Cuisine",
+        "famousFor": "Spicy tuna curry (Mas Min), coconut rice, and freshly tapped Neera drink",
+        "estimatedCostPerPersonInr": 300,
+        "coordinates": {
+          "lat": 10.5667,
+          "lng": 72.6417
+        }
+      }
+    ]
+  },
+  {
+    "id": "silvassa",
+    "name": "Silvassa & Dadra Gardens",
+    "normalizedName": "silvassa & dadra gardens",
+    "state": "Dadra and Nagar Haveli and Daman and Diu",
+    "isUnionTerritory": true,
+    "district": "Dadra and Nagar Haveli",
+    "category": "Nature & Cultural",
+    "tagline": "Portuguese heritage, Warli tribal art, and tranquil lakeside gardens",
+    "description": "Lush capital of Dadra and Nagar Haveli known for the Church of Our Lady of Piety, Tribal Cultural Museum showcasing Warli folk art, Vanganga Garden, and lion safari at Vasona.",
+    "coordinates": {
+      "lat": 20.2742,
+      "lng": 73.0083
+    },
+    "bestMonths": "October to March",
+    "idealDays": 2,
+    "popularInterests": [
+      "Warli Art",
+      "Portuguese Architecture",
+      "Gardens",
+      "Tribal Culture"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Silvassa",
+      "Dadra and Nagar Haveli",
+      "Vanganga",
+      "Khanvel"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Surat Airport (STV) - 130 km; Mumbai Chhatrapati Shivaji (BOM) - 165 km",
+      "nearestRailway": "Vapi Railway Station (VAPI) - 17 km",
+      "roadConnectivity": "Easily reachable via NH 48 from Mumbai and Surat"
+    },
+    "culturalHighlights": [
+      "Tribal Cultural Museum featuring authentic masks, hunting tools, and live Warli paintings",
+      "Church of Our Lady of Piety built by the Portuguese in 1889"
+    ],
+    "sourceUrl": "https://www.tourismdddnh.in",
+    "attractions": [
+      {
+        "id": "sil-museum",
+        "name": "Tribal Cultural Museum & Vanganga Lake Garden",
+        "category": "Culture & Gardens",
+        "timeSlot": "Morning",
+        "description": "Fascinating collection of tribal lifestyle dioramas followed by a peaceful stroll over Japanese-style bridges at Vanganga Lake.",
+        "visitDurationMinutes": 120,
+        "estimatedCostInr": 20,
+        "coordinates": {
+          "lat": 20.2742,
+          "lng": 73.0083
+        },
+        "address": "Silvassa Main Road, Dadra and Nagar Haveli",
+        "imageUrl": "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": false,
+        "tips": [
+          "Purchase certified Warli paintings directly from tribal artisans inside the museum compound"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-sil-1",
+        "name": "Woodlands Silvassa",
+        "mealType": "Lunch",
+        "cuisine": "Gujarati & Tribal Fusion",
+        "famousFor": "Authentic Kathiyawadi thali, Ubadiyu (seasonal earthen-pot steamed vegetables), and fresh buttermilk",
+        "estimatedCostPerPersonInr": 250,
+        "coordinates": {
+          "lat": 20.2742,
+          "lng": 73.0083
+        }
+      }
+    ]
+  },
+  {
+    "id": "diu",
+    "name": "Diu Fort & Nagoa Beach",
+    "normalizedName": "diu fort & nagoa beach",
+    "state": "Dadra and Nagar Haveli and Daman and Diu",
+    "isUnionTerritory": true,
+    "district": "Diu",
+    "category": "Forts & Coastal",
+    "tagline": "Portuguese sea fortresses, rare Hoka palm trees, and serene horseshoe beaches",
+    "description": "Charming coastal island featuring the massive 1535 Diu Fort surrounded by the Arabian Sea, St. Paul's Church, Naida Caves labyrinth, and horseshoe-shaped Nagoa Beach lined with African branching Hoka palms.",
+    "coordinates": {
+      "lat": 20.7144,
+      "lng": 70.9874
+    },
+    "bestMonths": "October to April",
+    "idealDays": 2,
+    "popularInterests": [
+      "Sea Forts",
+      "Portuguese Churches",
+      "Beaches",
+      "Caves"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Diu",
+      "Diu Island",
+      "Diu Fort",
+      "Nagoa Beach",
+      "Naida Caves"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Diu Airport (DIU) - Regular flights to Mumbai and Ahmedabad",
+      "nearestRailway": "Veraval Railway Station (VRL) - 90 km; Delvada - 8 km",
+      "roadConnectivity": "Connected to Gujarat mainland via two road bridges"
+    },
+    "culturalHighlights": [
+      "Diu Fort with bronze cannons, lighthouse, and dramatic sea ramparts",
+      "Naida Caves - an extraordinary natural-manmade sandstone labyrinth lit by open sunbeams"
+    ],
+    "sourceUrl": "https://www.tourismdddnh.in",
+    "attractions": [
+      {
+        "id": "diu-fort",
+        "name": "Diu Fort & Naida Caves",
+        "category": "Fort & Architecture",
+        "timeSlot": "Morning",
+        "description": "Explore the vast sea-facing citadel commanding the Gulf of Khambhat followed by walking through the photogenic golden caverns of Naida Caves.",
+        "visitDurationMinutes": 150,
+        "estimatedCostInr": 0,
+        "coordinates": {
+          "lat": 20.7144,
+          "lng": 70.9874
+        },
+        "address": "Fort Road, Diu, Dadra and Nagar Haveli and Daman and Diu",
+        "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Visit Naida Caves around midday when sun rays stream directly through natural ceiling openings"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-diu-1",
+        "name": "O'Coqueiro Restaurant & Lounge",
+        "mealType": "Dinner",
+        "cuisine": "Portuguese & Goan Seafood",
+        "famousFor": "Grilled lobster, butter garlic prawns, fish caldeen, and bebinca dessert",
+        "estimatedCostPerPersonInr": 450,
+        "coordinates": {
+          "lat": 20.7144,
+          "lng": 70.9874
+        }
+      }
+    ]
+  },
+  {
+    "id": "auroville",
+    "name": "Auroville & Matrimandir",
+    "normalizedName": "auroville & matrimandir",
+    "state": "Puducherry",
+    "isUnionTerritory": true,
+    "district": "Puducherry & Viluppuram",
+    "category": "Spiritual & Cultural",
+    "tagline": "The City of Dawn - Universal township centered around the golden Matrimandir sphere",
+    "description": "Universal experimental community founded by Mirra Alfassa ('The Mother') and Sri Aurobindo, renowned for the gleaming golden geodesic dome of Matrimandir, sustainable forests, and global culture.",
+    "coordinates": {
+      "lat": 11.9961,
+      "lng": 79.8106
+    },
+    "bestMonths": "October to March",
+    "idealDays": 2,
+    "popularInterests": [
+      "Meditation",
+      "Architecture",
+      "Organic Farming",
+      "Global Community"
+    ],
+    "bannerUrl": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80",
+    "aliases": [
+      "Auroville",
+      "Matrimandir",
+      "City of Dawn",
+      "Auroville Universal Township"
+    ],
+    "transportInfo": {
+      "nearestAirport": "Puducherry Airport (PNY) - 7 km; Chennai (MAA) - 135 km",
+      "nearestRailway": "Puducherry Railway Station (PDY) - 12 km",
+      "roadConnectivity": "Easily reached via East Coast Road (ECR) from Chennai or Pondicherry"
+    },
+    "culturalHighlights": [
+      "The golden geodesic sphere of Matrimandir housing a 70cm optical glass crystal ball",
+      "Sustainable handicraft boutiques, paper making workshops, and spirulina farms"
+    ],
+    "sourceUrl": "https://www.pondytourism.in",
+    "attractions": [
+      {
+        "id": "aur-matri",
+        "name": "Matrimandir Viewing Point & Gardens",
+        "category": "Spiritual & Architectural",
+        "timeSlot": "Morning",
+        "description": "Peaceful walk through dense regenerated green belt forests leading to the amphitheater viewing point of the golden globe.",
+        "visitDurationMinutes": 120,
+        "estimatedCostInr": 0,
+        "coordinates": {
+          "lat": 11.9961,
+          "lng": 79.8106
+        },
+        "address": "Auroville Visitors Centre, Auroville, Puducherry",
+        "imageUrl": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=600&q=80",
+        "isOutdoor": true,
+        "tips": [
+          "Internal meditation passes for the inner chamber must be booked in person a day in advance at the Visitors Centre"
+        ]
+      }
+    ],
+    "meals": [
+      {
+        "id": "m-aur-1",
+        "name": "Solar Kitchen & Visitors Centre Cafe",
+        "mealType": "Lunch",
+        "cuisine": "Organic Farm-to-Table & French",
+        "famousFor": "Fresh stoneground sourdough bread, organic farm salads, vegan tarts, and hibiscus iced tea",
+        "estimatedCostPerPersonInr": 300,
+        "coordinates": {
+          "lat": 11.9961,
+          "lng": 79.8106
+        }
+      }
+    ]
   }
 ];
 
 
 /**
- * Helper search function that performs prefix, substring, and alias matching across all Indian destinations.
- * Alphabetically sorted by destination name within relevance score tiers.
+ * Enhanced search function that performs multi-tier prefix, substring, and alias matching
+ * across all Indian destinations.
+ * Ranks strong name matches ahead of weaker alias matches, then alphabetizes within relevance groups.
+ * Does NOT impose a hardcoded 40 limit - returns all matches unless caller specifies a limit.
  */
-export function searchAllIndiaDestinations(query: string, limit: number = 20): DestinationCatalogueItem[] {
+export function searchAllIndiaDestinations(query?: string, limit?: number): DestinationCatalogueItem[] {
   if (!query || !query.trim()) {
-    // Return all destinations sorted alphabetically (A–Z) up to limit
-    return [...ALL_INDIA_DESTINATIONS].sort((a, b) => a.name.localeCompare(b.name)).slice(0, limit);
+    // Return all destinations sorted alphabetically (A–Z)
+    const sorted = [...ALL_INDIA_DESTINATIONS].sort((a, b) => a.name.localeCompare(b.name));
+    return (limit !== undefined && limit > 0) ? sorted.slice(0, limit) : sorted;
   }
 
   const q = query.trim().toLowerCase();
 
-  // Tier 1: Exact name prefix match (e.g. 'mum' -> Mumbai)
-  const tier1Prefix: DestinationCatalogueItem[] = [];
-  // Tier 2: Exact state prefix match (e.g. 'kerala' -> destinations in Kerala)
-  const tier2StatePrefix: DestinationCatalogueItem[] = [];
-  // Tier 3: Substring match in destination name
+  // Tier 1: Exact name match (e.g. 'mumbai' -> Mumbai)
+  const tier1Exact: DestinationCatalogueItem[] = [];
+  // Tier 2: Word-prefix in destination name (e.g. 'mum' -> Mumbai, 'oot' -> Ooty, 'ara' -> Araku Valley)
+  const tier2NamePrefix: DestinationCatalogueItem[] = [];
+  // Tier 3: Substring match inside destination name (e.g. 'valley' -> Araku Valley, Ziro Valley)
   const tier3NameSubstring: DestinationCatalogueItem[] = [];
-  // Tier 4: Alias or district match
-  const tier4Alias: DestinationCatalogueItem[] = [];
-  // Tier 5: Substring match in state or category
-  const tier5General: DestinationCatalogueItem[] = [];
+  // Tier 4: Exact match in verified aliases (e.g. 'kashi' -> Varanasi, 'vizag' -> Visakhapatnam)
+  const tier4AliasExact: DestinationCatalogueItem[] = [];
+  // Tier 5: Word-prefix in verified aliases (e.g. 'kashid' -> Alibaug)
+  const tier5AliasPrefix: DestinationCatalogueItem[] = [];
+  // Tier 6: Substring in verified aliases
+  const tier6AliasSubstring: DestinationCatalogueItem[] = [];
+  // Tier 7: State or Union Territory match (e.g. 'kerala' -> all destinations in Kerala)
+  const tier7StateMatch: DestinationCatalogueItem[] = [];
+  // Tier 8: District, category, or general attribute match
+  const tier8General: DestinationCatalogueItem[] = [];
 
   const seen = new Set<string>();
 
@@ -7978,49 +13749,68 @@ export function searchAllIndiaDestinations(query: string, limit: number = 20): D
     const norm = dest.normalizedName;
     const stateLower = dest.state.toLowerCase();
     const aliasesLower = dest.aliases.map(a => a.toLowerCase());
+    const wordsInName = norm.split(/[\s,&-]+/).filter(Boolean);
 
-    if (norm.startsWith(q)) {
-      tier1Prefix.push(dest);
+    if (norm === q || dest.id === q) {
+      tier1Exact.push(dest);
       seen.add(dest.id);
-    } else if (stateLower.startsWith(q)) {
-      tier2StatePrefix.push(dest);
+    } else if (norm.startsWith(q) || wordsInName.some(w => w.startsWith(q))) {
+      tier2NamePrefix.push(dest);
       seen.add(dest.id);
     } else if (norm.includes(q)) {
       tier3NameSubstring.push(dest);
       seen.add(dest.id);
-    } else if (aliasesLower.some(a => a.startsWith(q) || a.includes(q)) || (dest.district && dest.district.toLowerCase().includes(q))) {
-      tier4Alias.push(dest);
+    } else if (aliasesLower.some(a => a === q)) {
+      tier4AliasExact.push(dest);
       seen.add(dest.id);
-    } else if (stateLower.includes(q) || dest.category.toLowerCase().includes(q)) {
-      tier5General.push(dest);
+    } else if (aliasesLower.some(a => a.startsWith(q) || a.split(/[\s,&-]+/).some(w => w.startsWith(q)))) {
+      tier5AliasPrefix.push(dest);
+      seen.add(dest.id);
+    } else if (aliasesLower.some(a => a.includes(q))) {
+      tier6AliasSubstring.push(dest);
+      seen.add(dest.id);
+    } else if (stateLower.startsWith(q) || stateLower.includes(q)) {
+      tier7StateMatch.push(dest);
+      seen.add(dest.id);
+    } else if (
+      (dest.district && dest.district.toLowerCase().includes(q)) ||
+      dest.category.toLowerCase().includes(q)
+    ) {
+      tier8General.push(dest);
       seen.add(dest.id);
     }
   }
 
-  // Sort each tier alphabetically A-Z
+  // Strictly alphabetize within each relevance group
   const sortAlpha = (a: DestinationCatalogueItem, b: DestinationCatalogueItem) => a.name.localeCompare(b.name);
-  tier1Prefix.sort(sortAlpha);
-  tier2StatePrefix.sort(sortAlpha);
+  tier1Exact.sort(sortAlpha);
+  tier2NamePrefix.sort(sortAlpha);
   tier3NameSubstring.sort(sortAlpha);
-  tier4Alias.sort(sortAlpha);
-  tier5General.sort(sortAlpha);
+  tier4AliasExact.sort(sortAlpha);
+  tier5AliasPrefix.sort(sortAlpha);
+  tier6AliasSubstring.sort(sortAlpha);
+  tier7StateMatch.sort(sortAlpha);
+  tier8General.sort(sortAlpha);
 
   const combined = [
-    ...tier1Prefix,
-    ...tier2StatePrefix,
+    ...tier1Exact,
+    ...tier2NamePrefix,
     ...tier3NameSubstring,
-    ...tier4Alias,
-    ...tier5General
+    ...tier4AliasExact,
+    ...tier5AliasPrefix,
+    ...tier6AliasSubstring,
+    ...tier7StateMatch,
+    ...tier8General
   ];
 
-  return combined.slice(0, limit);
+  return (limit !== undefined && limit > 0) ? combined.slice(0, limit) : combined;
 }
 
 /**
- * Finds a destination from the All India catalogue with fallback
+ * Finds a destination from the All India catalogue with multi-level fallback
  */
 export function findAllIndiaDestination(query: string): DestinationCatalogueItem | undefined {
-  if (!query) return undefined;
+  if (!query || !query.trim()) return undefined;
   const q = query.trim().toLowerCase();
 
   // 1. Exact match on normalized name or ID
@@ -8031,7 +13821,7 @@ export function findAllIndiaDestination(query: string): DestinationCatalogueItem
   const aliasMatch = ALL_INDIA_DESTINATIONS.find(d => d.aliases.some(a => a.toLowerCase() === q));
   if (aliasMatch) return aliasMatch;
 
-  // 3. Prefix match
+  // 3. Prefix match on name
   const prefixMatch = ALL_INDIA_DESTINATIONS.find(d => d.normalizedName.startsWith(q));
   if (prefixMatch) return prefixMatch;
 
